@@ -2,26 +2,26 @@
 
 ## PARIGI
 
-### 1’ giorno 3 (Capacci - Tridello- Zavaglini)
+### 1’ giorno 
 MONTMARTRE e le SACRE COEUR+ La commune di Parigi (1871)
 
-### 2’ giorno * 6 (Tomassetti - Vignoli  - Di Giuseppe - Campa - Melandri- Medri) 
+### 2’ giorno 
 -MARAIS +MUSEE CARNAVALET  
 -MEMORIAL DE LA SHOAH
 -Visita Mostra ‘Album di Lili Jacob’
 
-### 3’ giorno 4 (Fusconi - Mele - Panzavolta - Florin)
+### 3’ giorno 
 VERSAILLES + JARDINS 
 
-### 4’ giorno* 6 (Nikita- Mangattu- Di seclì - Lullini - Nika- Gregorio)
+### 4’ giorno
 -INVALIDES o MUSEE DE L’ARMEE +Tomba di Napoleone e visita al quartiere
 -MUSEE DE LA LIBERATION-MUSEE DU GENERAL Leclerc-Moulin
 
-### 5’ giorno 2 (Savorelli - Marconi)
+### 5’ giorno
 -CONCIERGERIE +Visita au 1er ARRONDISSEMENT
 -TOUR EIFFEL (facoltativo)
 
-### Gruppo di n. 2 per impaginazione (Coluccia - Papa)
+### Gruppo di n. 2 per impaginazione
 
 SUDDIVISIONE IN GRUPPI + definizione RUOLI interni:
 Responsabile 
