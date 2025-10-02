@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>La Comune di Parigi — Gita a Parigi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{ --bg:#0f1115; --panel:#151923; --text:#e6e8ee; --muted:#a8b0c0; --brand:#4f7cff; --brand-2:#9f7aea; --shadow:0 10px 30px rgba(0,0,0,.25); --radius:14px; --maxw:900px; }
+    @media (prefers-color-scheme: light){ :root{ --bg:#fbfbfd; --panel:#ffffff; --text:#111317; --muted:#5b6472; --shadow:0 10px 30px rgba(20,23,29,.08);} }
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:var(--bg)}
+    a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:26px 18px}
+    .crumbs{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:14px;margin:12px 0 18px}
+    .panel{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    h1{margin:6px 0 8px} .sub{color:var(--muted);margin:0 0 18px}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center}
+    .hero img{width:100%;height:100%;object-fit:cover;border-radius:12px}
+    .chip{display:inline-block;font-size:12px;color:#fff;background:linear-gradient(135deg,var(--brand),var(--brand-2));padding:6px 10px;border-radius:999px}
+    footer{color:var(--muted);margin:24px 0 40px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="crumbs">
+      <a href="Giorno1.html">Home</a> <span>›</span> <span>La Comune di Parigi</span>
+    </nav>
+
+    <header class="panel grid">
+      <div>
+        <span class="chip">Storia</span>
+        <h1>La Comune di Parigi (1871)</h1>
+        <p class="sub">Un esperimento rivoluzionario unico: in pochi mesi la città visse riforme sociali e politiche che ancora oggi fanno discutere. Hôtel de Ville, Bastille e i percorsi della Semaine Sanglante sono tappe che ci riportano a quei giorni intensi.</p>
+      </div>
+      <div class="hero">
+        <img src="imgs/comune.jpg" alt="Illustrazione della Comune di Parigi">
+      </div>
+    </header>
+
+    <section class="panel grid">
+      <div>
+        <h2>Luoghi chiave</h2>
+        <p class="sub">Scopri i punti simbolici che testimoniano la memoria della Comune:</p>
+        <ul>
+          <li><strong>Hôtel de Ville:</strong> centro del governo comunardo.</li>
+          <li><strong>Place de la Bastille:</strong> luogo di memoria rivoluzionaria.</li>
+          <li><strong>Percorsi della settimana di sangue:</strong> riflessione su diritti e cittadinanza.</li>
+        </ul>
+      </div>
+      <div class="hero">
+        <img src="imgs/hotelville.jpg" alt="Hôtel de Ville di Parigi">
+      </div>
+    </section>
+
+    <section class="panel grid">
+      <div>
+        <h2>Attività</h2>
+        <p class="sub">Proposte per rendere la visita più coinvolgente:</p>
+        <ol>
+          <li>Scheda storica (max 200 parole) sulla Comune e le sue riforme.</li>
+          <li>Discussione guidata su partecipazione politica e memoria pubblica.</li>
+          <li>Creazione di una linea del tempo collaborativa.</li>
+        </ol>
+        <p><a href="index.html#itinerario">Vedi l’itinerario</a></p>
+      </div>
+      <div class="hero">
+        <img src="imgs/bastille.jpg" alt="Colonna della Bastiglia a Parigi">
+      </div>
+    </section>
+
+    <footer>© 2025 — Gita a Parigi • <a href="index.html#luoghi">Torna ai luoghi</a></footer>
+  </div>
+</body>
+</html>
