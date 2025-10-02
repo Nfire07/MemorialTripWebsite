@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Viaggio della Memoria – Giorno 2 (Parigi)</title>
+    <meta name="description"
+        content="Itinerario Giorno 2: Marais, Musée Carnavalet, Mémorial de la Shoah e mostra Album di Lili Jacob." />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="brand"><span class="dot"></span><strong>Viaggio della Memoria</strong></div>
+            <nav aria-label="Selettore giorni" id="days-nav">
+                <ul class="days">
+                    <!-- aggiorna gli href quando crei gli altri file -->
+                    <li><a href="giorno1.html" title="Giorno 1">Giorno 1</a></li>
+                    <li><a class="active" href="giorno2.html" aria-current="page" title="Giorno 2">Giorno 2</a></li>
+                    <li><a href="giorno3.html" title="Giorno 3">Giorno 3</a></li>
+                    <li><a href="giorno4.html" title="Giorno 4">Giorno 4</a></li>
+                    <li><a href="giorno5.html" title="Giorno 5">Giorno 5</a></li>
+                    <li><a href="giorno6.html" title="Giorno 6">Giorno 6</a></li>
+                    <li><a href="giorno7.html" title="Giorno 7">Giorno 7</a></li>
+                </ul>
+                <div class="nav-underline" aria-hidden="true"></div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Giorno 2 – Marais & Memoria</h1>
+        <p class="subtitle">Quartiere del Marais, Musée Carnavalet, Mémorial de la Shoah e la mostra “Album di Lili
+            Jacob”.</p>
+
+        <section class="grid" aria-label="Luoghi da visitare">
+
+            <!-- CARD 1 – MARAIS + MUSÉE CARNAVALET -->
+            <article class="card" id="carnavalet">
+                <div class="thumb">
+                    <img src="assets/carnavalet.jpg" alt="Facciata del Musée Carnavalet nel Marais" />
+                    <span class="chip">Marais · Museo</span>
+                </div>
+                <div class="body">
+                    <h2 class="title">Musée Carnavalet – Histoire de Paris</h2>
+                    <p class="meta">
+                        <span title="Posizione">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5Z" />
+                            </svg>
+                            23 rue Madame de Sévigné, 75003 Paris
+                        </span>
+                        <span title="Orari">🕒 Mar–Dom 10:00–18:00 (lun chiuso)</span>
+                        <span title="Prezzi">🎫 Collezioni permanenti: <strong>gratuite</strong></span>
+                    </p>
+                    <p class="excerpt">
+                        Nel cuore del Marais, il museo racconta la storia di Parigi. Ottimo punto di partenza per capire
+                        il quartiere e il contesto storico delle nostre visite.
+                    </p>
+                    <div class="actions">
+                        <button class="btn primary" data-toggle="carnavalet-details" aria-expanded="false"
+                            aria-controls="carnavalet-details">Leggi di più</button>
+                        <a class="btn" href="https://www.carnavalet.paris.fr/en/visit/pratical-information"
+                            target="_blank" rel="noopener">Sito ufficiale</a>
+                    </div>
+                </div>
+                <div id="carnavalet-details" class="details" hidden>
+                    <div class="content">
+                        <div class="dl">
+                            <div>Storia in breve</div>
+                            <div>Aperto nel 1880, è il <strong>più antico museo municipale di Parigi</strong>. Ospitato
+                                negli hôtel particuliers Carnavalet e Le Peletier de Saint-Fargeau, ha riaperto nel 2021
+                                dopo un ampio riallestimento.</div>
+
+                            <div>Cosa vedere</div>
+                            <div>Percorso dalla preistoria alla contemporaneità; collezioni sulla Rivoluzione francese,
+                                Belle Époque, Resistenza; ambienti storici ricostruiti; insegne antiche; <em>camera di
+                                    Marcel Proust</em>.</div>
+
+                            <div>Orari</div>
+                            <div>Mar–Dom 10:00–18:00; ultimo ingresso 17:15; sale chiudono 17:45. Chiuso: lunedì; 1 gen,
+                                1 mag, 25 dic.</div>
+
+                            <div>Prezzi</div>
+                            <div>Collezioni permanenti <strong>gratis</strong>; mostre temporanee a pagamento.</div>
+
+                            <div>Come arrivare</div>
+                            <div>Metro <strong>L1 Saint-Paul</strong>, <strong>L8 Chemin Vert</strong>, <strong>L7
+                                    Pont-Marie</strong>. Bus: 29, 69, 76, 91, 96.</div>
+
+                            <div>Curiosità</div>
+                            <div>I cortili rinascimentali sono usati spesso per mostre all’aperto. L’allestimento
+                                recente valorizza accessibilità e percorsi tematici.</div>
+                        </div>
+                        <p class="note">Info pratiche soggette a variazioni: verificare sempre sul sito ufficiale.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- CARD 2 – MÉMORIAL DE LA SHOAH -->
+            <article class="card" id="shoah">
+                <div class="thumb">
+                    <img src="assets/memorial-shoah.jpg" alt="Ingresso del Mémorial de la Shoah a Parigi" />
+                    <span class="chip">Memoriale</span>
+                </div>
+                <div class="body">
+                    <h2 class="title">Mémorial de la Shoah (Parigi)</h2>
+                    <p class="meta">
+                        <span>
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5Z" />
+                            </svg>
+                            17 rue Geoffroy-l’Asnier, 75004 Paris
+                        </span>
+                        <span>🕒 Dom–Ven 10:00–18:00 · Gio fino alle 22:00 · Sab chiuso</span>
+                        <span>🎫 Ingresso: <strong>gratuito</strong></span>
+                    </p>
+                    <p class="excerpt">
+                        Luogo centrale della memoria della Shoah in Francia: Muro dei Nomi, memoriale dei Bambini,
+                        centro documentazione e mostre temporanee.
+                    </p>
+                    <div class="actions">
+                        <button class="btn primary" data-toggle="shoah-details" aria-expanded="false"
+                            aria-controls="shoah-details">Leggi di più</button>
+                        <a class="btn"
+                            href="https://www.memorialdelashoah.org/english-version/practical-informations.html"
+                            target="_blank" rel="noopener">Sito ufficiale</a>
+                    </div>
+                </div>
+                <div id="shoah-details" class="details" hidden>
+                    <div class="content">
+                        <div class="dl">
+                            <div>Storia in breve</div>
+                            <div>Nell’attuale forma <strong>dal 2005</strong>, unisce museo, spazio commemorativo e
+                                centro di documentazione. Nel <em>Muro dei Nomi</em> sono incisi circa
+                                <strong>76.000</strong> ebrei deportati dalla Francia (1942–1944). All’esterno,
+                                l’<em>Allée des Justes</em> ricorda oltre <strong>3.900</strong> persone che salvarono
+                                vite.</div>
+
+                            <div>Percorso</div>
+                            <div>Spazi interni con mostre permanenti/temporanee, memoriale dei Bambini, sale studio.
+                                All’esterno, il cortile della memoria e il Muro dei Nomi.</div>
+
+                            <div>Orari</div>
+                            <div>Dom–Ven 10:00–18:00; <strong>giovedì</strong> fino alle 22:00. <strong>Sabato
+                                    chiuso</strong> e chiusure in alcune festività ebraiche.</div>
+
+                            <div>Prezzi</div>
+                            <div><strong>Ingresso gratuito</strong>; alcune attività possono avere prenotazioni o
+                                condizioni dedicate.</div>
+
+                            <div>Come arrivare</div>
+                            <div>Metro <strong>L1 Saint-Paul</strong> o <strong>Hôtel de Ville (L1, L11)</strong>. Bus:
+                                67, 69, 72, 76, 96.</div>
+
+                            <div>Curiosità</div>
+                            <div>Il Memoriale conserva un vasto <strong>archivio</strong> documentale consultato da
+                                storici internazionali. Nel cortile è presente la scultura del “deportato senza nome”.
+                            </div>
+                        </div>
+                        <p class="note">Info pratiche soggette a variazioni: verificare sempre sul sito ufficiale.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- CARD 3 – MOSTRA “ALBUM DI LILI JACOB” -->
+            <article class="card" id="lili-jacob">
+                <div class="thumb">
+                    <img src="assets/lili-jacob-album.PNG"
+                        alt="Pannelli della mostra sull'Album di Lili Jacob (immagine segnaposto)" />
+                    <span class="chip">Mostra</span>
+                </div>
+                <div class="body">
+                    <h2 class="title">Mostra “Album di Lili Jacob” (Auschwitz Album)</h2>
+                    <p class="meta">
+                        <span>
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5Z" />
+                            </svg>
+                            Presso il Memoriale (sala da verificare all’arrivo)
+                        </span>
+                        <span>🕒 Orari: come il Memoriale (giovedì serale)</span>
+                        <span>🎫 Di norma <strong>gratuita</strong> (se temporanea: verificare prenotazione)</span>
+                    </p>
+                    <p class="excerpt">
+                        L’“Album di Auschwitz”, ritrovato dalla sopravvissuta Lili Jacob, documenta arrivo, selezione e
+                        spoliazione dei deportati ungheresi a Birkenau nel 1944.
+                    </p>
+                    <div class="actions">
+                        <button class="btn primary" data-toggle="lili-details" aria-expanded="false"
+                            aria-controls="lili-details">Leggi di più</button>
+                        <a class="btn"
+                            href="https://www.yadvashem.org/education/educational-materials/lesson-plans/auschwitz-album/lili-jacob.html"
+                            target="_blank" rel="noopener">Approfondisci</a>
+                    </div>
+                </div>
+                <div id="lili-details" class="details" hidden>
+                    <div class="content">
+                        <div class="dl">
+                            <div>Contesto storico</div>
+                            <div>Circa <strong>193–200 fotografie</strong> scattate da membri delle SS nel 1944, unica
+                                sequenza coeva che mostra l’arrivo e la selezione dei deportati ungheresi ad
+                                Auschwitz-Birkenau.</div>
+
+                            <div>La scoperta</div>
+                            <div><strong>Lili (Lilly) Jacob</strong> ritrovò l’album nel campo di Dora-Mittelbau dopo la
+                                liberazione; nel 1980 lo donò a <strong>Yad Vashem</strong>, dove è conservato e
+                                studiato.</div>
+
+                            <div>Orari & prezzi</div>
+                            <div>Segue gli orari del Memoriale; ingresso generalmente <strong>gratuito</strong>.
+                                Verificare eventuali prenotazioni se trattasi di mostra temporanea.</div>
+
+                            <div>Come arrivare</div>
+                            <div>Stessa sede del Memoriale: 17 rue Geoffroy-l’Asnier — Metro <strong>Saint-Paul
+                                    (L1)</strong> o <strong>Hôtel de Ville (L1, L11)</strong>.</div>
+
+                            <div>Nota didattica</div>
+                            <div>Materiale iconografico forte: affrontarlo con sensibilità, fornendo contesto e momenti
+                                di riflessione guidata. Utile per comprendere dinamiche di disumanizzazione e meccanismi
+                                dello sterminio.</div>
+                        </div>
+                        <p class="note">Info pratiche soggette a variazioni: verificare sempre sul sito ufficiale.</p>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <footer class="container">
+            <p class="note">
+                Dati pratici e trasporti possono variare (festività, lavori, eventi). In loco attenersi alle indicazioni
+                del personale.
+            </p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
