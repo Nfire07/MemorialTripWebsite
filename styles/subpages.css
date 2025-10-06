@@ -310,3 +310,9 @@ footer { padding:36px 0 70px; color:var(--muted); }
 .hero--montmartre { background:linear-gradient(135deg, rgba(79,124,255,.18), rgba(31,206,139,.14)); }
 .hero--sacre { background:linear-gradient(135deg, rgba(159,122,234,.18), rgba(79,124,255,.14)); }
 .hero--commune { background:linear-gradient(135deg, rgba(31,206,139,.16), rgba(159,122,234,.14)); }
+
+.image{
+    width:100%;
+    height: 100%;
+    border-radius: 12px;
+}
