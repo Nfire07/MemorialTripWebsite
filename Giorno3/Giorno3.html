@@ -1,358 +1,193 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Giorno 3</title>
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      font-family: 'Playfair Display', serif;
-      background: linear-gradient(180deg,#c69c3b,#b79f3e,#c5af67);
-      color: #1e1e1e;
-      margin: 0;
-      padding: 0;
-    }
-
-    header.hero-header {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      text-align: center;
-      color: #2e2a1c;
-      border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-      box-shadow: inset 0 -1px 0 rgba(0,0,0,0.05);
-    }
-
-    header.hero-header::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url('assets/images/EsternoReggiaDiVersailles.png');
-      background-size: cover;
-      background-position: center;
-      filter: blur(4px);
-      transform: scale(1.05);
-      z-index: 1;
-    }
-
-    header.hero-header > .container {
-      position: relative;
-      z-index: 2;
-    }
-
-    footer {
-      width: 100%;
-      height: 30vh;
-      margin-top: 100px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #464646;
-      color: #d6d6d6da;
-      text-align: center;
-      padding: 1rem;
-    }
-
-    .animate-title {
-      font-size: 2.8rem;
-      font-weight: bold;
-      animation: fadeUp 1s ease-out;
-    }
-
-    .animate-subtitle {
-      font-size: 1.1rem;
-      animation: fadeUp 1.2s ease-out;
-      font-weight: 800;
-      color: #28261d;
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .header-buttons .btn {
-      padding: 0.75rem 1.5rem;
-      font-weight: 600;
-      border-radius: 30px;
-      transition: all 0.3s ease;
-    }
-
-    .header-buttons .btn:hover {
-      transform: scale(1.05);
-    }
-
-    .glass {
-      background: rgba(255, 255, 255, 0.6);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-radius: 15px;
-      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
-      padding: 1.5rem 2rem;
-      margin-bottom: 1rem;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      animation: fadeUp 1s ease-out;
-    }
-
-    .glass:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
-    }
-
-    .section-title button {
-      font-size: 1.5rem;
-      font-weight: bold;
-      background: none;
-      border: none;
-      color: #2c2c2c;
-      padding: 0;
-      text-align: left;
-      width: 100%;
-      transition: color 0.3s ease;
-    }
-
-    .section-title button:hover {
-      color: #a6881b;
-    }
-
-    .section-title button:focus {
-      outline: none;
-      box-shadow: none;
-    }
-
-    .carousel-inner {
-      border-radius: 15px;
-      overflow: hidden;
-    }
-
-    .carousel-item img {
-      width: 100%;
-      height: 600px;
-      object-fit: cover;
-    }
-
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-      background: rgba(29, 29, 29, 0.5);
-      border-radius: 50%;
-      background-size: 60% 60%;
-      background-position: center;
-      background-repeat: no-repeat;
-      width: 2.5rem;
-      height: 2.5rem;
-    }
-
-    .carousel-control-prev-icon {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 16 16'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
-    }
-
-    .carousel-control-next-icon {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 16 16'%3E%3Cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
-    }
-
-    ul {
-      padding-left: 1.5rem;
-    }
-
-    ul li {
-      margin-bottom: 0.5rem;
-    }
-
-    p {
-      text-align: justify;
-    }
-
-    .title {
-      font-size: 3vw;
-      font-weight: 800;
-    }
-
-    .title-container {
-      background-color: #9f9f9f76;
-      width: fit-content;
-      padding: 20px 50px;
-      border-radius: 12px;
-    }
-
-    @media (max-width: 575.98px) {
-      .animate-title {
-        font-size: 1.8rem;
-      }
-
-      .animate-subtitle {
-        font-size: 0.95rem;
-      }
-
-      .carousel-item img {
-        height: 250px;
-      }
-
-      .glass {
-        padding: 1rem 1.2rem;
-      }
-
-      .header-buttons {
-        flex-direction: column;
-        gap: 0.8rem;
-      }
-
-      .header-buttons .btn {
-        width: 100%;
-      }
-
-      .title-container {
-        padding: 15px 25px;
-      }
-
-      .title {
-        font-size: 6vw;
-      }
-
-      footer {
-        font-size: 0.9rem;
-        height: auto;
-        padding: 2rem 1rem;
-      }
-    }
-
-    @media (min-width: 576px) and (max-width: 991.98px) {
-      .title {
-        font-size: 4.5vw;
-      }
-
-      .carousel-item img {
-        height: 400px;
-      }
-
-      .glass {
-        padding: 1.2rem 1.5rem;
-      }
-    }
-
-    @media (min-width: 992px) {
-      .title {
-        font-size: 2.5rem;
-      }
-
-      .carousel-item img {
-        height: 600px;
-      }
-    }
-  </style>
+  <title>Gita a Parigi — Presentazione</title>
+  <meta name="description" content="Presentazione della gita a Parigi: Montmartre, Sacré-Cœur e i luoghi della Comune di Parigi."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/subpages.css">
 </head>
 <body>
-  <header class="hero-header">
-    <div class="container text-center title-container">
-      <h1 class="animate-title title">Giorno 3 - Versailles</h1>
-      <p class="animate-subtitle">Esplora la magnificenza e i segreti della Reggia di Versailles</p>
-      <div class="header-buttons mt-4 d-flex justify-content-center flex-wrap gap-3">
-        <a href="#visualizzazione" class="btn btn-outline-light">Vai alla visualizzazione</a>
-        <a href="../index.html" class="btn btn-outline-light">Torna alla home</a>
+  <a class="skip" href="#contenuto">Salta al contenuto</a>
+
+  <header>
+    <div class="container nav">
+      <div class="brand" aria-label="Logo e titolo">
+        <img src="../Images/logo.png" alt="Logo Tour Eiffel" class="logo">
+        <span>Gita a Parigi 2025</span>
       </div>
+      <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
+      <ul id="menu" role="menubar">
+        <li role="none"><a role="menuitem" href="../index.html" aria-current="page">Home</a></li>
+        <li role="none"><a role="menuitem" href="../Giorno1/Giorno1.html" aria-current="page">Giorno 1</a></li>
+        <li role="none"><a role="menuitem" href="../Giorno2/Giorno2.html">Giorno 2</a></li>
+        <li role="none"><a role="menuitem" href="../Giorno3/Giorno3.html">Giorno 3</a></li>
+        <li role="none"><a role="menuitem" href="../Giorno4/Giorno4.html">Giorno 4</a></li>
+        <li role="none"><a role="menuitem" href="../Giorno5/Giorno5.html">Giorno 5</a></li>
+      </ul>
     </div>
   </header>
 
-  <div class="container" id="visualizzazione">
-    <section class="glass my-4">
-      <h2 class="section-title">Galleria Fotografica</h2>
-      <div id="carouselVersailles" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-        <div class="carousel-inner">
-          <div class="carousel-item">
-            <img src="./assets/images/EsternoReggiaDiVersailles.png" class="d-block w-100" alt="Galleria degli Specchi">
-          </div>
-          <div class="carousel-item">
-            <img src="./assets/images/BacinoDiLatona.jpeg" class="d-block w-100" alt="Facciata della Reggia di Versailles">
-          </div>
-          <div class="carousel-item">
-            <img src="./assets/images/FontanaDiApollo.jpg" class="d-block w-100" alt="Fontana di Apollo">
-          </div>
-          <div class="carousel-item active">
-            <img src="./assets/images/GalleriaDegliSpecchi.jpg" class="d-block w-100" alt="Galleria degli Specchi">
-          </div>
-          <div class="carousel-item">
-            <img src="./assets/images/OrangerieDiVersailles.jpg" class="d-block w-100" alt="Orangerie di Versailles">
-          </div>
+  <main id="contenuto">
+    <!-- HERO -->
+    <section id="intro" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="tagline">Presentazione didattica</span>
+          <h1>Parigi tra arte, spiritualità e storia civile</h1>
+          <p>
+            Una passeggiata guidata per scoprire <strong>Montmartre</strong>, la basilica del <strong>Sacré-Cœur</strong> e i luoghi chiave della <strong>Comune di Parigi (1871)</strong>.
+          </p>
+          <a class="cta" href="#itinerario" aria-label="Vai all'itinerario">Vedi l'itinerario ↓</a>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselVersailles" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselVersailles" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </button>
+        <div class="hero-art" role="img" aria-label="Grafica astratta ispirata ai colori di Parigi"></div>
       </div>
     </section>
 
-    <section class="glass">
-      <div class="section-title">
-        <button data-bs-toggle="collapse" data-bs-target="#storia">La Storia di Versailles</button>
-      </div>
-      <div class="collapse" id="storia">
-        <p>Il Palazzo di Versailles nasce come padiglione di caccia voluto da Luigi XIII, ma è sotto Luigi XIV, il Re Sole, che si trasforma in uno dei palazzi più sfarzosi d’Europa. Costruito per simboleggiare il potere assoluto della monarchia francese, Versailles divenne il centro politico e culturale del paese fino alla Rivoluzione Francese del 1789. Ogni sala, affresco e giardino fu progettato per esaltare la grandezza del sovrano. Il palazzo fu anche teatro di momenti storici fondamentali, come la firma del Trattato di Versailles nel 1919, che pose fine alla Prima Guerra Mondiale.</p>
-      </div>
-    </section>
-
-    <section class="glass">
-      <div class="section-title">
-        <button data-bs-toggle="collapse" data-bs-target="#attrazioni">Le Attrazioni Più Gettonate</button>
-      </div>
-      <div class="collapse" id="attrazioni">
-        <p>Tra i luoghi più ammirati spicca la <strong>Galleria degli Specchi</strong>, un corridoio maestoso ornato con 357 specchi e affacciato sui giardini reali. Altri spazi iconici sono la <strong>Camera del Re</strong>, il <strong>Grand Trianon</strong> e il <strong>Petit Trianon</strong>, residenza privata di Maria Antonietta. Non può mancare una visita al <strong>Teatro dell’Opera</strong> e alla Cappella Reale, autentiche meraviglie architettoniche.</p>
-      </div>
-    </section>
-
-    <section class="glass">
-      <div class="section-title">
-        <button data-bs-toggle="collapse" data-bs-target="#curiosita">Curiosità</button>
-      </div>
-      <div class="collapse" id="curiosita">
-        <ul>
-          <li>La Galleria degli Specchi era una dimostrazione di superiorità tecnologica dell’epoca.</li>
-          <li>Il palazzo ospitava più di 3.000 persone tra nobili, artisti e servitori.</li>
-          <li>Maria Antonietta fece costruire un villaggio rustico, “Hameau de la Reine”.</li>
-          <li>Ogni domenica si tenevano spettacoli con fontane danzanti e musica dal vivo.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="glass">
-      <div class="section-title">
-        <button data-bs-toggle="collapse" data-bs-target="#giardini">I Giardini di Versailles</button>
-      </div>
-      <div class="collapse" id="giardini">
-        <p>I giardini di Versailles, progettati da André Le Nôtre, si estendono su oltre 800 ettari. Caratterizzati da geometrie perfette, fontane scenografiche e viali alberati, sono il massimo esempio del giardino alla francese. L’acqua veniva pompata attraverso un ingegnoso sistema idraulico, alimentando oltre 50 fontane funzionanti.</p>
-      </div>
-    </section>
-
-    <section class="glass">
-      <div class="section-title">
-        <button data-bs-toggle="collapse" data-bs-target="#info">Informazioni</button>
-      </div>
-      <div class="collapse show" id="info">
-        <p>Per orari aggiornati, biglietti, eventi speciali e altre informazioni ufficiali, ti invitiamo a consultare il sito ufficiale della Reggia di Versailles. 
-          <a href="https://en.chateauversailles.fr/" target="_blank" rel="noopener noreferrer">Visita il sito ufficiale</a>
-        </p>
-        <div class="text-center mt-3">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://en.chateauversailles.fr/" alt="QR code Versailles" width="160" height="160" style="border-radius: 12px; border: 5px solid #121212;">
+    <!-- LUOGHI -->
+    <section id="luoghi">
+      <div class="container">
+        <h2 class="section-title">Luoghi in evidenza</h2>
+        <p class="section-sub">Tre tappe per connettere geografia, arte e storia contemporanea.</p>
+        <div class="cards">
+          <article class="card">
+            <div class="thumb" role="img" aria-label="Collina di Montmartre"></div>
+            <span class="chip">Quartiere</span>
+            <h3>Montmartre</h3>
+            <p>Il villaggio degli artisti: vicoli, atelier e panorami sulla città. Ottimo per osservazioni urbanistiche e storia dell’arte moderna.</p>
+            <a class="more" href="montmartre.html">Approfondisci →</a>
+          </article>
+          <article class="card">
+            <div class="thumb" role="img" aria-label="Basilica del Sacré-Cœur"></div>
+            <span class="chip">Monumento</span>
+            <h3>Sacré-Cœur</h3>
+            <p>Basilica neobizantina simbolo della Terza Repubblica. Spunto per riflettere su religione, politica e memoria collettiva.</p>
+            <a class="more" href="sacre-coeur.html">Approfondisci →</a>
+          </article>
+          <article class="card">
+            <div class="thumb" role="img" aria-label="Luoghi della Comune di Parigi"></div>
+            <span class="chip">Storia</span>
+            <h3>La Comune di Parigi</h3>
+            <p>Pagine di democrazia e conflitto (1871): Hôtel de Ville, Place de la Bastille e altri luoghi della memoria civile.</p>
+            <a class="more" href="commune.html">Approfondisci →</a>
+          </article>
         </div>
       </div>
     </section>
+
+    <!-- ITINERARIO -->
+    <section id="itinerario">
+      <div class="container">
+        <h2 class="section-title">Itinerario proposto</h2>
+        <p class="section-sub">Durata indicativa: mezza giornata (4–5 ore). Tempi flessibili in base al gruppo.</p>
+        <div class="grid">
+          <div class="panel">
+            <div class="timeline" aria-label="Sequenza dell'itinerario">
+
+  <!-- Trasferimento iniziale -->
+  <div class="item">
+    <h4>Partenza — B&B HOTEL Paris Porte de la Villette</h4>
+    <div class="time">08:58</div>
+    <p class="section-sub">4 Rue Emile Reynaud, 75019 Paris</p>
   </div>
 
+  <div class="item">
+    <h4><span >A piedi </span> Verso “Aimé Césaire” (M12)</h4>
+    <div class="time">08:58 — 09:17</div>
+    <p class="section-sub">Circa 19 min, 1,3 km</p>
+  </div>
+
+  <div class="item">
+    <h4><span >M12</span> Aimé Césaire → Abbesses (direzione “Mairie d’Issy”) </h4>
+    <div class="time">09:17 — 09:28</div>
+    <p class="section-sub">11 min — 7 fermate</p>
+  </div>
+
+  <div class="item">
+    <h4><span >A piedi</span> Abbesses → Montmartre</h4>
+    <div class="time">09:28 — 09:37</div>
+    <p class="section-sub">Circa 9 min, 500 m</p>
+  </div>
+
+  <!-- Visita (orari aggiornati in base all’arrivo a Montmartre) -->
+  <div class="item">
+    <h4>Tour di Montmartre (Place du Tertre, Saint-Pierre, panorama)</h4>
+    <div class="time">09:40 — 10:40</div>
+  </div>
+
+  <div class="item">
+    <h4>Visita al Sacré-Cœur (esterni + interni)</h4>
+    <div class="time">10:40 — 11:25</div>
+  </div>
+
+  <div class="item">
+    <h4>Spostamento verso Hôtel de Ville (????)</h4>
+    <div class="time">11:25 — 11:55</div>
+  </div>
+
+  <div class="item">
+    <h4>Percorso storico: Hôtel de Ville → Bastille (????)</h4>
+    <div class="time">11:55 — 12:40</div>
+  </div>
+<h2 style="color: brown;"><b>gli orari sono ancora da definire meglio come il percorso</b></h2>
+</div>
+
+    </section>
+
+    <!-- INFO -->
+    <section id="info">
+      <div class="container grid">
+        <div class="panel">
+          <h2 class="section-title">Info utili</h2>
+          <ul>
+            <li><strong>Trasporti:</strong> Metro linee 2 (Anvers), 12 (Abbesses), 1 (Hôtel de Ville / Bastille).</li>
+            <li><strong>Accessibilità:</strong> scale ripide a Montmartre; funicolare disponibile.</li>
+            <li><strong>Abbigliamento:</strong> scarpe comode, acqua, copri-spalle per ingresso in basilica.</li>
+            <li><strong>Materiali:</strong> smartphone o taccuino per attività; auricolari per eventuale audioguida.</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Prenotazioni & contatti</h3>
+          <p>Per aggiornare orari, punto di ritrovo e docenti accompagnatori inserire qui le informazioni di classe.</p>
+          <p><em>Segnaposto:</em> Classe, data, numero studenti, docenti.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
   <footer>
-    <p style="text-align: center;">Sito sviluppato da:<br><strong>Fusconi Luca, Davide Panzavolta, Claudiu Cotea Floran, Nicolò Emanuele Mele</strong><br>In collaborazione con: <strong><br>&copy; 2025 5AIN ITIS Ravenna.</strong></p>
+    <div class="container foot" style="width:100%;display: flex;align-items: center;justify-content: center;">
+      <p style="text-align: center;">Sito sviluppato da:<br><strong>Jacopo Capacci Zanette - Gianluigi Tridello - Federico Zavaglini</strong><br>In collaborazione con: <strong><br>&copy; 2025 5AIN ITIS Ravenna.</strong></p>
+    </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Mobile menu toggle
+    const btn = document.querySelector('.menu-btn');
+    const menu = document.getElementById('menu');
+    btn?.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(open));
+    });
+
+    // Active link on scroll
+    const links = [...document.querySelectorAll('header a[href^="#"]')];
+    const sections = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const id = '#' + entry.target.id;
+        const link = links.find(l => l.getAttribute('href') === id);
+        if(link){
+          if(entry.isIntersecting){ link.classList.add('active-link'); }
+          else { link.classList.remove('active-link'); }
+        }
+      });
+    }, { rootMargin: '-40% 0px -50% 0px', threshold: 0.01 });
+    sections.forEach(sec => observer.observe(sec));
+  </script>
 </body>
 </html>

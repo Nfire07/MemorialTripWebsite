@@ -279,7 +279,6 @@ footer { padding:36px 0 70px; color:var(--muted); }
   background:linear-gradient(135deg, rgba(79,124,255,.18), rgba(159,122,234,.18)) !important;
 }
 
-/* Placeholder panels (dettagli luoghi) */
 .img-montmartre {
   min-height:220px;
   border-radius:12px;
