@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Interni Parigini — Gita a Parigi</title>
+  <title>Interni di Versailles — Gita a Parigi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel("preconnect") href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <style>
     :root{
@@ -13,51 +13,154 @@
       --brand:#4f7cff; --brand-2:#9f7aea; --shadow:0 10px 30px rgba(0,0,0,.25);
       --radius:14px; --maxw:900px; --border:1px solid rgba(255,255,255,.08);
     }
-    @media (prefers-color-scheme: light){:root{--bg:#fbfbfd;--panel:#ffffff;--text:#111317;--muted:#5b6472;--shadow:0 10px 30px rgba(20,23,29,.08)}}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:var(--bg)}
-    a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:26px 18px}
-    .crumbs{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:14px;margin:12px 0 18px}
-    .panel{background:var(--panel);border:var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
-    .chip{display:inline-block;font-size:12px;color:#fff;background:linear-gradient(135deg,var(--brand),var(--brand-2));padding:6px 10px;border-radius:999px}
-    h1{margin:6px 0 8px} .sub{color:var(--muted);margin:0 0 18px}
-    .meta-row{display:flex;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:14px}
-
-    .hero{height:220px;border-radius:12px;background:linear-gradient(135deg, rgba(159,122,234,.18), rgba(79,124,255,.14));margin-top:14px;overflow:hidden}
-    .hero img{width:100%;height:100%;object-fit:cover;display:block}
-
-    .cards{display:grid;grid-template-columns:1fr;gap:18px}
-    .card{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;align-items:stretch;background:var(--panel);border:var(--border);border-radius:12px;padding:16px}
-    .card h3{margin:0 0 6px}
-    .card p{margin:0;color:var(--muted);line-height:1.5}
-    .media{position:relative;width:100%;border-radius:10px;overflow:hidden;border:var(--border);background:#0b0d12}
-    .media::before{content:"";display:block;aspect-ratio:16/10;width:100%}
-    .media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-    .badge{display:inline-block;font-size:11px;color:#cfd5e5;background:#1b2130;border:1px solid rgba(255,255,255,.06);padding:4px 8px;border-radius:999px;margin-bottom:8px}
-
-    @media (max-width:780px){.card{grid-template-columns:1fr;}}
-
-    footer{color:var(--muted);margin:24px 0 40px}
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#fbfbfd; --panel:#ffffff; --text:#111317; --muted:#5b6472;
+        --shadow:0 10px 30px rgba(20,23,29,.08)
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+    a {
+      color: var(--brand);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 26px 18px;
+    }
+    .crumbs {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 14px;
+      margin: 12px 0 18px;
+    }
+    .panel {
+      background: var(--panel);
+      border: var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+    .chip {
+      display: inline-block;
+      font-size: 12px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      padding: 6px 10px;
+      border-radius: 999px;
+    }
+    h1 { margin: 6px 0 8px; }
+    .sub { color: var(--muted); margin: 0 0 18px; }
+    .meta-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .hero {
+      height: 220px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(159,122,234,.18), rgba(79,124,255,.14));
+      margin-top: 14px;
+      overflow: hidden;
+    }
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+    .card {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 16px;
+      align-items: stretch;
+      background: var(--panel);
+      border: var(--border);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .card h3 { margin: 0 0 6px; }
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .media {
+      position: relative;
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      border: var(--border);
+      background: #0b0d12;
+    }
+    .media::before {
+      content: "";
+      display: block;
+      aspect-ratio: 16/10;
+      width: 100%;
+    }
+    .media img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      color: #cfd5e5;
+      background: #1b2130;
+      border: 1px solid rgba(255,255,255,.06);
+      padding: 4px 8px;
+      border-radius: 999px;
+      margin-bottom: 8px;
+    }
+    @media (max-width: 780px) {
+      .card { grid-template-columns: 1fr; }
+    }
+    footer {
+      color: var(--muted);
+      margin: 24px 0 40px;
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
     <nav class="crumbs">
-      <a href="Giorno3.html">Home</a> <span>›</span> <a href="Giorno3.html#itinerario">Itinerario</a> <span>›</span> <span>Interni Storici Parigini</span>
+      <a href="Giorno3.html">Home</a> <span>›</span> <a href="Giorno3.html#itinerario">Itinerario</a> <span>›</span> <span>Interni di Versailles</span>
     </nav>
 
     <header class="panel page">
-      <span class="chip">Architettura • Interni</span>
-      <h1>Alla scoperta degli interni storici di Parigi</h1>
+      <span class="chip">Palazzo • Interni</span>
+      <h1>Dentro Versailles: un viaggio negli interni reali</h1>
       <p class="sub">
-        Dai saloni sontuosi del Louvre agli appartamenti reali del Palais-Royal, fino alle sale decorative dei palazzi quartiere per quartiere: questa pagina guida la visita agli ambienti interni che rivelano l’eleganza, la memoria e le scelte stilistiche delle élite parigine nei secoli.
+        Dalla Galleria degli Specchi agli appartamenti del Re e della Regina, passando per le sale di rappresentanza e le stanze private: questa pagina guida la scoperta degli ambienti interni più emblematici della Reggia di Versailles, con riflessioni su simbolismo, arte e vita di corte.
       </p>
       <div class="meta-row">
-        <span>Durata consigliata: 1–2 ore</span> · <span>Adatto a gruppi scolastici</span> · <span>Attenzione: orari di visita</span>
+        <span>Durata consigliata: 1–1,5 ore</span> · <span>Accesso con biglietto prenotato</span> · <span>Fotografia senza flash</span>
       </div>
       <div class="media" aria-hidden="true">
-        <img src="imgs/interni_header.jpg" alt="Interno decorato parigino" loading="lazy">
+        <img src="assets/images/PalaceVersailles.jpg" alt="Interni decorati della Reggia di Versailles" loading="lazy">
       </div>
     </header>
 
@@ -68,11 +171,11 @@
         <article class="card">
           <div>
             <span class="badge">Tappa 1</span>
-            <h3>Saloni del Louvre</h3>
-            <p>All’interno del Museo del Louvre non solo opere d’arte: gli ambienti storici furono un tempo residenza reale. I saloni decorati, volte affrescate e elementi architettonici originali mostrano come la cultura e il potere si riflettessero anche negli spazi quotidiani della corte.</p>
+            <h3>Galleria degli Specchi (Galerie des Glaces)</h3>
+            <p>La sala più celebre di Versailles: 357 specchi riflettono le finestre che si affacciano sui giardini. Il soffitto è decorato con affreschi che narrano le imprese di Luigi XIV e la gloria dell’assolutismo. Questo ambiente è elemento simbolico e coreografico della rappresentanza reale.</p>
           </div>
           <div class="media">
-            <img src="imgs/interni_louvre.jpg" alt="Sala interna del Louvre" loading="lazy">
+            <img src="assets/images/GalleriaDegliSpecchi2.jpg" alt="Galleria degli Specchi di Versailles" loading="lazy">
           </div>
         </article>
 
@@ -80,11 +183,11 @@
         <article class="card">
           <div>
             <span class="badge">Tappa 2</span>
-            <h3>Appartamenti del Palais-Royal</h3>
-            <p>Il Palais-Royal fu residenza reale poi luogo di cultura e politica. Gli appartamenti mostrano stili classici e decorazioni raffinate: specchi, boiserie, lampadari e giochi di luce. È un ottimo spunto per parlare di rappresentanza, privacy e simboli del potere.</p>
+            <h3>Appartamenti del Re</h3>
+            <p>Queste stanze private e ufficiali erano utilizzate dal monarca per cerimonie, udienze e vita quotidiana. Ogni stanza è decorata con stili e allegorie che rimandano all’ordine cosmico, alla regalità e al potere. È interessante osservare l’evoluzione stilistica nei passaggi tra sale.</p>
           </div>
           <div class="media">
-            <img src="imgs/interni_palais_royal.jpg" alt="Interni del Palais-Royal" loading="lazy">
+            <img src="assets/images/AppartamentiDelRe.jpg" alt="Appartamenti del Re a Versailles" loading="lazy">
           </div>
         </article>
 
@@ -92,11 +195,11 @@
         <article class="card">
           <div>
             <span class="badge">Tappa 3</span>
-            <h3>Salone delle Armi a Versailles (parte interna)</h3>
-            <p>Parte della Reggia è spesso trascurata. Il Salone delle Armi conserva arredi, armature e decorazioni che parlano del ruolo militare della monarchia. La visita interna consente di riflettere sul rapporto tra potere, simboli militari e arte decorativa.</p>
+            <h3>Appartamenti della Regina</h3>
+            <p>Alloggi simmetrici ma con decorazioni pensate per la sovrana: affreschi, mobili intarsiati, tappezzerie floreali e dettagli raffinati caratterizzano queste stanze. Spesso interpretate come ambienti più “intimi” rispetto a quelli del Re.</p>
           </div>
           <div class="media">
-            <img src="imgs/interni_armi_versailles.jpg" alt="Sala delle Armi Versailles" loading="lazy">
+            <img src="assets/images/AppartamentiDellaRegina.jpg" alt="Appartamenti della Regina a Versailles" loading="lazy">
           </div>
         </article>
 
@@ -104,11 +207,11 @@
         <article class="card">
           <div>
             <span class="badge">Tappa 4</span>
-            <h3>Salon e biblioteche storiche</h3>
-            <p>Alcuni palazzi parigini, come l’Hôtel de Sully o l’Hôtel de Ville, conservano saloni interni e biblioteche storiche riccamente decorati. Specchi, soffitti affrescati e boiserie testimoniano i gusti aristocratici e l’amore per il sapere e la cultura.</p>
+            <h3>Sale di rappresentanza e cerimonia</h3>
+            <p>Sale come la Sala del Trono, le sale di udienza e le gallerie laterali erano progettate per impressionare gli ospiti e ricevere ambasciatori. Materiali preziosi, alti soffitti e ornamenti dorati parlano del rapporto tra arte e potere nella monarchia assoluta.</p>
           </div>
           <div class="media">
-            <img src="imgs/interni_salone_libri.jpg" alt="Salone interno con libreria storica" loading="lazy">
+            <img src="assets/images/SalaDiRappresentanza.jpg" alt="Sale di rappresentanza di Versailles" loading="lazy">
           </div>
         </article>
 
@@ -116,11 +219,11 @@
         <article class="card">
           <div>
             <span class="badge">Tappa 5</span>
-            <h3>Stanze napoleoniche</h3>
-            <p>Dopo la Rivoluzione e l’impero, alcuni palazzi furono ridecorati in stile neoclassico e imperiale. Le stanze napoleoniche — con mobili, decorazioni e simbologia imperiale — raccontano un’altra fase della storia francese, spesso in dialogo con gli elementi architettonici precedenti.</p>
+            <h3>La Cappella Reale</h3>
+            <p>Ultima parte del palazzo ad essere completata, la cappella fu consacrata nel 1710. Gli affreschi illustrano temi religiosi e monarchici, con un collegamento diretto tra sacro e potere reale, riflettendo l’ideale del re come figura investita anche spiritualmente.</p>
           </div>
           <div class="media">
-            <img src="imgs/interni_napoleonici.jpg" alt="Interno in stile napoleonico" loading="lazy">
+            <img src="assets/images/CappellaInterna.jpg" alt="Cappella interna della Reggia di Versailles" loading="lazy">
           </div>
         </article>
 
@@ -128,17 +231,17 @@
         <article class="card">
           <div>
             <span class="badge">Tappa 6</span>
-            <h3>Gallerie decorative e cortili interni</h3>
-            <p>Molti palazzi parigini hanno cortili interni con gallerie affrescate, volte a ventilazione e luce naturale, e decorazioni che uniscono interno ed esterno. È interessante osservare come l’architettura si apre su spazi interni semi-pubblici che uniscono estetica e funzionalità urbana.</p>
+            <h3>Stanze dei Trianon e appartamenti minori</h3>
+            <p>Nel complesso di Versailles ci sono anche ambienti meno noti, come quelli del Grand Trianon e Petit Trianon, o stanze di servitù e ambienti minori nel corpo centrale. Questi spazi mostrano come la Reggia non fosse solo rappresentazione, ma anche struttura vivente e organizzata.</p>
           </div>
           <div class="media">
-            <img src="imgs/interni_gallerie.jpg" alt="Galleria interna di palazzo parigino" loading="lazy">
+            <img src="assets/images/Triaton.jpg" alt="Interno del Trianon, Versailles" loading="lazy" style="width: 50%;">
+            <img src="assets/images/PetitTriaton.jpg" alt="Interno del Trianon, Versailles" loading="lazy" style="width: 50%;margin-left: 50%;">
           </div>
         </article>
       </div>
     </section>
-
-     <footer>
+    <footer>
         <div class="container foot" style="width:100%;display: flex;align-items: center;justify-content: center;">
         <p style="text-align: center;">Sito sviluppato da:<br><strong>Cotea Claudiu Florin - Panzavolta Davide - Fusconi Luca - Mele Nicolo' Emanuele</strong><br>In collaborazione con: <strong><br>&copy; 2025 5AIN ITIS Ravenna.</strong></p>
         </div>

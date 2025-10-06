@@ -1,68 +1,92 @@
-/* Reset e base */
-*,
-*::before,
-*::after {
+/* ================================
+   🌐 Reset e base
+================================ */
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
-body,
 html {
+  scroll-behavior: smooth;
+}
+
+body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  width: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
   overflow-x: hidden;
 }
 
-/* Hero section */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  width: 100%;
-  background: url('img/paris-background.jpg') center/cover no-repeat;
-  overflow: hidden;
-}
-
-/* Overlay */
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 51, 102, 0.5);
-  z-index: 1;
-}
-
-/* Navbar */
+/* ================================
+   🧭 Navbar
+================================ */
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 2;
-  color: white;
+  background-color: rgba(0, 51, 102, 0.3);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 51, 102, 0.6);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.navbar:hover {
+  background-color: rgba(0, 51, 102, 0.8);
 }
 
 .nav-title {
-  font-size: 1.5em;
+  font-size: 1.8em;
   font-weight: bold;
+  color: white;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 25px;
 }
 
-.nav-links li a {
+.nav-links a {
+  position: relative;
   color: white;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1em;
+  padding: 5px 0;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #ffd700;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  transform: scale(1.2);
+  color: #ffd700;
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus::after {
+  width: 100%;
 }
 
 /* Hamburger menu */
@@ -70,100 +94,222 @@ html {
   display: none;
   font-size: 2em;
   cursor: pointer;
+  color: white;
 }
 
 #menu-toggle {
   display: none;
 }
 
-/* Intro text */
-.intro {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  z-index: 2;
-  color: white;
-  max-width: 600px;
-  font-size: 1.2em;
-}
-
-/* Carousel */
-.carousel {
-  padding: 40px 0;
-  background-color: #f9f9f9;
-  text-align: center;
-}
-
-.carousel-container {
+/* ================================
+   🏞️ Hero Section con carosello sfondo
+================================ */
+.hero {
   position: relative;
-  max-width: 800px;
-  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px 20px 60px;
   overflow: hidden;
 }
 
-.carousel-slide {
-  display: none;
-  width: 100%;
-  height: auto;
-}
-
-.carousel-slide.active {
-  display: block;
-}
-
-.prev,
-.next {
+.carousel-background {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.carousel-background .carousel-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-background .carousel-slide.active {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: transparent; /* Nessun colore blu */
+  z-index: 1;
+}
+
+.intro {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
   color: white;
-  border: none;
-  font-size: 2em;
-  padding: 10px;
-  cursor: pointer;
 }
 
-.prev {
-  left: 10px;
+.intro h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
 }
 
-.next {
-  right: 10px;
+.intro p {
+  font-size: 1.2em;
+  line-height: 1.6;
 }
 
-/* Map section */
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #ffd700;
+  color: #003366;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+  background-color: #ffcc00;
+}
+
+.hero {
+  margin-bottom: 100px; /* Spazio bianco tra hero e mappa */
+}
+
+/* ================================
+   🗺️ Mappa
+================================ */
 .map-section {
-  padding: 40px 0;
+  padding: 60px 20px;
+  background-color: #f0f0f0;
+}
+
+.map-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .map-container {
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
 .map-sidebar {
-  flex: 1 1 200px;
+  flex: 1 1 250px;
   padding: 20px;
-  background-color: #eee;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.map-sidebar h3 {
+  margin-bottom: 15px;
+}
+
+.map-sidebar label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.map-sidebar label.attivo {
+  background-color: #ffd700;
+  color: #003366;
 }
 
 #map {
   flex: 3 1 600px;
-  height: 400px;
+  min-height: 400px;
+  width: 100%;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
-/* Responsive */
+#map-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #666;
+  font-size: 1.2em;
+  text-align: center;
+  z-index: 10;
+}
+
+/* Popup immagine */
+.leaflet-popup-content img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+/* ================================
+   ⬆️ Pulsante "Torna su"
+================================ */
+.leaflet-top.leaflet-left {
+  top: 80px !important;
+}
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #ffd700, #ff9900);
+  color: #003366;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 1.5em;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+  background: linear-gradient(135deg, #ffcc00, #ff6600);
+}
+
+/* ================================
+   🧾 Footer
+================================ */
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 40px;
+}
+
+.footer-content p {
+  margin: 5px 0;
+}
+
+/* ================================
+   📱 Responsive
+================================ */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     position: absolute;
     top: 60px;
     right: 0;
     width: 100vw;
-    padding: 10px;
+    padding: 20px;
   }
 
   #menu-toggle:checked + .hamburger + .nav-links {
@@ -172,6 +318,7 @@ html {
 
   .hamburger {
     display: block;
+    margin-left: auto;
   }
 
   .map-container {
@@ -179,6 +326,25 @@ html {
   }
 
   #map {
-    height: 300px;
+    min-height: 300px;
   }
+
+  .intro h1 {
+    font-size: 2em;
+  }
+
+  .map-section h2 {
+    font-size: 1.5em;
+  }
+
+  .carousel-background .carousel-slide {
+    height: 100%;
+  }
+}
+
+/* ================================
+   🎯 Scroll offset per ancoraggi
+================================ */
+:target {
+  scroll-margin-top: 100px;
 }
