@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Conciergerie — Gita a Parigi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1115; --panel:#151923; --text:#e6e8ee; --muted:#a8b0c0;
+      --brand:#4f7cff; --brand-2:#9f7aea; --shadow:0 10px 30px rgba(0,0,0,.25);
+      --radius:14px; --maxw:900px; --border:1px solid rgba(255,255,255,.08);
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#fbfbfd; --panel:#ffffff; --text:#111317; --muted:#5b6472;
+        --shadow:0 10px 30px rgba(20,23,29,.08)
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+    a {
+      color: var(--brand);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 26px 18px;
+    }
+    .crumbs {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 14px;
+      margin: 12px 0 18px;
+    }
+    .panel {
+      background: var(--panel);
+      border: var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+    .chip {
+      display: inline-block;
+      font-size: 12px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      padding: 6px 10px;
+      border-radius: 999px;
+    }
+    h1 { margin: 6px 0 8px; }
+    .sub { color: var(--muted); margin: 0 0 18px; }
+    .meta-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .hero {
+      height: 220px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(159,122,234,.18), rgba(79,124,255,.14));
+      margin-top: 14px;
+      overflow: hidden;
+    }
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+    .card {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 16px;
+      align-items: stretch;
+      background: var(--panel);
+      border: var(--border);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .card h3 { margin: 0 0 6px; }
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .media {
+      position: relative;
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      border: var(--border);
+      background: #0b0d12;
+    }
+    .media::before {
+      content: "";
+      display: block;
+      aspect-ratio: 16/10;
+      width: 100%;
+    }
+    .media img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      color: #cfd5e5;
+      background: #1b2130;
+      border: 1px solid rgba(255,255,255,.06);
+      padding: 4px 8px;
+      border-radius: 999px;
+      margin-bottom: 8px;
+    }
+    @media (max-width: 780px) {
+      .card { grid-template-columns: 1fr; }
+    }
+    footer {
+      color: var(--muted);
+      margin: 24px 0 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="crumbs">
+      <a href="Giorno5.html">Home</a> <span>></span> <a href="Giorno5.html#itinerario">Itinerario</a> <span>></span> <span>Concengerie</span>
+    </nav>
+
+    <header class="panel page">
+      <span class="chip">Palazzo • Interni</span>
+      <h1>Dentro Concengerie: da prigione a palazzo della giustizia</h1>
+      <p class="sub">
+        La Conciergerie, sull’Île de la Cité a Parigi, fu in origine la residenza dei re di Francia fino al XIV secolo, quando la corte si trasferì al Louvre e a Vincennes. Divenne quindi sede del Parlamento di Parigi e una prigione reale, amministrata dal concierge, da cui prese il nome. Durante la Rivoluzione francese fu la principale prigione del Tribunale rivoluzionario, ospitando tra gli altri Maria Antonietta. Successivamente rimase carcere fino al XIX secolo, per poi trasformarsi in monumento storico e museo, simbolo della storia francese tra monarchia e rivoluzione.
+      </p>
+      <div class="meta-row">
+        <span>Durata consigliata: x ore</span> · <span>Accesso con biglietto prenotato</span> · <span>Fotografia senza flash</span>
+      </div>
+      <div class="media" aria-hidden="true">
+        <img src="assets/images/conciergerie.jpg" alt="Concengerie" loading="lazy">
+      </div>
+    </header>
+
+    <section class="panel">
+      <h2>Tappe principali</h2>
+      <div class="cards">
+        <!-- TAPPA 1 -->
+         <article class="card">
+          <div>
+            <span class="badge">Tappa 1</span>
+            <h3>Orologio</h3>
+            <p>L’orologio della Conciergerie, installato nel 1371, è considerato il più antico orologio pubblico di Parigi. Si trova sulla Tour de l’Horloge, la torre dell’orologio che affaccia sulla Senna. Realizzato dal maestro orologiaio Henri de Vic, serviva a segnare il tempo per tutti i parigini, quando gli orologi personali erano ancora un lusso.Nel corso dei secoli è stato restaurato più volte, e il suo quadrante dorato con decorazioni blu e gigli reali rimane un simbolo del potere monarchico e dell’antica precisione tecnica francese.</p>
+          </div>
+          <div class="media">
+            <img src="assets/images/orologio.jpg" alt="Appartamenti del Re a Versailles" loading="lazy">
+          </div>
+        </article>
+
+        <!-- TAPPA 2 -->
+        <article class="card">
+          <div>
+            <span class="badge">Tappa 2</span>
+            <h3>Cella di Maria Antonietta</h3>
+            <p>Durante la Rivoluzione Francese, la regina Maria Antonietta fu imprigionata nella Conciergerie nel 1793, in attesa del processo e della ghigliottina. La sua cella era piccola, fredda e sorvegliata costantemente.Oggi il luogo è stato trasformato in una cappella commemorativa chiamata “Chapelle expiatoire”, dove sono conservati oggetti e ricostruzioni che ricordano gli ultimi giorni della regina. È uno degli spazi più visitati e toccanti dell’intera Conciergerie, simbolo del crollo della monarchia francese.</p>
+          </div>
+          <div class="media">
+            <img src="assets/images/cellaMariaAntonietta.jpg" alt="Galleria degli Specchi di Versailles" loading="lazy">
+          </div>
+        </article>
+      </div>
+    </section>
+    <footer>
+        <div class="container foot" style="width:100%;display: flex;align-items: center;justify-content: center;">
+        <p style="text-align: center;">Sito sviluppato da:<br><strong>Luca Marconi - Matteo Savorelli</strong><br>In collaborazione con: <strong><br>&copy; 2025 5AIN ITIS Ravenna.</strong></p>
+        </div>
+    </footer>
+  </div>
+</body>
+</html>
