@@ -207,6 +207,7 @@ header {
 section { padding:64px 0; }
 .section-title { font-size:28px; margin:0 0 18px; }
 .section-sub { color:var(--muted); margin:0 0 26px; }
+.gothic-subtitle { color: #c0c0c0 !important; }
 
 /* Cards */
 .cards {
