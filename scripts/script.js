@@ -42,14 +42,14 @@ document.addEventListener('DOMContentLoaded', () => {
       { coord: [48.8462, 2.3371], label: 'Pantheon', img: 'images/pantheon.jpg', desc: 'Tempio laico che ospita le tombe di grandi francesi.' }
     ],
     giorno3: [
-      { coord: [48.8049, 2.1204], label: 'Reggia di Versailles', img: 'images/versailles.jpg', desc: 'Maestosa residenza reale simbolo dell’assolutismo francese.' },
-      { coord: [48.8156, 2.1265], label: 'Giardini di Versailles', img: 'images/giardini.jpg', desc: 'Spettacolari giardini geometrici progettati da Le Nôtre.' },
-      { coord: [48.8014, 2.1301], label: 'Grand Trianon', img: 'images/trianon.jpg', desc: 'Palazzina privata utilizzata dai sovrani per ritirarsi.' }
-    ],
-    giorno4: [
       { coord: [48.8606, 2.3376], label: 'Museo del Louvre', img: 'images/louvre.jpg', desc: 'Il museo più visitato al mondo, sede della Gioconda.' },
       { coord: [48.8584, 2.2945], label: 'Torre Eiffel', img: 'images/eiffel.jpg', desc: 'Simbolo iconico di Parigi, costruita nel 1889.' },
       { coord: [48.8625, 2.2875], label: 'Campo di Marte', img: 'images/champdemars.jpg', desc: 'Ampio spazio verde ai piedi della Torre Eiffel.' }
+    ],
+    giorno4: [
+      { coord: [48.8049, 2.1204], label: 'Reggia di Versailles', img: 'images/versailles.jpg', desc: 'Maestosa residenza reale simbolo dell’assolutismo francese.' },
+      { coord: [48.8156, 2.1265], label: 'Giardini di Versailles', img: 'images/giardini.jpg', desc: 'Spettacolari giardini geometrici progettati da Le Nôtre.' },
+      { coord: [48.8014, 2.1301], label: 'Grand Trianon', img: 'images/trianon.jpg', desc: 'Palazzina privata utilizzata dai sovrani per ritirarsi.' }
     ],
     giorno5: [
       { coord: [48.8647, 2.3490], label: 'Hôtel de Ville', img: 'images/hoteldeville.jpg', desc: 'Municipio di Parigi, sede storica dell’amministrazione cittadina.' },

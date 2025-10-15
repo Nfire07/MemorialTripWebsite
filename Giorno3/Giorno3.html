@@ -9,6 +9,30 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles/subpages.css">
+  <style>
+    /* Stile menu interno hero */
+    .hero-menu ul {
+      display: flex;
+      gap: 20px;
+      margin: 10px 0 20px 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .hero-menu ul li a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #333;
+      padding: 6px 12px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .hero-menu ul li a:hover,
+    .hero-menu ul li a:focus {
+      background-color: rgba(0,0,0,0.1);
+    }
+  </style>
 </head>
 <body>
   <a class="skip" href="#contenuto">Salta al contenuto</a>
@@ -32,48 +56,96 @@
   </header>
 
   <main id="contenuto">
-    <!-- HERO -->
-    <section id="intro" class="hero">
-      <div class="container hero-grid">
-        <div>
-          <span class="tagline">Presentazione Didattica</span>
-          <h1>Parigi tra giardini, palazzi e bellezza urbana</h1>
-          <p>
-            Una passeggiata attraverso gli spazi verdi e gli interni storici della capitale francese. Dalla regolarità dei giardini di Versailles all’eleganza degli interni parigini.
-          </p>
-          <a class="cta" href="#itinerario" aria-label="Vai all'itinerario">Vedi l'itinerario ↓</a>
-        </div>
-        <div class="hero-art" role="img" aria-label="Grafica astratta ispirata ai giardini parigini"><img src="assets/images/EsternoReggiaDiVersailles.png" alt="Esterno Reggia Di Versailles" class="image"></div>
-      </div>
-    </section>
+  <!-- HERO -->
+<section id="intro" class="hero" style="position:relative; height:80vh; display:flex; align-items:center; justify-content:center; text-align:center; color:white;">
+  <!-- Layer sfondo -->
+  <div style="position:absolute; inset:0; background:url('assets/images/EsternoReggiaDiVersailles.png') center/cover no-repeat; filter:blur(4px); z-index:0;"></div>
+
+  <!-- Contenuto -->
+  <div style="position:relative; z-index:1;">
+    <h1 style="font-size:3rem; font-weight:800; text-shadow:2px 2px 8px rgba(0,0,0,0.7); margin-bottom:30px;">
+      Parigi tra giardini, palazzi e bellezza urbana
+    </h1>
+    <nav class="hero-menu" aria-label="Navigazione interna hero">
+      <ul style="display:flex; justify-content:center; gap:20px; padding:0; list-style:none; margin:0;">
+        <li><a href="#luoghi" class="hero-chip">Monumenti</a></li>
+        <li><a href="#itinerario" class="hero-chip">Itinerario</a></li>
+        <li><a href="#info" class="hero-chip">Info utili</a></li>
+      </ul>
+    </nav>
+  </div>
+</section>
+
+<style>
+/* Chip stile "Giardini" e "Architettura" */
+.hero-chip {
+  display: inline-block;
+  padding: 6px 14px;
+  background-color: #e0c9a6; /* simile ai chip delle card */
+  color: #5c3a21; /* testo scuro marrone */
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 16px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.hero-chip:hover,
+.hero-chip:focus {
+  background-color: #d8b28f; /* colore leggermente più chiaro al passaggio */
+}
+</style>
 
     <!-- LUOGHI -->
-    <section id="luoghi">
-      <div class="container">
-        <h2 class="section-title">Luoghi in evidenza</h2>
-        <p class="section-sub">Due tappe per esplorare Parigi tra natura e architettura.</p>
-        <div class="cards">
-          <article class="card">
-            <div class="thumb" role="img" aria-label="Giardini di Versailles">
-              <img src="assets/images/FontanaDiApollo.jpg" class="image">
-            </div>
-            <span class="chip">Giardini</span>
-            <h3>Giardini di Versailles</h3>
-            <p>Un esempio di paesaggio geometrico e simbolico. Percorso ideale per riflettere su natura, potere e urbanistica del Seicento.</p>
-            <a class="more" href="versailles.html">Approfondisci →</a>
-          </article>
-          <article class="card">
-            <div class="thumb" role="img" aria-label="Interni del Louvre e altri palazzi parigini">
-              <img src="assets/images/GalleriaDegliSpecchi.jpg" class="image">
-            </div>
-            <span class="chip">Architettura</span>
-            <h3>Interni di Versailles</h3>
-            <p>Un viaggio tra sfarzo, potere e simbologia: dalla celebre Galleria degli Specchi agli appartamenti reali, gli interni della Reggia raccontano la grandezza del Re Sole e della corte francese.</p>
-            <a class="more" href="interni.html">Approfondisci →</a>
-          </article>
+<section id="luoghi">
+  <div class="container">
+    <h2 class="section-title">Luoghi in evidenza</h2>
+    <p class="section-sub">Tre tappe per esplorare Parigi tra natura, architettura e storia.</p>
+    <div class="cards">
+      <article class="card">
+        <div class="thumb" role="img" aria-label="Giardini di Versailles">
+          <img src="assets/images/FontanaDiApollo.jpg" class="image">
         </div>
-      </div>
-    </section>
+        <span class="chip">Giardini</span>
+        <h3>Giardini di Versailles</h3>
+        <p>Un esempio di paesaggio geometrico e simbolico. Percorso ideale per riflettere su natura, potere e urbanistica del Seicento.</p>
+        <a class="more" href="versailles.html">Approfondisci →</a>
+      </article>
+
+      <article class="card">
+        <div class="thumb" role="img" aria-label="Interni del Louvre e altri palazzi parigini">
+          <img src="assets/images/GalleriaDegliSpecchi.jpg" class="image">
+        </div>
+        <span class="chip">Architettura</span>
+        <h3>Interni di Versailles</h3>
+        <p>Un viaggio tra sfarzo, potere e simbologia: dalla celebre Galleria degli Specchi agli appartamenti reali, gli interni della Reggia raccontano la grandezza del Re Sole e della corte francese.</p>
+        <a class="more" href="interni.html">Approfondisci →</a>
+      </article>
+
+      <article class="card">
+        <div class="thumb" role="img" aria-label="Association Nationale Les Garibaldiens">
+          <img src="assets/images/AssociationNationale.jpg" class="image">
+        </div>
+        <span class="chip">Extra</span>
+        <h3>Association Nationale Les Garibaldiens</h3>
+        <p>Incontro con il professore e lo storico Eric Gobetti sul libro ‘I carnefici del Duce’.</p>
+        <a class="more" href="#">Approfondisci →</a>
+      </article>
+    </div>
+  </div>
+</section>
+<style>
+/* Gap maggiore tra chip e titolo nelle card */
+.card .chip {
+  display: inline-block;
+  margin-bottom: 12px; /* aumenta lo spazio sotto il chip (prima era 8px o simile) */
+}
+
+.card h3 {
+  margin-top: 0; /* assicura che il margine non venga cumulato */
+  margin-bottom: 12px; /* spazio tra titolo e descrizione */
+}
+</style>
 
     <!-- ITINERARIO -->
     <section id="itinerario">

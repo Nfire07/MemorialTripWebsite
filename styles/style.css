@@ -1,4 +1,4 @@
-/* ================================
+﻿/* ================================
    🌐 Reset e base
 ================================ */
 *, *::before, *::after {
@@ -347,4 +347,100 @@ footer {
 ================================ */
 :target {
   scroll-margin-top: 100px;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: saturate(180%) blur(8px);
+  background: rgba(15, 17, 21, 0.55);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  z-index: 200;
+}
+
+@media (prefers-color-scheme: light) {
+  header {
+    background: rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid rgba(20, 23, 29, 0.06);
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.nav ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav a {
+  display: block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav a[aria-current="page"],
+.nav a:hover {
+  background: linear-gradient(135deg, rgba(79, 124, 255, 0.14), rgba(159, 122, 234, 0.14));
+}
+
+.menu-btn {
+  display: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: transparent;
+  color: var(--text);
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+@media (max-width: 860px) {
+  .nav ul {
+    display: none;
+    position: fixed;
+    right: 20px;
+    top: 66px;
+    background: var(--panel);
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    flex-direction: column;
+    width: min(260px, 90vw);
+  }
+
+  .nav ul.open {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
 }

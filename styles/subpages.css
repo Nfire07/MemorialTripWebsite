@@ -1,3 +1,7 @@
+/* =========================================================
+   Modern Subpages Theme — base + Giorno 3 Versailles
+   ========================================================= */
+
 :root {
   --bg:#0f1115;
   --panel:#151923;
@@ -21,15 +25,16 @@
   }
 }
 
-* { box-sizing:border-box; }
+{ box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 body {
   margin:0;
   font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color:var(--text);
-  background: radial-gradient(1200px 600px at 80% -10%, rgba(79,124,255,.15), transparent),
-              radial-gradient(900px 500px at -10% -10%, rgba(159,122,234,.18), transparent),
-              var(--bg);
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(79,124,255,.15), transparent),
+    radial-gradient(900px 500px at -10% -10%, rgba(159,122,234,.18), transparent),
+    var(--bg);
 }
 
 a { color:var(--brand); text-decoration:none; }
@@ -207,7 +212,6 @@ header {
 section { padding:64px 0; }
 .section-title { font-size:28px; margin:0 0 18px; }
 .section-sub { color:var(--muted); margin:0 0 26px; }
-.gothic-subtitle { color: #c0c0c0 !important; }
 
 /* Cards */
 .cards {
@@ -280,6 +284,7 @@ footer { padding:36px 0 70px; color:var(--muted); }
   background:linear-gradient(135deg, rgba(79,124,255,.18), rgba(159,122,234,.18)) !important;
 }
 
+/* Generic images */
 .img-montmartre {
   min-height:220px;
   border-radius:12px;
@@ -311,9 +316,111 @@ footer { padding:36px 0 70px; color:var(--muted); }
 .hero--montmartre { background:linear-gradient(135deg, rgba(79,124,255,.18), rgba(31,206,139,.14)); }
 .hero--sacre { background:linear-gradient(135deg, rgba(159,122,234,.18), rgba(79,124,255,.14)); }
 .hero--commune { background:linear-gradient(135deg, rgba(31,206,139,.16), rgba(159,122,234,.14)); }
+.image{ width:100%; height:100%; border-radius:12px; }
 
-.image{
-    width:100%;
-    height: 100%;
-    border-radius: 12px;
+/* =========================================================
+   GIORNO 3 — REGGIA DI VERSAILLES SPECIFIC
+   ========================================================= */
+
+.g3-hero {
+  background:
+    linear-gradient(135deg, rgba(79,124,255,.18), rgba(159,122,234,.18)),
+    url("../img/versailles-ext.jpg") center/cover no-repeat;
+  border-radius: var(--radius);
+  min-height: 360px;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  color: #fff;
+  padding: 30px;
+  position: relative;
+}
+
+.g3-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(15,17,21,.45);
+  border-radius: inherit;
+  backdrop-filter: blur(2px);
+}
+
+.g3-hero h1 {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(30px, 5vw, 54px);
+  font-weight: 800;
+  text-shadow: 0 4px 14px rgba(0,0,0,.4);
+}
+
+/* Hero buttons */
+.hero-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+.hero-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  transition: all .2s ease;
+}
+.hero-links a:hover {
+  transform: translateY(-2px);
+  opacity: .9;
+}
+
+/* Monumenti */
+.g3-monumenti .card {
+  background: linear-gradient(135deg, rgba(255,255,255,.02), rgba(255,255,255,.04));
+  border: 1px solid rgba(255,255,255,.08);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.g3-monumenti .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,.3);
+}
+.g3-monumenti .thumb img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Itinerario */
+.g3-itinerario .timeline {
+  border-left: 2px solid rgba(79,124,255,.3);
+  margin-top: 10px;
+}
+.g3-itinerario .item::before {
+  content: "●";
+  color: var(--brand-2);
+  font-size: 14px;
+  margin-right: 6px;
+}
+
+/* Info utili */
+.g3-info .panel {
+  background: linear-gradient(135deg, rgba(79,124,255,.06), rgba(159,122,234,.08));
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .g3-hero {
+    min-height: 260px;
+    padding: 24px;
+  }
+  .g3-hero h1 {
+    font-size: clamp(24px, 6vw, 40px);
+  }
+  .hero-links { justify-content: center; }
 }
