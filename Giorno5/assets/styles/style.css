@@ -1,3 +1,30 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg:#0f1115;
+  --panel:#151923;
+  --text:#e6e8ee;
+  --muted:#a8b0c0;
+  --brand:#4f7cff;
+  --brand-2:#9f7aea;
+  --ok:#1fce8b;
+  --shadow:0 10px 30px rgba(0,0,0,.25);
+  --radius:14px;
+  --maxw:1100px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg:#fbfbfd;
+    --panel:#ffffff;
+    --text:#111317;
+    --muted:#5b6472;
+    --shadow:0 10px 30px rgba(20,23,29,.08);
+  }
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background: #D9BA98;
@@ -249,4 +276,20 @@ footer a {
   color: black;
   transform: translateY(-3px);
   box-shadow: 0 8px 18px rgba(0,0,0,0.4);
+}
+
+.qr-code {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1rem;
+  border: 1px solid rgba(212, 136, 77, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+}
+
+.qr-code img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
