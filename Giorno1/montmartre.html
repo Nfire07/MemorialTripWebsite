@@ -3,180 +3,129 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Montmartre — Itinerario</title>
-  <meta name="description" content="Itinerario a Montmartre con card: Muro dei Ti Amo, Bateau-Lavoir, Primo Studio di Picasso, Place du Tertre, Saint-Pierre, Basilica del Sacro Cuore."/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#0f1115; --panel:#151923; --text:#e8ebf2; --muted:#a7afc0; --line:rgba(255,255,255,.08);
-      --brand:#4f7cff; --accent:#9f7aea; --ok:#22c55e; --warn:#f59e0b; --shadow:0 10px 30px rgba(0,0,0,.28);
-      --radius:16px; --radius-sm:12px; --maxw:1100px; --gap:22px;
-    }
-    @media (prefers-color-scheme: light){
-      :root{ --bg:#fbfbfd; --panel:#ffffff; --text:#111318; --muted:#626d7c; --line:rgba(17,19,24,.08); --shadow:0 10px 26px rgba(20,23,29,.08); }
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; color:var(--text); background:radial-gradient(1200px 400px at 10% -10%, rgba(79,124,255,.12), transparent 60%), radial-gradient(900px 400px at 110% 0%, rgba(159,122,234,.10), transparent 60%), var(--bg);}
-    a{color:var(--brand); text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{max-width:var(--maxw); margin:0 auto; padding:28px 18px 44px}
-    .crumbs{display:flex; gap:8px; align-items:center; color:var(--muted); font-size:14px; margin:2px 0 16px}
-    .crumbs a{color:var(--muted)}
-    .hero{position:relative; overflow:hidden; border-radius:20px; background:linear-gradient(135deg, rgba(79,124,255,.22), rgba(31,206,139,.14)); height:240px; box-shadow:var(--shadow)}
-    header.page{display:grid; gap:16px; padding:18px; background:var(--panel); border:1px solid var(--line); border-radius:20px; box-shadow:var(--shadow)}
-    h1{font-family: "Playfair Display", serif; font-weight:700; font-size:38px; letter-spacing:.2px; margin:4px 0 6px}
-    .sub{margin:0; color:var(--muted)}
-
-    .chip{display:inline-flex; align-items:center; gap:8px; padding:6px 12px; border-radius:999px; font-size:12px; color:#fff; background:linear-gradient(135deg, var(--brand), var(--accent)); box-shadow:0 6px 14px rgba(79,124,255,.25)}
-    .meta-row{display:flex; flex-wrap:wrap; gap:10px; font-size:13px; color:var(--muted)}
-
-    /* GRID DELLE CARD */
-    .grid{display:grid; grid-template-columns:1fr; gap:var(--gap); margin-top:22px}
-    @media (min-width: 780px){ .grid{grid-template-columns:1fr 1fr} }
-
-    .card{display:grid; grid-template-columns:1.2fr 0.8fr; align-items:center; gap:14px; background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:16px; box-shadow:var(--shadow)}
-    .card h3{margin:.2rem 0 .2rem; font-size:22px}
-    .card .desc{color:var(--muted); margin:0 0 6px}
-    .pill{display:inline-flex; gap:6px; align-items:center; font-size:12px; color:#fff; background:linear-gradient(135deg, var(--brand), var(--accent)); border-radius:999px; padding:6px 10px}
-
-    .kv{display:flex; gap:10px; flex-wrap:wrap; margin:6px 0 2px}
-    .kv .tag{font-size:12px; color:var(--muted); border:1px dashed var(--line); padding:6px 10px; border-radius:999px}
-
-    .btns{display:flex; gap:10px; flex-wrap:wrap; margin-top:6px}
-    .btn{display:inline-flex; gap:8px; align-items:center; font-weight:600; font-size:14px; padding:10px 12px; border-radius:12px; background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border:1px solid var(--line)}
-    .btn:hover{transform:translateY(-1px)}
-
-    footer{color:var(--muted); margin:26px 0 40px}
-    img.card-img{width:100%; height:220px; object-fit:cover; border-radius:12px}
-  </style>
+  <title>Montmartre — Itinerario (Giorno 1)</title>
+  <meta name="description" content="Itinerario a Montmartre: Muro dei Ti Amo, Bateau-Lavoir, Primo Studio di Picasso, Place du Tertre, Saint-Pierre, Basilica del Sacro Cuore."/>
+  <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
+
+  <!-- BREADCRUMB MINIMAL -->
   <div class="wrap">
-    <nav class="crumbs" aria-label="Percorso">
-      <a href="Giorno1.html">Home</a> <span aria-hidden="true">›</span> <span>Montmartre</span>
+    <nav class="crumbs">
+      <a href="Giorno1.html">Home</a> <span>›</span> <span>Montmartre</span>
     </nav>
+  </div>
 
-    <header class="page">
-      <span class="chip">Itinerario • Montmartre</span>
-      <h1>Montmartre: cuore bohémien di Parigi</h1>
-      <p class="sub">Quartiere pittoresco sulla collina a nord di Parigi, Montmartre è famoso per le sue stradine acciottolate, le piazzette animate e l’atmosfera artistica che ha ispirato generazioni di pittori, scrittori e musicisti. Da villaggio indipendente a rifugio bohémien, è oggi un luogo dove storia, spiritualità e creatività si incontrano. Passeggiando si incontrano murales, atelier e panorami che raccontano la Parigi di ieri e di oggi. Questo itinerario propone sei tappe simboliche, dal romantico Muro dei Ti Amo alle cupole candide del Sacro Cuore, per scoprire un quartiere che continua ad affascinare studenti e viaggiatori.</p>
-      <div class="meta-row">
-        <span>Durata consigliata: 2–3 ore</span> · <span>Adatto a gruppi scolastici</span> · <span>Consiglio: scarpe comode</span>
+  <!-- HERO GRANDE E SFUOCATA -->
+  <section id="intro" class="hero-bg montmartre">
+    <div class="container hero-content">
+      <h1>Montmartre — Itinerario</h1>
+      <p class="section-sub" style="max-width:800px">
+        Passeggiata tra storia, arte e panorami: dal <em>Muro dei Ti Amo</em> alle cupole del <em>Sacro Cuore</em>,
+        passando per atelier e piazze simbolo del quartiere.
+      </p>
+      <div class="hero-icons">
+        <a href="#tappe" class="hero-icon"><span class="ico">🏛️</span>Tappe</a>
+        <a href="#itinerario" class="hero-icon"><span class="ico">🗺️</span>Percorso</a>
+        <a href="#info" class="hero-icon"><span class="ico">ℹ️</span>Info</a>
       </div>
-      <div class="hero" aria-hidden="true"><img src="assets/Images/monmartre.jpg" alt="Montmartre" class="card-img"></div>
-    </header>
+    </div>
+  </section>
 
-    <section aria-labelledby="tap-title" class="grid">
-      <!-- 1) MURO DEI TI AMO -->
-      <article class="card" id="muro-ti-amo">
-        <div>
+  <!-- GRID DELLE TAPPE -->
+  <section id="tappe" class="monumenti-section">
+    <div class="container">
+      <div class="monumenti-grid">
+
+        <!-- 1) MURO DEI TI AMO -->
+        <article class="card" id="muro-ti-amo">
+          <img class="mon-img" src="imgs/muro_tiamo.jpg" alt="Muro dei Ti Amo">
           <h3>Muro dei “Ti Amo”</h3>
-          <p class="desc">Opera murale di 10×4 metri realizzata da Frédéric Baron con Claire Kito: 311 “Ti amo” scritti in oltre 300 lingue e dialetti su 612 piastrelle blu. Situato nello Square Jehan Rictus, è uno dei simboli romantici più celebri di Parigi.</p>
-          <div class="kv">
-            <span class="tag">Sosta foto: 10′</span>
-            <span class="tag">Tema: lingue e cultura</span>
-          </div>
-          <div class="btns">
-            <a class="btn" href="https://maps.app.goo.gl/iGxfp1ruVoLinDSX6" target="_blank" rel="noopener">Apri su Maps</a>
-            <a class="btn" href="https://www.parigi.it/it/le-mur-des-je-taime.php" target="_blank" rel="noopener">Approfondisci</a>
-          </div>
-        </div>
-        <img src="assets/Images/muro_tiamo.jpg" alt="Muro dei Ti Amo" class="card-img">
-      </article>
+          <p>311 “Ti amo” in oltre 300 lingue su 612 piastrelle blu. Una sosta breve e simbolica nello Square Jehan Rictus.</p>
+          <p class="section-sub">Sosta 10′ — Tema: lingue e cultura</p>
+          <div><a href="https://maps.app.goo.gl/iGxfp1ruVoLinDSX6" target="_blank" rel="noopener">Apri su Maps</a></div>
+          <div class="card-links"><a class="btn more" href="https://www.parigi.it/it/le-mur-des-je-taime.php" target="_blank" rel="noopener">Approfondisci</a></div>
+        </article>
 
-      <!-- 2) BATEAU-LAVOIR -->
-      <article class="card" id="bateau-lavoir">
-        <div>
+        <!-- 2) BATEAU-LAVOIR -->
+        <article class="card" id="bateau-lavoir">
+          <img class="mon-img" src="imgs/bateau_lavoir.jpg" alt="Bateau-Lavoir">
           <h3>Bateau-Lavoir</h3>
-          <p class="desc">Edificio di atelier collettivi dove, tra fine ’800 e inizi ’900, nacquero movimenti artistici rivoluzionari. Frequentato da Picasso, Modigliani e altri protagonisti dell’avanguardia, è considerato la “culla del cubismo”.</p>
-          <div class="kv">
-            <span class="tag">Sosta: 10′</span>
-            <span class="tag">Tema: storia dell’arte</span>
-          </div>
-          <div class="btns">
-            <a class="btn" href="https://maps.app.goo.gl/KanRpU4nJCVMeVaQ8" target="_blank" rel="noopener">Apri su Maps</a>
-            <a class="btn" href="https://www.sortiraparis.com/it/cosa-visitare-a-parigi/storia-patrimonio/articles/332833-histoire-bateau-lavoir-cite-artistes-montmartre-paris-18" target="_blank" rel="noopener">Approfondisci</a>
-          </div>
-        </div>
-        <img src="assets/Images/bateau_lavoir.jpg" alt="Bateau-Lavoir" class="card-img">
-      </article>
+          <p>Storici atelier collettivi frequentati da Picasso e Modigliani: culla delle avanguardie del ’900.</p>
+          <p class="section-sub">Sosta 10′ — Tema: storia dell’arte</p>
+          <div><a href="https://maps.app.goo.gl/KanRpU4nJCVMeVaQ8" target="_blank" rel="noopener">Apri su Maps</a></div>
+          <div class="card-links"><a class="btn more" href="https://it.wikipedia.org/wiki/Bateau-Lavoir" target="_blank" rel="noopener">Approfondisci</a></div>
+        </article>
 
-      <!-- 3) PICASSO FIRST STUDIO -->
-      <article class="card" id="picasso-primo-studio">
-        <div>
+        <!-- 3) PRIMO STUDIO DI PICASSO -->
+        <article class="card" id="picasso-primo-studio">
+          <img class="mon-img" src="imgs/picasso_studio.jpg" alt="Primo studio di Picasso a Montmartre">
           <h3>Picasso — Primo studio</h3>
-          <p class="desc">Nel suo primo studio parigino a Montmartre, Picasso visse anni di intensa sperimentazione che portarono alla nascita del cubismo. L’ambiente artistico del quartiere favorì incontri decisivi e una nuova stagione dell’arte moderna.</p>
-          <div class="kv">
-            <span class="tag">Sosta: 10′</span>
-            <span class="tag">Tema: biografia dell’artista</span>
-          </div>
-          <div class="btns">
-            <a class="btn" href="https://maps.app.goo.gl/T1e5frcBxDbQ9HBi7" target="_blank" rel="noopener">Apri su Maps</a>
-            <a class="btn" href="https://www.catalogoartemoderna.it/approfondimenti/pablo-picasso-e-il-cuore-di-parigi-arte-e-innovazione-nel-900-779" target="_blank" rel="noopener">Approfondisci</a>
-          </div>
-        </div>
-        <img src="assets/Images/picasso_studio.jpg" alt="Primo studio di Picasso" class="card-img">
-      </article>
+          <p>Anni di sperimentazione che preparano il cubismo, in dialogo con l’ambiente artistico di Montmartre.</p>
+          <p class="section-sub">Sosta 10′ — Tema: biografia dell’artista</p>
+          <div><a href="https://maps.app.goo.gl/T1e5frcBxDbQ9HBi7" target="_blank" rel="noopener">Apri su Maps</a></div>
+          <div class="card-links"><a class="btn more" href="https://www.deodato-arte.it/2020/04/13/i-periodi-di-picasso-larte-come-specchio-dellesistenza/" target="_blank" rel="noopener">Approfondisci</a></div>
+        </article>
 
-      <!-- 4) PLACE DU TERTRE -->
-      <article class="card" id="place-du-tertre">
-        <div>
+        <!-- 4) PLACE DU TERTRE -->
+        <article class="card" id="place-du-tertre">
+          <img class="mon-img" src="imgs/Place_du_Tertre.jpg" alt="Place du Tertre">
           <h3>Place du Tertre</h3>
-          <p class="desc">Piazza storica di Montmartre, un tempo centro della vita bohémien e ancora oggi animata da pittori e ritrattisti. Simbolo del legame del quartiere con l’arte all’aperto e la tradizione dei caffè parigini.</p>
-          <div class="kv">
-            <span class="tag">Sosta: 15′</span>
-            <span class="tag">Tema: osservazione urbana</span>
-          </div>
-          <div class="btns">
-            <a class="btn" href="https://maps.app.goo.gl/oNCMqg3GaMob3V9z8" target="_blank" rel="noopener">Apri su Maps</a>
-            <a class="btn" href="https://www.parigi.it/it/place_du_tertre.php" target="_blank" rel="noopener">Approfondisci</a>
-          </div>
-        </div>
-        <img src="assets/Images/Place_du_Tertre.jpg" alt="Place du Tertre" class="card-img">
-      </article>
+          <p>Piazza dei ritrattisti e dei caffè: dal cuore bohémien di ieri alla vitalità artistica di oggi.</p>
+          <p class="section-sub">Sosta 15′ — Tema: osservazione urbana</p>
+          <div><a href="https://maps.app.goo.gl/oNCMqg3GaMob3V9z8" target="_blank" rel="noopener">Apri su Maps</a></div>
+          <div class="card-links"><a class="btn more" href="https://www.parigi.it/it/place_du_tertre.php" target="_blank" rel="noopener">Approfondisci</a></div>
+        </article>
 
-      <!-- 5) ÉGLISE SAINT-PIERRE-DE-MONTMARTRE -->
-      <article class="card" id="chiesa-saint-pierre-de-montmartre">
-        <div>
+        <!-- 5) SAINT-PIERRE-DE-MONTMARTRE -->
+        <article class="card" id="chiesa-saint-pierre-de-montmartre">
+          <img class="mon-img" src="imgs/saint_pierre.jpg" alt="Église Saint-Pierre-de-Montmartre">
           <h3>Église Saint-Pierre-de-Montmartre</h3>
-          <p class="desc">Fondata nel 1147, è una delle chiese più antiche di Parigi. Con la sua architettura romanica e gotica primitiva, testimonia le origini medievali della collina e custodisce memorie dell’abbazia benedettina di Montmartre.</p>
-          <div class="kv">
-            <span class="tag">Sosta: 10′</span>
-            <span class="tag">Tema: patrimonio</span>
-          </div>
-          <div class="btns">
-            <a class="btn" href="https://maps.app.goo.gl/F9bhsUo76EGCJMtY7" target="_blank" rel="noopener">Apri su Maps</a>
-            <a class="btn" href="https://www.vivaparigi.com/chiesa-saint-pierre-montmartre/" target="_blank" rel="noopener">Approfondisci</a>
-          </div>
-        </div>
-        <img src="assets/Images/saint_pierre.jpg" alt="Église Saint-Pierre-de-Montmartre" class="card-img">
-      </article>
+          <p>Fondata nel 1147: architettura romanica e gotica primitiva, tra le chiese più antiche di Parigi.</p>
+          <p class="section-sub">Sosta 10′ — Tema: patrimonio</p>
+          <div><a href="https://maps.app.goo.gl/F9bhsUo76EGCJMtY7" target="_blank" rel="noopener">Apri su Maps</a></div>
+          <div class="card-links"><a class="btn more" href="https://www.parigi.it/it/chiesa-di-st-pierre-de-montmartre.php" target="_blank" rel="noopener">Approfondisci</a></div>
+        </article>
 
-      <!-- 6) BASILICA DEL SACRO CUORE -->
-      <article class="card" id="basilica-sacro-cuore">
-        <div>
+        <!-- 6) BASILICA DEL SACRO CUORE -->
+        <article class="card" id="basilica-sacro-cuore">
+          <img class="mon-img" src="imgs/sacre_coer.jpg" alt="Basilica del Sacro Cuore">
           <h3>Basilica del Sacro Cuore</h3>
-          <p class="desc">Costruita tra il 1875 e il 1914 in stile romano-bizantino, la basilica è uno dei monumenti più visitati di Parigi. Celebre per la sua pietra bianca, custodisce il mosaico più grande di Francia e offre uno dei panorami più spettacolari della città.</p>
-          <div class="kv">
-            <span class="tag">Sosta: 20′</span>
-            <span class="tag">Tema: architettura & panorama</span>
-          </div>
-          <div class="btns">
-            <a class="btn" href="https://maps.app.goo.gl/TPJGXQLyv3VU2wqj7" target="_blank" rel="noopener">Apri su Maps</a>
-            <a class="btn" href="https://www.parigi.it/it/sacro_cuore.php" target="_blank" rel="noopener">Approfondisci</a>
-          </div>
-        </div>
-        <img src="assets/Images/sacre_coer.jpg" alt="Basilica del Sacro Cuore" class="card-img">
-      </article>
-    </section>
+          <p>1875–1914, stile romano-bizantino: pietra “candida”, grande mosaico absidale e panorama sulla città.</p>
+          <p class="section-sub">Sosta 20′ — Tema: architettura & panorama</p>
+          <div><a href="https://maps.app.goo.gl/TPJGXQLyv3VU2wqj7" target="_blank" rel="noopener">Apri su Maps</a></div>
+          <div class="card-links"><a class="btn more" href="https://www.parigi.it/it/sacro_cuore.php" target="_blank" rel="noopener">Approfondisci</a></div>
+        </article>
 
-    <footer>
-      <div class="container foot" style="width:100%;display: flex;align-items: center;justify-content: center;">
-        <p style="text-align: center;">Sito sviluppato da:<br><strong>Jacopo Capacci Zanette - Gianluigi Tridello - Federico Zavaglini</strong><br>In collaborazione con: <strong><br>&copy; 2025 5AIN ITIS Ravenna.</strong></p>
       </div>
-    </footer>
+    </div>
+  </section>
+
+  <!-- ITINERARIO + INFO -->
+  <section id="itinerario">
+    <div class="container grid">
+      <div class="panel">
+        <h2 class="section-title">Percorso consigliato (2–3 ore)</h2>
+        <p class="section-sub">
+          Partenza da <strong>muro dei "ti amo"</strong> → <strong>Bateau-Lavoir</strong> →
+          <strong>primo studio di Picasso</strong> → <strong>Place du Tertre</strong> → <strong>Saint-Pierre</strong> → <strong>Sacro Cuore</strong>.
+        </p>
+      </div>
+
+      <div class="panel" id="info">
+        <h2 class="section-title">Info pratiche</h2>
+        <p class="section-sub">Scarpe comode, acqua e k-way se piove. In basilica: comportamento rispettoso.</p>
+        <ul>
+          <li><strong>Accesso</strong>: metro Abbesses/Anvers; funicolare per il Sacro Cuore.</li>
+          <li><strong>Tempo soste</strong>: 10–20′ a tappa.</li>
+          <li><strong>Materiali</strong>: 1–2 immagini storiche per la spiegazione della Comune (optional).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 — Giorno 1 • Montmartre
+  </footer>
 </body>
 </html>

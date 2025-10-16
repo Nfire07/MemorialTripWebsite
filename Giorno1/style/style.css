@@ -1,0 +1,259 @@
+:root{
+  --bg:#F3EEE7;         /* sabbia chiara, più scura del panna */
+  --panel:#FBF8F3;      /* pannelli chiari ma più caldi */
+  --text:#141312;       /* testo quasi nero */
+  --muted:#5C554F;      /* grigio caldo più deciso */
+  --brand:#202020;      /* blu parigino polveroso */
+  --brand-2:#6B8FCB;    /* blu chiaro secondario */
+  --border:#E0D6C8;     /* bordi caldi più marcati */
+  --shadow:0 6px 18px rgba(20,19,18,.08);
+  --radius:14px;
+  --maxw:1100px;
+}
+
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--text);
+  background:var(--bg);
+}
+
+a { color:var(--brand); text-decoration:none; font-weight:600; }
+a:hover { text-decoration:underline; }
+
+.container {
+  width:100%;
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:0 20px;
+}
+
+/* Header */
+header {
+  position:sticky;
+  top:0;
+  background:rgba(255,255,255,.95);
+  backdrop-filter:saturate(180%) blur(8px);
+  border-bottom:1px solid rgba(0,0,0,.05);
+  z-index:200;
+}
+
+.nav {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:14px 0;
+}
+
+.brand {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:800;
+}
+
+.logo {
+  width:34px;
+  height:34px;
+  border-radius:10px;
+  object-fit:cover;
+}
+
+/* Navbar menu */
+#menu {
+  display:flex;
+  gap:10px;
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+#menu a {
+  display:block;
+  padding:8px 14px;
+  border-radius:10px;
+  color:var(--text);
+  font-weight:600;
+}
+
+#menu a:hover {
+  background:rgba(37,99,235,.08);
+}
+
+.menu-btn { display:none; }
+
+/* HERO */
+.hero-bg {
+  position:relative;
+  height:70vh;
+  background:url('../imgs/parigi_hero.jpg') center center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:var(--text);
+  overflow:hidden;
+}
+
+.hero-bg::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(255,255,255,0.75);
+  backdrop-filter:blur(4px);
+  z-index:1;
+}
+
+.hero-content {
+  position:relative;
+  z-index:2;
+  max-width:800px;
+  padding:0 20px;
+}
+
+.hero-content h1 {
+  font-size:clamp(36px,5vw,60px);
+  margin-bottom:30px;
+  line-height:1.1;
+  font-weight:800;
+  color:#111;
+}
+
+/* Hero icons */
+.hero-icons {
+  display:flex;
+  justify-content:center;
+  gap:22px;
+  flex-wrap:wrap;
+}
+
+.hero-icon { 
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:var(--brand);
+  font-weight:600;
+  font-size:1.1rem;
+  text-decoration:none;
+  background:rgba(220, 230, 253, 0.799);
+  padding:10px 18px;
+  border-radius:999px;
+  transition:all .25s ease;
+  box-shadow:var(--shadow);
+}
+
+.hero-icon:hover {
+  background:rgba(37,99,235,.15);
+  transform:translateY(-2px);
+}
+
+/* Sezioni */
+section { padding:64px 0; background:var(--bg); }
+.section-title { font-size:28px; margin:0 0 12px; color:#111; }
+.section-sub { color:var(--muted); margin:0 0 26px; }
+
+/* MONUMENTI */
+.monumenti-section { background:#f9f9fb; }
+.monumenti-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+  gap:22px;
+}
+.card {
+  background:var(--panel);
+  border:1px solid rgba(0,0,0,.05);
+  border-radius:var(--radius);
+  padding:16px;
+  box-shadow:var(--shadow);
+  transition:transform .25s ease;
+  display:flex;
+  flex-direction:column;
+}
+.card:hover { transform:translateY(-3px); }
+.mon-img {
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:12px;
+  margin-bottom:12px;
+}
+.card h3 { margin:6px 0; color:#111; }
+.card p { color:var(--muted); margin:0 0 10px; }
+
+/* ITINERARIO e INFO */
+.grid {
+  display:grid;
+  grid-template-columns:min(820px,100%);
+  justify-content:center;
+  gap:22px;
+}
+.panel {
+  background:var(--panel);
+  border:1px solid rgba(0,0,0,.05);
+  border-radius:var(--radius);
+  padding:18px;
+  box-shadow:var(--shadow);
+}
+#itinerario .section-title,
+#itinerario .section-sub,
+#info .section-title,
+#info .section-sub { text-align:center; }
+
+/* FOOTER */
+footer {
+  background:#E5DED5;        /* tortora caldo più scuro del resto */
+  color:#3A3530;             /* testo marrone/grigio scuro */
+  text-align:center;
+  padding:40px 0 60px;
+  font-size:0.95rem;
+  border-top:1px solid #D2C8BA; /* bordo chiaro per separazione */
+}
+
+footer a {
+  color:#2B5CA8;             /* link blu coordinato */
+  text-decoration:none;
+  font-weight:600;
+}
+
+footer a:hover {
+  text-decoration:underline;
+}
+
+/* Breadcrumb minimal */
+.wrap { width:100%; }
+.wrap .crumbs{
+  max-width:var(--maxw);
+  margin:12px auto 0;
+  padding:0 20px;
+  font-size:14px;
+  color:var(--muted);
+}
+.wrap .crumbs a{ color:var(--muted); text-decoration:none; }
+.wrap .crumbs a:hover{ text-decoration:underline; }
+.wrap .crumbs span{ opacity:.85; }
+
+/* Hero specifica per Sacré-Cœur (riusa lo stesso stile .hero-bg) */
+.hero-bg.sacre{
+  background-image:url('../imgs/sacre1.jpg'); /* percorso relativo al CSS */
+  background-position:center;
+  background-size:cover;
+}
+
+/* Hero Montmartre */
+.hero-bg.montmartre{ background-image:url('../imgs/monmartre.jpg');
+   background-position:center; 
+   background-size:cover;
+}
+/* Hero Commune */
+.hero-bg.commune{ background-image:url('../imgs/commune_bg.jpg');
+   background-position:center; 
+   background-size:cover; }
+.card-links{ margin-top:10px; }
+.btn.more{
+  display:inline-block; padding:12px; border-radius:var(--radius,14px);
+  background:var(--brand,#4f7cff); color:#fff; text-decoration:none; font-weight:600;
+}
+.btn.more:hover{ opacity:.95; transform:translateY(-1px); }
