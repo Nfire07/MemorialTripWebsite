@@ -3,76 +3,70 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gita a Parigi — Presentazione</title>
-  <meta name="description" content="Presentazione della gita a Parigi: Montmartre, Sacré-Cœur e i luoghi della Comune di Parigi."/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>Viaggio d’Istruzione — Giorno 2: Marais, Shoah e Lili Jacob</title>
+  <meta name="description" content="Visita al quartiere Marais, Musée Carnavalet, Mémorial de la Shoah e Mostra 'Album di Lili Jacob' durante il viaggio d’istruzione a Parigi."/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles/subpages.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <a class="skip" href="#contenuto">Salta al contenuto</a>
-
   <header>
     <div class="container nav">
-      <div class="brand" aria-label="Logo e titolo">
-        <img src="../Images/logo.png" alt="Logo Tour Eiffel" class="logo">
-        <span>Gita a Parigi 2025</span>
+      <div class="brand">
+        <span>Viaggio d’Istruzione — Parigi 2025</span>
       </div>
       <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
-      <ul id="menu" role="menubar">
-        <li role="none"><a role="menuitem" href="../index.html">Home</a></li>
-        <li role="none"><a role="menuitem" href="../Giorno1/Giorno1.html">Giorno 1</a></li>
-        <li role="none"><a role="menuitem" href="../Giorno2/Giorno2.html" aria-current="page">Giorno 2</a></li>
-        <li role="none"><a role="menuitem" href="../Giorno3/Giorno3.html">Giorno 3</a></li>
-        <li role="none"><a role="menuitem" href="../Giorno4/Giorno4.html">Giorno 4</a></li>
-        <li role="none"><a role="menuitem" href="../Giorno5/Giorno5.html">Giorno 5</a></li>
+      <ul id="menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../Giorno1/Giorno1.html">Giorno 1</a></li>
+        <li><a href="../Giorno2/Giorno2.html" aria-current="page">Giorno 2</a></li>
+        <li><a href="../Giorno3/Giorno3.html">Giorno 3</a></li>
+        <li><a href="../Giorno4/Giorno4.html">Giorno 4</a></li>
+        <li><a href="../Giorno5/Giorno5.html">Giorno 5</a></li>
       </ul>
     </div>
   </header>
 
   <main id="contenuto">
     <!-- HERO -->
-    <section id="intro" class="hero">
+    <section class="hero">
       <div class="container hero-grid">
         <div>
-          <span class="tagline">Presentazione didattica</span>
-          <h1>Parigi tra arte, spiritualità e storia civile</h1>
+          <span class="tagline">Percorso storico e memoriale</span>
+          <h1>Il Marais: memoria, arte e identità ebraica</h1>
           <p>
-            Una passeggiata guidata per scoprire <strong>Montmartre</strong>, la basilica del <strong>Sacré-Cœur</strong> e i luoghi chiave della <strong>Comune di Parigi (1871)</strong>.
+            Un itinerario nel cuore storico di Parigi: dal <strong>Musée Carnavalet</strong> alla <strong>Mémorial de la Shoah</strong>, fino alla mostra <em>“Album di Lili Jacob”</em>.
           </p>
-          <a class="cta" href="#itinerario" aria-label="Vai all'itinerario">Vedi l'itinerario ↓</a>
+          <a class="cta" href="#itinerario">Scopri il percorso ↓</a>
         </div>
-        <div class="hero-art" role="img" aria-label="Grafica astratta ispirata ai colori di Parigi"></div>
+        <div class="hero-art" role="img" aria-label="Mappa astratta del Marais"></div>
       </div>
     </section>
 
-    <!-- LUOGHI -->
-    <section id="luoghi">
+    <!-- MONUMENTI -->
+    <section id="monumenti">
       <div class="container">
-        <h2 class="section-title">Luoghi in evidenza</h2>
-        <p class="section-sub">Tre tappe per connettere geografia, arte e storia contemporanea.</p>
+        <h2 class="section-title">Tappe principali</h2>
         <div class="cards">
           <article class="card">
-            <div class="thumb" role="img" aria-label="Collina di Montmartre"></div>
-            <span class="chip">Quartiere</span>
-            <h3>Montmartre</h3>
-            <p>Il villaggio degli artisti: vicoli, atelier e panorami sulla città. Ottimo per osservazioni urbanistiche e storia dell’arte moderna.</p>
-            <a class="more" href="montmartre.html">Approfondisci →</a>
+            <img src="img/carnavalet.jpg" alt="Musee Carnavalet" class="thumb">
+            <span class="chip">Museo</span>
+            <h3>Musée Carnavalet</h3>
+            <p>Un viaggio nella storia di Parigi attraverso collezioni, dipinti e reperti che raccontano la vita della città dal XVI secolo alla Belle Époque.</p>
+            <a class="more" href="carnavalet.html">Approfondisci →</a>
           </article>
           <article class="card">
-            <div class="thumb" role="img" aria-label="Basilica del Sacré-Cœur"></div>
-            <span class="chip">Monumento</span>
-            <h3>Sacré-Cœur</h3>
-            <p>Basilica neobizantina simbolo della Terza Repubblica. Spunto per riflettere su religione, politica e memoria collettiva.</p>
-            <a class="more" href="sacre-coeur.html">Approfondisci →</a>
+            <img src="img/memorial-shoah.jpg" alt="Memorial de la Shoah" class="thumb">
+            <span class="chip">Memoriale</span>
+            <h3>Mémorial de la Shoah</h3>
+            <p>Centro di documentazione e memoria sull’Olocausto, dedicato alla comunità ebraica francese e alle vittime della deportazione.</p>
+            <a class="more" href="memorial.html">Approfondisci →</a>
           </article>
           <article class="card">
-            <div class="thumb" role="img" aria-label="Luoghi della Comune di Parigi"></div>
-            <span class="chip">Storia</span>
-            <h3>La Comune di Parigi</h3>
-            <p>Pagine di democrazia e conflitto (1871): Hôtel de Ville, Place de la Bastille e altri luoghi della memoria civile.</p>
-            <a class="more" href="commune.html">Approfondisci →</a>
+            <img src="img/lili-jacob-album.png" alt="Mostra Album di Lili Jacob" class="thumb">
+            <span class="chip">Mostra</span>
+            <h3>Mostra “Album di Lili Jacob”</h3>
+            <p>Una testimonianza fotografica unica dei deportati di Auschwitz, ritrovata da Lili Jacob nel 1945, oggi esposta al Mémorial.</p>
+            <a class="more" href="lili-jacob-album.html">Approfondisci →</a>
           </article>
         </div>
       </div>
@@ -81,60 +75,28 @@
     <!-- ITINERARIO -->
     <section id="itinerario">
       <div class="container">
-        <h2 class="section-title">Itinerario proposto</h2>
-        <p class="section-sub">Durata indicativa: mezza giornata (4–5 ore). Tempi flessibili in base al gruppo.</p>
-        <div class="grid">
-          <div class="panel">
-            <div class="timeline" aria-label="Sequenza dell'itinerario">
-
-  <!-- Trasferimento iniziale -->
-  <div class="item">
-    <h4>Partenza — B&B HOTEL Paris Porte de la Villette</h4>
-    <div class="time">08:58</div>
-    <p class="section-sub">4 Rue Emile Reynaud, 75019 Paris</p>
-  </div>
-
-  <div class="item">
-    <h4><span >A piedi </span> Verso “Aimé Césaire” (M12)</h4>
-    <div class="time">08:58 — 09:17</div>
-    <p class="section-sub">Circa 19 min, 1,3 km</p>
-  </div>
-
-  <div class="item">
-    <h4><span >M12</span> Aimé Césaire → Abbesses (direzione “Mairie d’Issy”) </h4>
-    <div class="time">09:17 — 09:28</div>
-    <p class="section-sub">11 min — 7 fermate</p>
-  </div>
-
-  <div class="item">
-    <h4><span >A piedi</span> Abbesses → Montmartre</h4>
-    <div class="time">09:28 — 09:37</div>
-    <p class="section-sub">Circa 9 min, 500 m</p>
-  </div>
-
-  <!-- Visita (orari aggiornati in base all’arrivo a Montmartre) -->
-  <div class="item">
-    <h4>Tour di Montmartre (Place du Tertre, Saint-Pierre, panorama)</h4>
-    <div class="time">09:40 — 10:40</div>
-  </div>
-
-  <div class="item">
-    <h4>Visita al Sacré-Cœur (esterni + interni)</h4>
-    <div class="time">10:40 — 11:25</div>
-  </div>
-
-  <div class="item">
-    <h4>Spostamento verso Hôtel de Ville (????)</h4>
-    <div class="time">11:25 — 11:55</div>
-  </div>
-
-  <div class="item">
-    <h4>Percorso storico: Hôtel de Ville → Bastille (????)</h4>
-    <div class="time">11:55 — 12:40</div>
-  </div>
-<h2 style="color: brown;"><b>gli orari sono ancora da definire meglio come il percorso</b></h2>
-</div>
-
+        <h2 class="section-title">Itinerario del giorno 2</h2>
+        <p class="section-sub">Partenza dal B&B Hotel Paris Porte de la Villette</p>
+        <br>
+        <h2 class="section-title">Mattino</h2>
+        <div class="timeline">
+          <div class="item">
+            <h4>🕍 Passeggiata nel Marais Ebraico e Musée Carnavalet</h4>
+            <p class="section-sub">Ingresso gratuito | 23 Rue de Sévigné – 3e Arr.</p>
+          </div>
+        </div>
+        <h2 class="section-title">Pomeriggio</h2>
+        <div class="timeline">
+          <div class="item">
+            <h4>🕯️ Mémorial de la Shoah</h4>
+            <p class="section-sub">17 Rue Geoffroy-l’Asnier – 4e Arr. (ingresso gratuito)</p>
+          </div>
+          <div class="item">
+            <h4>📷 Mostra “Album di Lili Jacob”</h4>
+            <p class="section-sub">tema: la deportazione in Francia</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- INFO -->
@@ -143,51 +105,30 @@
         <div class="panel">
           <h2 class="section-title">Info utili</h2>
           <ul>
-            <li><strong>Trasporti:</strong> Metro linee 2 (Anvers), 12 (Abbesses), 1 (Hôtel de Ville / Bastille).</li>
-            <li><strong>Accessibilità:</strong> scale ripide a Montmartre; funicolare disponibile.</li>
-            <li><strong>Abbigliamento:</strong> scarpe comode, acqua, copri-spalle per ingresso in basilica.</li>
-            <li><strong>Materiali:</strong> smartphone o taccuino per attività; auricolari per eventuale audioguida.</li>
+            <li><strong>Trasporti:</strong> Metro 7 (Pont Marie), 1 (St Paul), 11 (Hôtel de Ville)</li>
+            <li><strong>Accessibilità:</strong> Tutti i luoghi sono accessibili; rampe per disabili al Mémorial</li>
+            <li><strong>Abbigliamento:</strong> comodo e rispettoso dei luoghi di memoria</li>
           </ul>
         </div>
         <div class="panel">
-          <h3>Prenotazioni & contatti</h3>
-          <p>Per aggiornare orari, punto di ritrovo e docenti accompagnatori inserire qui le informazioni di classe.</p>
-          <p><em>Segnaposto:</em> Classe, data, numero studenti, docenti.</p>
+          <h3>Contatti & Materiali</h3>
+          <p><strong>Docenti referenti:</strong> Angelini Cristina, Bassi Silvia</p>
+          <p><strong>Siti ufficiali:</strong><br>
+            <a href="https://www.carnavalet.paris.fr" target="_blank">Musée Carnavalet</a><br>
+            <a href="https://www.memorialdelashoah.org" target="_blank">Mémorial de la Shoah e Mostra “Album di Lili Jacob”</a>
+          </p>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer>
-    <div class="container foot" style="width:100%;display: flex;align-items: center;justify-content: center;">
-      <p style="text-align: center;">Sito sviluppato da:<br><strong>Jacopo Capacci Zanette - Gianluigi Tridello - Federico Zavaglini</strong><br>In collaborazione con: <strong><br>&copy; 2025 5AIN ITIS Ravenna.</strong></p>
+    <div class="container foot" style="text-align:center;">
+      <p>Sito sviluppato da Tomassetti – Vignoli – Di Giuseppe – Campa – Melandri – Medri<br>
+      © 2025 Classe 5AIN ITIS Ravenna</p>
     </div>
   </footer>
 
-  <script>
-    // Mobile menu toggle
-    const btn = document.querySelector('.menu-btn');
-    const menu = document.getElementById('menu');
-    btn?.addEventListener('click', () => {
-      const open = menu.classList.toggle('open');
-      btn.setAttribute('aria-expanded', String(open));
-    });
-
-    // Active link on scroll
-    const links = [...document.querySelectorAll('header a[href^="#"]')];
-    const sections = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        const id = '#' + entry.target.id;
-        const link = links.find(l => l.getAttribute('href') === id);
-        if(link){
-          if(entry.isIntersecting){ link.classList.add('active-link'); }
-          else { link.classList.remove('active-link'); }
-        }
-      });
-    }, { rootMargin: '-40% 0px -50% 0px', threshold: 0.01 });
-    sections.forEach(sec => observer.observe(sec));
-  </script>
+  <script src="./script.js"></script>
 </body>
 </html>
