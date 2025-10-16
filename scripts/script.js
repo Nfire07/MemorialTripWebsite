@@ -17,6 +17,22 @@ document.addEventListener('DOMContentLoaded', () => {
   showSlide(slideIndex);
   setInterval(nextSlide, 5000);
 
+  // 🧭 Menu hamburger
+  const btn = document.querySelector('.menu-btn');
+  const menu = document.getElementById('menu');
+
+  btn?.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(open));
+  });
+
+  document.querySelectorAll('#menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
   // ⬇️ Scroll fluido verso la mappa
   document.getElementById('intro-button')?.addEventListener('click', e => {
     e.preventDefault();
@@ -91,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
       marker.bindPopup(popupContent);
 
       marker.on('popupopen', () => {
-        const offset = map.project(p.coord).subtract([0, 100]); // sposta verso il basso
+        const offset = map.project(p.coord).subtract([0, 100]);
         const target = map.unproject(offset);
         map.panTo(target, { animate: true });
       });
@@ -136,19 +152,6 @@ document.addEventListener('DOMContentLoaded', () => {
     console.warn('Geolocalizzazione non supportata dal browser.');
   }
 
-  // 📱 Navbar dinamica
-  const navbar = document.querySelector('.navbar');
-  window.addEventListener('scroll', () => {
-    navbar?.classList.toggle('scrolled', window.scrollY > 50);
-  });
-
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      const toggle = document.getElementById('menu-toggle');
-      if (toggle) toggle.checked = false;
-    });
-  });
-
   // ⬆️ Pulsante "Torna su"
   const scrollBtn = document.createElement('button');
   scrollBtn.id = 'scrollTopBtn';
@@ -160,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
   });
 
-  scrollBtn.addEventListener('click', () => {
+    scrollBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 });

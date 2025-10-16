@@ -3,36 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Viaggio d’Istruzione a Parigi — 03/11–08/11/25</title>
+  <title>Viaggio della Memoria a Parigi</title>
+
 
   <!-- SEO & Social -->
   <meta name="description" content="Viaggio della Memoria a Parigi: scopri i luoghi storici e culturali attraverso un percorso interattivo e fotografico." />
   <meta name="author" content="Studenti e docenti del Viaggio della Memoria" />
   <meta property="og:title" content="Viaggio della Memoria a Parigi" />
   <meta property="og:description" content="Un percorso storico e culturale tra i luoghi simbolo di Parigi." />
-  <meta property="og:image" content="images/og-image.jpg" />
+  <meta property="og:image" content="Images/og-image.jpg" />
   <meta property="og:type" content="website" />
 
+
   <!-- Icone e manifest -->
-  <link rel="icon" href="images/favicon.ico" />
+  <link rel="icon" href="Images/favicon.ico" />
   <link rel="manifest" href="manifest.json" />
+
 
   <!-- Stili -->
   <link rel="stylesheet" href="styles/style.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
+
+  <!-- Script Leaflet -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js" defer></script>
 </head>
 <body>
-  <!-- NAVBAR SEPARATA -->
-  <header>
+  <!-- NAVBAR -->
+  <header class="navbar">
     <div class="container nav">
       <div class="brand" aria-label="Logo e titolo">
-        <img src="Images/logo.png" alt="Logo Tour Eiffel" class="logo">
+        <img src="Images/logo.png" alt="Logo Tour Eiffel" class="logo" />
         <span>Gita a Parigi 2025</span>
       </div>
-      <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
-      <ul id="menu" role="menubar">
+      <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Apri menu">☰</button>
+      <ul id="menu" class="nav-links" role="menubar">
         <li role="none"><a role="menuitem" href="index.html" aria-current="page">Home</a></li>
         <li role="none"><a role="menuitem" href="Giorno1/Giorno1.html">Giorno 1</a></li>
         <li role="none"><a role="menuitem" href="Giorno2/Giorno2.html">Giorno 2</a></li>
@@ -43,28 +48,28 @@
     </div>
   </header>
 
+
   <!-- HERO -->
   <section class="hero" role="region" aria-label="Introduzione">
-    <div class="overlay" aria-hidden="true" style="background-color: rgba(0, 51, 102, 0.4);"></div>
+    <div class="overlay" aria-hidden="true"></div>
     <div class="carousel-background">
-      <img src="images/carosello1.jpg" alt="Montmartre al tramonto" class="carousel-slide active" loading="lazy" />
-      <img src="images/carosello2.jpg" alt="Museo della Shoah" class="carousel-slide" loading="lazy" />
-      <img src="images/carosello3.jpg" alt="Versailles" class="carousel-slide" loading="lazy" />
+      <img src="Images/carosello1.jpg" alt="Montmartre al tramonto" class="carousel-slide active" />
+      <img src="Images/carosello2.jpg" alt="Museo della Shoah" class="carousel-slide" />
+      <img src="Images/carosello3.jpg" alt="Versailles" class="carousel-slide" />
     </div>
     <div class="intro">
       <h1 id="intro-title">Un viaggio nella memoria</h1>
       <p id="intro-text">Scopri Parigi attraverso i luoghi che raccontano la storia, la resistenza e la bellezza. Ogni giorno è un passo verso la consapevolezza.</p>
-      <a href="#map-section" class="cta-button" id="intro-button" role="button">Scopri il percorso</a>
+      <div class="cta-group">
+        <a href="#map-section" class="cta-button" id="intro-button" role="button">🗺️ Scopri il percorso</a>
+        <a href="#itinerari" class="cta-button" role="button">📋 Vai agli Itinerari</a>
+      </div>
     </div>
   </section>
-	<div style="font-size: 20px; font-color: black; text-align: center">
-		<b>Partenza da Ravenna</b>: partenza in bus da scuola in via Marconi alle ore 5:10. Decollo dall'aeroporto Marco Polo di Venezia alle ore 10:10 con arrivo a Parigi Orly alle ore 12:00.<br><br>
-		<b>Ritorno a Ravenna 5AIN</b>: decollo dall'aeroporto di Charles de Gaulle alle ore 15:25 e arrivo a Milano Malpensa alle 16:55. A seguire, partenza in bus con arrivo a Ravenna previsto alle ore 21:30 circa.<br><br>
-		<b>Ritorno a Ravenna 4AEL</b>: decollo dall'aeroporto di Parigi Orly alle ore 18:00 e arrivo a Milano Linate alle ore 19:25. Si procederà in bus verso Ravenna con arrivo previsto per le ore 00:00 circa.<br>
-	</div>
-  </header>
+
 
   <main role="main">
+    <!-- MAPPA -->
     <section id="map-section" class="map-section" aria-labelledby="map-title">
       <h2 id="map-title">🗺️ Mappa Interattiva</h2>
       <div class="map-container">
@@ -83,26 +88,51 @@
         </div>
       </div>
     </section>
+
+
+    <!-- ITINERARI -->
+    <section id="itinerari" class="itinerari-section" aria-labelledby="itinerari-title">
+      <h2 id="itinerari-title">📋 Itinerari di Viaggio</h2>
+      <div class="itinerari-container">
+        <div class="itinerario-blocco">
+          <h3>🚌 Itinerario Partenza</h3>
+          <div class="card">
+            <h4>Partenza da Ravenna</h4>
+            <p>🕔 5:10 – Bus da via Marconi</p>
+            <p>✈️ 10:10 – Volo da Venezia Marco Polo</p>
+            <p>🛬 12:00 – Arrivo a Parigi Orly</p>
+          </div>
+        </div>
+        <div class="itinerario-blocco">
+          <h3>🏁 Itinerario Ritorno</h3>
+          <div class="card">
+            <h4>Ritorno 5AIN</h4>
+            <p>✈️ 15:25 – Volo da Charles de Gaulle</p>
+            <p>🛬 16:55 – Arrivo a Milano Malpensa</p>
+            <p>🚌 21:30 – Arrivo previsto a Ravenna</p>
+          </div>
+          <div class="card">
+            <h4>Ritorno 4AEL</h4>
+            <p>✈️ 18:00 – Volo da Parigi Orly</p>
+            <p>🛬 19:25 – Arrivo a Milano Linate</p>
+            <p>🚌 00:00 – Arrivo previsto a Ravenna</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
+
+  <!-- FOOTER -->
   <footer role="contentinfo">
     <div class="footer-content">
       <p>2025 Viaggio della Memoria a Parigi.</p>
-      <p></p>
       <p>By Cristian Coluccia & Lorenzo Papa.<br>2025/2026 5AIN ITIS Nullo Baldini Ravenna</p>
     </div>
   </footer>
 
-  <script src="scripts/script.js" defer></script>
-<script>
-  // Mobile menu toggle
-  const btn = document.querySelector('.menu-btn');
-  const menu = document.getElementById('menu');
-  btn?.addEventListener('click', () => {
-    const open = menu.classList.toggle('open');
-    btn.setAttribute('aria-expanded', String(open));
-  });
-</script>
 
+  <!-- SCRIPT -->
+  <script src="scripts/script.js" defer></script>
 </body>
 </html>

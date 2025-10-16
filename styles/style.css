@@ -1,4 +1,4 @@
-﻿/* ================================
+/* ================================
    🌐 Reset e base
 ================================ */
 *, *::before, *::after {
@@ -26,92 +26,130 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgba(0, 51, 102, 0.3);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: #003366;
+  color: white;
   z-index: 1000;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.navbar.scrolled {
-  background-color: rgba(0, 51, 102, 0.6);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
 }
 
 .navbar:hover {
-  background-color: rgba(0, 51, 102, 0.8);
+  background-color: #002244;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
-.nav-title {
-  font-size: 1.8em;
-  font-weight: bold;
-  color: white;
-}
-
-.nav-links {
-  list-style: none;
+.nav {
   display: flex;
-  gap: 25px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
 }
 
-.nav-links a {
-  position: relative;
+.nav ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 1em;
-  padding: 5px 0;
-  transition: transform 0.3s ease, color 0.3s ease;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
 }
 
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0;
-  height: 2px;
+.nav a:hover,
+.nav a[aria-current="page"] {
   background-color: #ffd700;
-  transition: width 0.3s ease;
+  color: #003366;
 }
 
-.nav-links a:hover,
-.nav-links a:focus {
-  transform: scale(1.2);
-  color: #ffd700;
-}
-
-.nav-links a:hover::after,
-.nav-links a:focus::after {
-  width: 100%;
-}
-
-/* Hamburger menu */
-.hamburger {
+/* Menu mobile */
+.menu-btn {
   display: none;
-  font-size: 2em;
+  background: #ffd700;
+  color: #003366;
+  border: none;
+  padding: 8px 12px;
+  font-size: 1.2em;
+  border-radius: 8px;
   cursor: pointer;
-  color: white;
 }
 
-#menu-toggle {
-  display: none;
+@media (max-width: 860px) {
+  .nav {
+    position: relative;
+  }
+
+  .nav ul {
+    display: none;
+    position: absolute;
+    top: 100%; /* si apre sotto il bottone */
+    right: 0;
+    background: rgba(0, 0, 0, 0.8); /* nero trasparente */
+    flex-direction: column;
+    padding: 12px;
+    border-radius: 0 0 12px 12px; /* solo angoli inferiori arrotondati */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 1001;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+    min-width: 180px;
+  }
+
+  .nav ul.open {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav ul::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 14px;
+    border-width: 0 10px 10px 10px;
+    border-style: solid;
+    border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
+  }
+
+  .nav ul a {
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+
+  .nav ul a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .menu-btn {
+    display: block;
+    position: relative;
+    z-index: 1002; /* sopra la tendina */
+  }
 }
 
 /* ================================
-   🏞️ Hero Section con carosello sfondo
+   🏞️ Hero Section
 ================================ */
 .hero {
   position: relative;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   padding: 100px 20px 60px;
   overflow: hidden;
+  background-color: #003366;
+  color: white;
 }
 
 .carousel-background {
@@ -121,7 +159,7 @@ body {
   overflow: hidden;
 }
 
-.carousel-background .carousel-slide {
+.carousel-slide {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -131,14 +169,14 @@ body {
   transition: opacity 1s ease-in-out;
 }
 
-.carousel-background .carousel-slide.active {
+.carousel-slide.active {
   opacity: 1;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background-color: transparent; /* Nessun colore blu */
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
 
@@ -146,17 +184,23 @@ body {
   position: relative;
   z-index: 2;
   max-width: 600px;
-  color: white;
 }
 
 .intro h1 {
-  font-size: 2.5em;
+  font-size: 2.8em;
   margin-bottom: 10px;
 }
 
 .intro p {
   font-size: 1.2em;
   line-height: 1.6;
+}
+
+.cta-group {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .cta-button {
@@ -171,27 +215,23 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.cta-button:hover,
-.cta-button:focus {
+.cta-button:hover {
   background-color: #ffcc00;
-}
-
-.hero {
-  margin-bottom: 100px; /* Spazio bianco tra hero e mappa */
 }
 
 /* ================================
    🗺️ Mappa
 ================================ */
 .map-section {
-  padding: 60px 20px;
+  padding: 80px 20px;
   background-color: #f0f0f0;
+  margin-top: 60px;
 }
 
 .map-section h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
   text-align: center;
+  font-size: 2em;
+  margin-bottom: 30px;
 }
 
 .map-container {
@@ -202,8 +242,8 @@ body {
 
 .map-sidebar {
   flex: 1 1 250px;
-  padding: 20px;
   background-color: #fff;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
@@ -231,9 +271,9 @@ body {
   flex: 3 1 600px;
   min-height: 400px;
   width: 100%;
-  position: relative;
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  position: relative;
 }
 
 #map-placeholder {
@@ -247,20 +287,57 @@ body {
   z-index: 10;
 }
 
-/* Popup immagine */
-.leaflet-popup-content img {
-  width: 100%;
-  border-radius: 5px;
-  margin-bottom: 5px;
+/* ================================
+   📋 Itinerari
+================================ */
+.itinerari-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.itinerari-section h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.itinerari-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.itinerario-blocco {
+  flex: 1 1 300px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.itinerario-blocco h3 {
+  margin-top: 0;
+  color: #003366;
+}
+
+.card {
+  background-color: #fff;
+  border-left: 5px solid #ffd700;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.card h4 {
+  margin: 0 0 10px;
+  color: #003366;
 }
 
 /* ================================
    ⬆️ Pulsante "Torna su"
 ================================ */
-.leaflet-top.leaflet-left {
-  top: 80px !important;
-}
-
 #scrollTopBtn {
   position: fixed;
   bottom: 20px;
@@ -301,26 +378,6 @@ footer {
    📱 Responsive
 ================================ */
 @media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.9);
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100vw;
-    padding: 20px;
-  }
-
-  #menu-toggle:checked + .hamburger + .nav-links {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-    margin-left: auto;
-  }
-
   .map-container {
     flex-direction: column;
   }
@@ -333,114 +390,45 @@ footer {
     font-size: 2em;
   }
 
-  .map-section h2 {
+  .intro p {
+    font-size: 1em;
+  }
+
+  .cta-button {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+
+  .map-section h2,
+  .itinerari-section h2 {
     font-size: 1.5em;
   }
 
-  .carousel-background .carousel-slide {
-    height: 100%;
-  }
-}
-
-/* ================================
-   🎯 Scroll offset per ancoraggi
-================================ */
-:target {
-  scroll-margin-top: 100px;
-}
-
-/* Header */
-header {
-  position: sticky;
-  top: 0;
-  backdrop-filter: saturate(180%) blur(8px);
-  background: rgba(15, 17, 21, 0.55);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  z-index: 200;
-}
-
-@media (prefers-color-scheme: light) {
-  header {
-    background: rgba(255, 255, 255, 0.7);
-    border-bottom: 1px solid rgba(20, 23, 29, 0.06);
-  }
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 14px 0;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-weight: 800;
-  letter-spacing: 0.2px;
-}
-
-.logo {
-  width: 34px;
-  height: 34px;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-.nav ul {
-  display: flex;
-  gap: 10px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.nav a {
-  display: block;
-  padding: 10px 14px;
-  border-radius: 10px;
-  color: var(--text);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.nav a[aria-current="page"],
-.nav a:hover {
-  background: linear-gradient(135deg, rgba(79, 124, 255, 0.14), rgba(159, 122, 234, 0.14));
-}
-
-.menu-btn {
-  display: none;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: transparent;
-  color: var(--text);
-  padding: 8px 10px;
-  border-radius: 10px;
-}
-
-@media (max-width: 860px) {
-  .nav ul {
-    display: none;
-    position: fixed;
-    right: 20px;
-    top: 66px;
-    background: var(--panel);
-    padding: 10px;
-    border-radius: 12px;
-    box-shadow: var(--shadow);
+  .itinerari-container {
     flex-direction: column;
-    width: min(260px, 90vw);
+    align-items: center;
   }
 
-  .nav ul.open {
-    display: flex;
+  .itinerario-blocco {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .nav ul {
+    width: 90vw;
+    right: 5vw;
   }
 
   .menu-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+    font-size: 1.5em;
+    padding: 10px 14px;
+  }
+
+  .carousel-slide {
+    height: 100%;
+  }
+
+  .footer-content p {
+    font-size: 0.9em;
   }
 }
