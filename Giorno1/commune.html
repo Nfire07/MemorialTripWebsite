@@ -3,78 +3,128 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>La Comune di Parigi — Gita a Parigi</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <style>
-    :root{ --bg:#0f1115; --panel:#151923; --text:#e6e8ee; --muted:#a8b0c0; --brand:#4f7cff; --brand-2:#9f7aea; --shadow:0 10px 30px rgba(0,0,0,.25); --radius:14px; --maxw:900px; }
-    @media (prefers-color-scheme: light){ :root{ --bg:#fbfbfd; --panel:#ffffff; --text:#111317; --muted:#5b6472; --shadow:0 10px 30px rgba(20,23,29,.08);} }
-    *{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:var(--bg)}
-    a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:26px 18px}
-    .crumbs{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:14px;margin:12px 0 18px}
-    .panel{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
-    h1{margin:6px 0 8px} .sub{color:var(--muted);margin:0 0 18px}
-    .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center}
-    .hero img{width:100%;height:100%;object-fit:cover;border-radius:12px}
-    .chip{display:inline-block;font-size:12px;color:#fff;background:linear-gradient(135deg,var(--brand),var(--brand-2));padding:6px 10px;border-radius:999px}
-    footer{color:var(--muted);margin:24px 0 40px}
-  </style>
+  <title>La Commune di Parigi (1871) — Giorno 1</title>
+  <meta name="description" content="La Comune di Parigi (1871): contesto storico, luoghi simbolici e percorso didattico tra Montmartre, Hôtel de Ville e Palazzo delle Tuileries."/>
+  <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
+
+  <!-- BREADCRUMB -->
   <div class="wrap">
     <nav class="crumbs">
-      <a href="Giorno1.html">Home</a> <span>›</span> <span>La Comune di Parigi</span>
+      <a href="Giorno1.html">Home</a> <span>›</span> <span>La Commune di Parigi</span>
     </nav>
+  </div>
 
-    <header class="panel grid">
-      <div>
-        <span class="chip">Storia</span>
-        <h1>La Comune di Parigi (1871)</h1>
-        <p class="sub">Un esperimento rivoluzionario unico: in pochi mesi la città visse riforme sociali e politiche che ancora oggi fanno discutere. Hôtel de Ville, Bastille e i percorsi della Semaine Sanglante sono tappe che ci riportano a quei giorni intensi.</p>
+  <!-- HERO -->
+  <section id="intro" class="hero-bg commune">
+    <div class="container hero-content">
+      <h1>La Commune di Parigi (1871)</h1>
+      <p class="section-sub" style="max-width:860px">
+        Dalla collina di Montmartre al cuore politico della città: 72 giorni di rivoluzione che cambiarono la storia di Parigi.
+      </p>
+      <div class="hero-icons">
+        <a href="#storia" class="hero-icon"><span class="ico">📖</span>Storia</a>
+        <a href="#luoghi" class="hero-icon"><span class="ico">📍</span>Luoghi</a>
+        <a href="#info" class="hero-icon"><span class="ico">ℹ️</span>Info</a>
       </div>
-      <div class="hero">
-        <img src="assets/Images/comune.jpg" alt="Illustrazione della Comune di Parigi">
-      </div>
-    </header>
+    </div>
+  </section>
 
-    <section class="panel grid">
-      <div>
-        <h2>Luoghi chiave</h2>
-        <p class="sub">Scopri i punti simbolici che testimoniano la memoria della Comune:</p>
+  <!-- CONTESTO -->
+  <section id="storia" class="container">
+    <h2 class="section-title">Contesto storico</h2>
+    <p class="section-sub" style="max-width:860px">
+      Dopo la guerra franco-prussiana (1870) e la caduta dell’Impero di Napoleone III, Parigi si ritrovò occupata, affamata e
+      divisa. Il 18 marzo 1871 il tentativo del governo di <strong>Adolphe Thiers</strong> di requisire i cannoni della
+      Guardia Nazionale a Montmartre scatenò l’insurrezione: nacque così la <em>Commune di Parigi</em>, primo esperimento di
+      democrazia diretta nella storia moderna. La Comune durò solo 72 giorni, ma lasciò un’eredità politica e simbolica che
+      ancora oggi affascina e divide.
+    </p>
+  </section>
+
+  <!-- LUOGHI PRINCIPALI -->
+  <section id="luoghi" class="monumenti-section">
+    <div class="container">
+      <h2 class="section-title">Luoghi simbolo della Comune</h2>
+      <p class="section-sub">Tre tappe fondamentali per comprendere la rivolta del 1871</p>
+
+      <div class="monumenti-grid">
+
+        <!-- MONTMARTRE -->
+        <article class="card">
+          <img class="mon-img" src="imgs/commune_montmartre.jpg" alt="Montmartre, luogo di nascita della Comune">
+          <h3>Montmartre</h3>
+          <p>
+            Considerato il luogo di nascita dell’insurrezione. La collina era il punto in cui la Guardia Nazionale aveva
+            posizionato i suoi cannoni. Il tentativo del governo di <strong>Adolphe Thiers</strong> di requisirli il 18 marzo 1871
+            fallì, scatenando la rivolta che diede inizio alla Comune.
+          </p>
+          <p class="section-sub"><a href="https://maps.app.goo.gl/VNj9Hj9uxfJYLvr87" target="_blank" rel="noopener">Apri su Maps</a></p>
+          <div class="card-links"><a class="btn more" href="https://www.parigi.it/montmartre-il-quartiere-degli-artisti" target="_blank" rel="noopener">Approfondisci</a></div>
+        </article>
+
+        <!-- HÔTEL DE VILLE -->
+        <article class="card">
+          <img class="mon-img" src="imgs/commune_hoteldeville.jpg" alt="Hôtel de Ville, municipio di Parigi">
+          <h3>Hôtel de Ville (Municipio)</h3>
+          <p>
+            L’edificio storico in Place de Grève (oggi <strong>Place de l’Hôtel-de-Ville</strong>) fu il centro nevralgico della Comune:
+            qui s’insediò il Consiglio rivoluzionario e sventolò la <em>bandiera rossa</em>. Durante la <em>Settimana di sangue</em>
+            (maggio 1871) venne incendiato dalle truppe governative e poi ricostruito identico all’originale.
+          </p>
+          <p class="section-sub"><a href="https://maps.app.goo.gl/6ukh7w4ZcYUPnieZ8" target="_blank" rel="noopener">Apri su Maps</a></p>
+          <div class="card-links"><a class="btn more" href="https://www.parigi.it/hotel-de-ville-parigi"_blank" rel="noopener">Approfondisci</a></div>
+        </article>
+
+        <!-- PALAZZO DELLE TUILERIES -->
+        <article class="card">
+          <img class="mon-img" src="imgs/commune_tuileries.jpg" alt="Palazzo delle Tuileries, oggi Jardin des Tuileries">
+          <h3>Palazzo delle Tuileries</h3>
+          <p>
+            Questa residenza reale e imperiale fu un simbolo del potere monarchico e di <strong>Napoleone III</strong>.
+            I comunardi la incendiarono il <strong>23 maggio 1871</strong> per simboleggiare la fine del potere precedente.
+            Oggi al suo posto si estende il <em>Jardin des Tuileries</em>, uno dei parchi più famosi di Parigi.
+          </p>
+          <p class="section-sub"><a href="https://maps.app.goo.gl/f8JJoWsg2zi1dSbE6" target="_blank" rel="noopener">Apri su Maps</a></p>
+          <div class="card-links"><a class="btn more" href="https://parigimeravigliosa.it/articoli/vocabolario/palazzo-delle-tuileries/" target="_blank" rel="noopener">Approfondisci</a></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO -->
+  <section id="info">
+    <div class="container grid">
+      <div class="panel">
+        <h2 class="section-title">Percorso didattico</h2>
+        <p class="section-sub">
+          Montmartre → Palazzo delle Tuileries→ Hôtel de Ville 
+        </p>
         <ul>
-          <li><strong>Hôtel de Ville:</strong> centro del governo comunardo.</li>
-          <li><strong>Place de la Bastille:</strong> luogo di memoria rivoluzionaria.</li>
-          <li><strong>Percorsi della settimana di sangue:</strong> riflessione su diritti e cittadinanza.</li>
+          <li><strong>Durata complessiva</strong>: circa 1 ora e mezza.</li>
+          <li><strong>Obiettivo</strong>: comprendere la nascita, il governo e la caduta della Comune.</li>
+          <li><strong>Approfondimenti</strong>: rapporto tra potere politico e simboli urbani.</li>
         </ul>
       </div>
-      <div class="hero">
-        <img src="assets/Images/hotelville.jpg" alt="Hôtel de Ville di Parigi">
-      </div>
-    </section>
 
-    <section class="panel grid">
-      <div>
-        <h2>Attività</h2>
-        <p class="sub">Proposte per rendere la visita più coinvolgente:</p>
-        <ol>
-          <li>Scheda storica (max 200 parole) sulla Comune e le sue riforme.</li>
-          <li>Discussione guidata su partecipazione politica e memoria pubblica.</li>
-          <li>Creazione di una linea del tempo collaborativa.</li>
-        </ol>
-        <p><a href="Giorno1.html#itinerario">Vedi l’itinerario</a></p>
+      <div class="panel">
+        <h2 class="section-title">Informazioni pratiche</h2>
+        <ul>
+          <li><strong>Accesso</strong>: metro Abbesses (Montmartre), Hôtel de Ville, Tuileries (linea 1).</li>
+          <li><strong>Comportamento</strong>: rispetto dei luoghi pubblici e dei parchi.</li>
+          <li><strong>Materiali</strong>: mappe, scheda riassuntiva e immagini d’epoca.</li>
+        </ul>
+        <p class="section-sub"><a href="https://maps.app.goo.gl/7d8LZs1qH1J3mTtV7" target="_blank" rel="noopener">Apri su Google Maps</a></p>
       </div>
-      <div class="hero">
-        <img src="assets/Images/bastille.jpg" alt="Colonna della Bastiglia a Parigi">
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <footer>
-      <div class="container foot" style="width:100%;display: flex;align-items: center;justify-content: center;">
-        <p style="text-align: center;">Sito sviluppato da:<br><strong>Jacopo Capacci Zanette - Gianluigi Tridello - Federico Zavaglini</strong><br>In collaborazione con: <strong><br>&copy; 2025 5AIN ITIS Ravenna.</strong></p>
-      </div>
+  <footer>
+    
+    © 2025 — Giorno 1 • Montmartre <br>
+    fonti: www.parisinsidersguide.com/sites-of-the-paris-commune.html; wikipedia.
   </footer>
-  </div>
 </body>
 </html>
