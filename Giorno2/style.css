@@ -1,10 +1,10 @@
 :root {
-  --bg:#0f1115;
-  --panel:#151923;
-  --text:#e6e8ee;
-  --muted:#a8b0c0;
-  --brand:#4f7cff;
-  --brand-2:#9f7aea;
+  --bg:#e0d8c8;
+  --panel:#ffffff;
+  --text:#1f2328;
+  --muted:#5f6158;
+  --brand:#a06a3b;
+  --brand-2:#c89b6e;
   --ok:#1fce8b;
   --shadow:0 10px 30px rgba(0,0,0,.25);
   --radius:14px;
@@ -13,7 +13,7 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bg:#fbfbfd;
+    --bg:#e9e1d3;
     --panel:#ffffff;
     --text:#111317;
     --muted:#5b6472;
@@ -61,7 +61,7 @@ a:hover { text-decoration:underline; }
   color:var(--text);
   padding:10px 14px;
   border-radius:8px;
-  box-shadow:var(--shadow);
+  box-shadow:var(--shadow); text-decoration:none;
   z-index:1000;
 }
 
@@ -139,7 +139,7 @@ header {
     background:var(--panel);
     padding:10px;
     border-radius:12px;
-    box-shadow:var(--shadow);
+    box-shadow:var(--shadow); text-decoration:none;
     flex-direction:column;
     width:min(260px, 90vw);
   }
@@ -151,7 +151,7 @@ header {
 .hero { padding:80px 0 60px; }
 .hero-grid {
   display:grid;
-  grid-template-columns:1.2fr .8fr;
+  grid-template-columns:1fr; justify-items:center; text-align:center;
   gap:34px;
   align-items:center;
 }
@@ -176,7 +176,7 @@ header {
   border-radius:12px;
   font-weight:700;
   cursor:pointer;
-  box-shadow:var(--shadow);
+  box-shadow:var(--shadow); text-decoration:none;
 }
 .tagline {
   display:inline-block;
@@ -196,7 +196,7 @@ header {
     radial-gradient(800px 260px at 50% 0%, rgba(255,255,255,.08), transparent),
     linear-gradient(135deg, rgba(255,255,255,.04), rgba(255,255,255,0));
   border:1px solid rgba(255,255,255,.12);
-  box-shadow:var(--shadow);
+  box-shadow:var(--shadow); text-decoration:none;
 }
 @media (max-width:860px){
   .hero-grid { grid-template-columns:1fr; }
@@ -219,7 +219,7 @@ section { padding:64px 0; }
   border:1px solid rgba(255,255,255,.08);
   border-radius:var(--radius);
   padding:18px;
-  box-shadow:var(--shadow);
+  box-shadow:var(--shadow); text-decoration:none;
   display:flex;
   flex-direction:column;
 }
@@ -265,7 +265,7 @@ section { padding:64px 0; }
   border:1px solid rgba(255,255,255,.08);
   border-radius:var(--radius);
   padding:18px;
-  box-shadow:var(--shadow);
+  box-shadow:var(--shadow); text-decoration:none;
 }
 @media (max-width:900px){ .grid{ grid-template-columns:1fr; } }
 
@@ -311,3 +311,99 @@ footer { padding:36px 0 70px; color:var(--muted); }
 .hero--montmartre { background:linear-gradient(135deg, rgba(79,124,255,.18), rgba(31,206,139,.14)); }
 .hero--sacre { background:linear-gradient(135deg, rgba(159,122,234,.18), rgba(79,124,255,.14)); }
 .hero--commune { background:linear-gradient(135deg, rgba(31,206,139,.16), rgba(159,122,234,.14)); }
+
+/* ==== Marais theming additions ==== */
+.hero-bg{
+  min-height:46vh;
+  background:url('img/marais.jpg') center/cover no-repeat;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  border-bottom:1px solid rgba(20,23,29,.08);
+}
+.hero-bg .overlay{
+  width:100%;
+  background:linear-gradient(to top, rgba(0,0,0,.35), rgba(0,0,0,0));
+  color:#fff;
+  padding:36px 0 22px;
+}
+@media (prefers-color-scheme: light){
+  .hero-bg .overlay{ background:linear-gradient(to top, rgba(0,0,0,.25), rgba(0,0,0,0)); }
+}
+.hero-bg .title{
+  text-align:center;
+  font-weight:800;
+  font-size:clamp(28px,5vw,48px);
+  line-height:1.05;
+  text-shadow:0 2px 8px rgba(0,0,0,.35);
+  margin:0;
+}
+
+.btn-group{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin:16px 0 0;
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 14px;
+  border-radius:999px;
+  border:1px solid rgba(20,23,29,.12);
+  background:#ffffff;
+  font-weight:700;
+  text-decoration:none;
+  box-shadow:var(--shadow); text-decoration:none;
+}
+@media (prefers-color-scheme: dark){
+  .btn{ background:var(--panel); color:var(--text); border-color: rgba(255,255,255,.12); }
+}
+
+.img-pair{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin:14px 0 0;
+}
+.img-pair .hero-box{ height:220px; }
+@media (max-width:800px){
+  .img-pair{ grid-template-columns:1fr; }
+}
+
+
+/* ==== Hero background for Giorno 2 (Marais) ==== */
+.hero{
+  position:relative;
+  background:url('img/marais.jpg') center/cover no-repeat;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,.25) 50%, rgba(0,0,0,.15));
+  backdrop-filter:blur(6px);
+}
+.hero .container{
+  position:relative;
+  z-index:1;
+  padding-top:120px;
+  padding-bottom:40px;
+  color:#fff;
+}
+.hero h1, .hero p, .hero .tagline{ color:#fff; }
+.hero .tagline{ background:rgba(255,255,255,.14); border-color:rgba(255,255,255,.35); }
+
+/* Buttons row */
+.cta-group{justify-content:center;  display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-top:12px; }
+.hero .cta{ box-shadow:0 12px 30px rgba(0,0,0,.35); border:1px solid rgba(255,255,255,.22); }
+
+@media (max-width: 780px){
+  .hero .container{ padding-top:88px; padding-bottom:28px; }
+}
+
+
+.hero .tagline{ margin-inline:auto; }
+.hero-grid .hero-art{ display:none !important; } /* remove transparent box on the right */

@@ -1,8 +1,8 @@
 :root{
-  --bg:#F3EEE7;         /* sabbia chiara, più scura del panna */
-  --panel:#FBF8F3;      /* pannelli chiari ma più caldi */
-  --text:#141312;       /* testo quasi nero */
-  --muted:#5C554F;      /* grigio caldo più deciso */
+  --bg:#ebd9be;         /* sabbia chiara, più scura del panna */
+  --panel:#ffefd2;      /* pannelli chiari ma più caldi */
+  --text:#484644;       /* testo quasi nero */
+  --muted:#34302c;      /* grigio caldo più deciso */
   --brand:#202020;      /* blu parigino polveroso */
   --brand-2:#6B8FCB;    /* blu chiaro secondario */
   --border:#E0D6C8;     /* bordi caldi più marcati */
@@ -22,7 +22,9 @@ body {
 
 a { color:var(--brand); text-decoration:none; font-weight:600; }
 a:hover { text-decoration:underline; }
-
+.nav a[aria-current="page"], .nav a:hover {
+  background:linear-gradient(135deg, rgba(79,124,255,.14), rgba(159,122,234,.14));
+}
 .container {
   width:100%;
   max-width:var(--maxw);
@@ -34,10 +36,10 @@ a:hover { text-decoration:underline; }
 header {
   position:sticky;
   top:0;
-  background:rgba(255,255,255,.95);
+  background:#f9ede1;
   backdrop-filter:saturate(180%) blur(8px);
   border-bottom:1px solid rgba(0,0,0,.05);
-  z-index:200;
+  z-index:100;
 }
 
 .nav {
@@ -102,7 +104,7 @@ header {
   content:"";
   position:absolute;
   inset:0;
-  background:rgba(255,255,255,0.75);
+  background:rgba(255,255,255,0);
   backdrop-filter:blur(4px);
   z-index:1;
 }
@@ -152,11 +154,11 @@ header {
 
 /* Sezioni */
 section { padding:64px 0; background:var(--bg); }
-.section-title { font-size:28px; margin:0 0 12px; color:#111; }
-.section-sub { color:var(--muted); margin:0 0 26px; }
+.section-title { font-size:28px; margin:0 0 12px; color:#393838; }
+.section-sub { color:#131313; margin:0 0 26px; font-weight: 700;backdrop-filter:saturate(180%) blur(0,px) }
 
 /* MONUMENTI */
-.monumenti-section { background:#f9f9fb; }
+.monumenti-section { background:var(--bg); }
 .monumenti-grid {
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
@@ -204,7 +206,7 @@ section { padding:64px 0; background:var(--bg); }
 
 /* FOOTER */
 footer {
-  background:#E5DED5;        /* tortora caldo più scuro del resto */
+  background:#c9b395;        /* tortora caldo più scuro del resto */
   color:#3A3530;             /* testo marrone/grigio scuro */
   text-align:center;
   padding:40px 0 60px;
