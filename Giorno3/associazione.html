@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Association Nationale Le Garibaldiens — Storia e Memoria</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+        --bg: #dfd2b9;
+        --panel: #cdb585;
+        --text: #433422;
+        --muted: #856f58;
+        --brand: #c59d5f;
+        --brand-light: rgba(197,157,95,0.12);
+        --shadow: 0 8px 24px rgba(67,52,34,0.08);
+        --radius: 12px;
+        --maxw: 1100px;
+    }
+    *{box-sizing:border-box}
+    body {
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:var(--bg)
+    }
+    a {
+      color:var(--brand);
+      text-decoration:none
+    }
+    a:hover {text-decoration:underline}
+    .wrap {
+      max-width:var(--maxw);
+      margin:0 auto;
+      padding:26px 18px
+    }
+    .crumbs {
+      display:flex;
+      gap:8px;
+      align-items:center;
+      color:var(--muted);
+      font-size:14px;
+      margin:12px 0 18px
+    }
+    .panel {
+      background:var(--panel);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:var(--shadow)
+    }
+    .chip {
+      display:inline-block;
+      font-size:12px;
+      color:#fff;
+      background:linear-gradient(135deg,var(--brand),#b3894a);
+      padding:6px 10px;
+      border-radius:999px
+    }
+    h1 {margin:6px 0 8px}
+    .sub {color:var(--muted);margin:0 0 18px}
+    .meta-row {display:flex;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:14px}
+    .hero {
+      height:220px;
+      border-radius:12px;
+      background:linear-gradient(135deg, rgba(159,122,234,.18), rgba(79,124,255,.14));
+      margin-top:14px;
+      overflow:hidden
+    }
+    .hero img {
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block
+    }
+    .card {
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:16px;
+      align-items:stretch;
+      background:var(--panel);
+      border-radius:12px;
+      padding:16px
+    }
+    .card h3 {margin:0 0 6px}
+    .card p {margin:0;color:var(--muted);line-height:1.5}
+    .media {
+      position:relative;
+      width:100%;
+      border-radius:10px;
+      overflow:hidden;
+      background:#0b0d12
+    }
+    .media::before {content:"";display:block;aspect-ratio:16/10;width:100%}
+    .media img {
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover
+    }
+    .badge {
+      display:inline-block;
+      font-size:11px;
+      color:var(--text);
+      background:var(--brand);
+      border:1px solid rgba(255,255,255,.06);
+      padding:4px 8px;
+      border-radius:999px;
+      margin-bottom:8px;
+    }
+    @media (max-width:780px){.card{grid-template-columns:1fr;}}
+    footer {
+      color:var(--muted);
+      margin:24px 0 40px
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="crumbs">
+      <a href="Giorno3.html">Home</a> <span>›</span> <a href="Giorno3.html#itinerario">Itinerario</a> <span>›</span> <span>Le Garibaldiens</span>
+    </nav>
+
+    <!-- HEADER PRINCIPALE -->
+    <header class="panel page">
+      <span class="chip">Associazione • Le Garibaldiens</span>
+      <h1>Association Nationale Le Garibaldiens: custodire la memoria garibaldina</h1>
+      <p class="sub">
+        L’<strong>Association Nationale Le Garibaldiens</strong> nasce per mantenere viva la memoria e i valori di Giuseppe Garibaldi, eroe dei due mondi e simbolo di libertà, coraggio e unità. L’associazione si impegna nella promozione della storia garibaldina attraverso attività culturali, commemorazioni, pubblicazioni e incontri con le scuole, con l’obiettivo di tramandare lo spirito di solidarietà e impegno civile che animò i volontari garibaldini.
+      </p>
+      <div class="media" aria-hidden="true">
+        <img src="assets/images/AssociationNationale.jpg" alt="Bandiera e membri dell'Association Nationale Le Garibaldiens" loading="lazy">
+      </div>
+    </header>
+
+    <!-- SEZIONE STORICA -->
+    <section class="panel">
+      <div style="display:flex;align-items:center;justify-content:center;flex-direction:column;width:100%;text-align:justify;">
+        <span class="badge">Tradizione e memoria</span>
+        <h3>Un legame tra passato e presente</h3>
+        <p>
+          Fondata per preservare la memoria delle battaglie e dei principi garibaldini, l’associazione rappresenta oggi un ponte tra la storia del Risorgimento e le nuove generazioni. Attraverso cerimonie, mostre e collaborazioni con istituzioni culturali, i membri mantengono viva una tradizione di impegno civile, tolleranza e patriottismo democratico, nel rispetto dell’eredità di Garibaldi e dei suoi ideali di libertà universale.
+        </p>
+      </div>
+    </section>
+
+    <!-- SEZIONE ERIC GOBETTI -->
+    <section class="panel" style="margin-top:18px;">
+      <div class="card">
+        <div>
+          <span class="badge">Presidente</span>
+          <h3>Eric Gobetti</h3>
+          <p>
+            Storico e saggista, <strong>Eric Gobetti</strong> è l’attuale presidente dell’Association Nationale Le Garibaldiens.  
+            Conosciuto per i suoi studi sulla Resistenza e sulla memoria del Novecento, Gobetti guida l’associazione con l’obiettivo di unire ricerca storica, divulgazione e impegno civile.  
+            La sua visione promuove un dialogo aperto e critico sul passato, per comprendere meglio il presente e rafforzare i valori democratici e antifascisti che sono alla base del garibaldinismo.
+          </p>
+        </div>
+        <div class="media" aria-hidden="true">
+          <img src="https://fondazionefeltrinelli.it/wp-content/uploads/2025/04/Untitled-design.jpg" alt="Eric Gobetti, presidente dell'associazione" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container foot" style="width:100%;display:flex;align-items:center;justify-content:center;">
+        <p style="text-align:center;">
+          Sito sviluppato da:<br>
+          <strong>Cotea Claudiu Florin - Panzavolta Davide - Fusconi Luca - Mele Nicolò Emanuele</strong><br>
+          In collaborazione con: <strong><br>&copy; 2025 5AIN ITIS Ravenna.</strong>
+        </p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
