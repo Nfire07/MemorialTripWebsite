@@ -1,21 +1,4 @@
-// Mobile menu functionality
-const menuBtn = document.querySelector('.menu-btn');
-const navMenu = document.getElementById('menu');
-
-if (menuBtn && navMenu) {
-  menuBtn.addEventListener('click', () => {
-    const isOpen = navMenu.classList.toggle('open');
-    menuBtn.setAttribute('aria-expanded', String(isOpen));
-  });
-
-  // Close menu when clicking on nav links
-  document.querySelectorAll('.nav a').forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('open');
-      menuBtn.setAttribute('aria-expanded', 'false');
-    });
-  });
-}
+// Mobile menu functionality is now in the HTML file to avoid conflicts
 
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -200,4 +183,45 @@ document.querySelectorAll('.gothic-panel, .monumento-detailed').forEach(card => 
 // Add loading animation
 window.addEventListener('load', () => {
   document.body.classList.add('loaded');
+});
+
+// Expandable Monument Descriptions
+document.querySelectorAll('.monumento-detailed').forEach(monument => {
+  const description = monument.querySelector('.monumento-description');
+  
+  if (description) {
+    // Create expand button
+    const expandBtn = document.createElement('button');
+    expandBtn.className = 'expand-toggle';
+    expandBtn.innerHTML = '<span>Leggi di più</span><i class="fas fa-chevron-down"></i>';
+    expandBtn.setAttribute('aria-expanded', 'false');
+    
+    // Insert button inside the description area, after all content
+    description.appendChild(expandBtn);
+    
+    // Add click event
+    expandBtn.addEventListener('click', () => {
+      const isExpanding = !description.classList.contains('expanded');
+      
+      description.classList.toggle('expanded');
+      expandBtn.classList.toggle('expanded');
+      expandBtn.setAttribute('aria-expanded', isExpanding ? 'true' : 'false');
+      
+      if (description.classList.contains('expanded')) {
+        expandBtn.innerHTML = '<span>Mostra meno</span><i class="fas fa-chevron-down"></i>';
+        
+        // Smooth scroll to keep the button in view when expanding
+        setTimeout(() => {
+          expandBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 100);
+      } else {
+        expandBtn.innerHTML = '<span>Leggi di più</span><i class="fas fa-chevron-down"></i>';
+        
+        // Scroll to top of monument when collapsing
+        setTimeout(() => {
+          monument.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+        }, 100);
+      }
+    });
+  }
 });
