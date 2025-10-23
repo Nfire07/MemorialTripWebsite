@@ -273,9 +273,11 @@ header {
 
 .hero-actions-centered {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   justify-content: center;
   flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .btn-primary-orange {
@@ -356,6 +358,160 @@ header {
   transform: translateY(-4px) scale(1.05);
   box-shadow: 0 20px 50px rgba(255, 255, 255, 0.3);
   text-decoration: none;
+}
+
+/* =========================================================
+   Glass Style Buttons
+   ========================================================= */
+
+.btn-glass-primary {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  border-radius: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  flex: 1;
+  min-width: 160px;
+  text-align: center;
+}
+
+.btn-glass-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-glass-primary:hover::before {
+  left: 100%;
+}
+
+.btn-glass-primary:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  color: white;
+}
+
+.btn-glass-secondary {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: rgba(212, 175, 55, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  border-radius: 50px;
+  border: 2px solid rgba(212, 175, 55, 0.4);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 8px 32px rgba(212, 175, 55, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  flex: 1;
+  min-width: 160px;
+  text-align: center;
+}
+
+.btn-glass-secondary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-glass-secondary:hover::before {
+  left: 100%;
+}
+
+.btn-glass-secondary:hover {
+  background: rgba(212, 175, 55, 0.3);
+  border-color: rgba(212, 175, 55, 0.6);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 
+    0 20px 50px rgba(212, 175, 55, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  color: white;
+}
+
+.btn-glass-tertiary {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: rgba(201, 169, 110, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  border-radius: 50px;
+  border: 2px solid rgba(201, 169, 110, 0.4);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 8px 32px rgba(201, 169, 110, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  flex: 1;
+  min-width: 160px;
+  text-align: center;
+}
+
+.btn-glass-tertiary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(201, 169, 110, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-glass-tertiary:hover::before {
+  left: 100%;
+}
+
+.btn-glass-tertiary:hover {
+  background: rgba(201, 169, 110, 0.3);
+  border-color: rgba(201, 169, 110, 0.6);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 
+    0 20px 50px rgba(201, 169, 110, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  color: white;
 }
 
 .glass-scroll {
@@ -482,9 +638,9 @@ header {
   top: 0;
   bottom: 0;
   width: 4px;
-  background: var(--gradient-gold);
+  background: linear-gradient(135deg, #8b7355, #a68b5b, #8b7355);
   border-radius: 2px;
-  box-shadow: var(--shadow-gold);
+  box-shadow: 0 4px 12px rgba(45, 27, 14, 0.1);
 }
 
 .timeline-step {
@@ -504,34 +660,34 @@ header {
   top: 0.8rem;
   width: 1.5rem;
   height: 1.5rem;
-  background: var(--gradient-gold);
+  background: linear-gradient(135deg, #8b7355, #a68b5b, #8b7355);
   border: 4px solid var(--bg);
   border-radius: 50%;
   z-index: 2;
   transition: all 0.4s ease;
-  box-shadow: var(--shadow-gold);
+  box-shadow: 0 4px 12px rgba(45, 27, 14, 0.1);
 }
 
 .timeline-step.highlight::before {
-  background: var(--gradient-gold);
-  border-color: var(--brand);
+  background: linear-gradient(135deg, #8b7355, #a68b5b, #8b7355);
+  border-color: #8b7355;
   transform: scale(1.2);
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+  box-shadow: 0 0 20px rgba(139, 115, 85, 0.4);
 }
 
 .step-time {
   font-size: 1.2rem;
-  color: var(--brand);
+  color: var(--text);
   font-weight: 700;
   margin-bottom: 0.8rem;
-  text-shadow: 1px 1px 2px rgba(212, 175, 55, 0.3);
+  text-shadow: 1px 1px 2px rgba(45, 27, 14, 0.2);
 }
 
 .step-content {
-  background: var(--panel);
+  background: rgba(255, 255, 255, 0.8);
   padding: 2rem;
   border-radius: var(--radius);
-  border: 2px solid var(--brand-light);
+  border: 2px solid rgba(201, 169, 110, 0.2);
   transition: all 0.4s ease;
   box-shadow: var(--shadow);
   position: relative;
@@ -545,19 +701,19 @@ header {
   left: 0;
   width: 4px;
   height: 100%;
-  background: var(--gradient-gold);
+  background: linear-gradient(135deg, #8b7355, #a68b5b, #8b7355);
 }
 
 .timeline-step.highlight .step-content {
-  background: var(--panel);
-  border-color: var(--brand);
-  box-shadow: var(--shadow-gold);
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(201, 169, 110, 0.4);
+  box-shadow: 0 12px 32px rgba(45, 27, 14, 0.15);
   transform: translateY(-5px);
 }
 
 .step-content h3 {
   font-size: 1.5rem;
-  color: var(--brand);
+  color: var(--text);
   margin: 0 0 0.8rem;
   font-weight: 700;
 }
@@ -573,12 +729,12 @@ header {
   display: inline-flex;
   align-items: center;
   gap: 0.8rem;
-  color: var(--brand);
+  color: var(--text);
   text-decoration: none;
   font-weight: 700;
   padding: 0.8rem 1.5rem;
-  background: var(--brand-light);
-  border: 2px solid var(--brand);
+  background: rgba(139, 115, 85, 0.1);
+  border: 2px solid rgba(139, 115, 85, 0.3);
   border-radius: 30px;
   transition: all 0.3s ease;
   position: relative;
@@ -592,7 +748,7 @@ header {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: var(--gradient-gold);
+  background: linear-gradient(135deg, #8b7355, #a68b5b, #8b7355);
   transition: left 0.3s ease;
   z-index: -1;
 }
@@ -602,9 +758,9 @@ header {
 }
 
 .step-link:hover {
-  color: var(--text);
+  color: white;
   transform: translateY(-3px);
-  box-shadow: var(--shadow-gold);
+  box-shadow: 0 8px 24px rgba(139, 115, 85, 0.25);
   text-decoration: none;
 }
 
@@ -1230,6 +1386,20 @@ header {
 }
 
 @media (max-width: 768px) {
+  .hero-actions-centered {
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 300px;
+  }
+  
+  .btn-glass-primary,
+  .btn-glass-secondary,
+  .btn-glass-tertiary {
+    flex: none;
+    min-width: auto;
+    width: 100%;
+  }
+  
   .simple-timeline::before {
     left: 2rem;
   }
