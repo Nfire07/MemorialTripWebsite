@@ -70,15 +70,9 @@ header {
   position:sticky;
   top:0;
   backdrop-filter:saturate(180%) blur(8px);
-  background:rgba(15,17,21,.55);
-  border-bottom:1px solid rgba(255,255,255,.06);
+  background:rgba(255,255,255,.7);
+  border-bottom:1px solid rgba(20,23,29,.06);
   z-index:200;
-}
-@media (prefers-color-scheme: light){
-  header {
-    background:rgba(255,255,255,.7);
-    border-bottom:1px solid rgba(20,23,29,.06);
-  }
 }
 
 .nav {
@@ -178,6 +172,10 @@ header {
   cursor:pointer;
   box-shadow:var(--shadow); text-decoration:none;
 }
+/* >>> Niente underline sui bottoni dell'hero, anche in hover */
+.hero .cta,
+.hero .cta:hover { text-decoration:none; }
+
 .tagline {
   display:inline-block;
   font-weight:700;
@@ -205,8 +203,37 @@ header {
 
 /* Sections */
 section { padding:64px 0; }
+
+/* Header di sezione per pulsante "Torna su" */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+.section-header .section-title { margin: 0; }
+
 .section-title { font-size:28px; margin:0 0 18px; }
 .section-sub { color:var(--muted); margin:0 0 26px; }
+
+/* Pulsante "Torna su" */
+.cta-top {
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  flex-shrink: 0;
+  background: transparent;
+  color: var(--text);
+  box-shadow: none;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+.cta-top:hover {
+  background: rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+}
 
 /* Cards */
 .cards {
@@ -232,14 +259,9 @@ section { padding:64px 0; }
 }
 .card h3 { margin:0 0 6px; }
 .card p { color:var(--muted); margin:0 0 14px; }
-.chip {
-  display:inline-block;
-  font-size:12px;
-  color:#fff;
-  background:linear-gradient(135deg, var(--brand), var(--brand-2));
-  padding:6px 10px;
-  border-radius:999px;
-}
+/* .chip usata in passato: ora rimossa dalle pagine */
+
+/* Link "Approfondisci" */
 .card a.more { margin-top:auto; font-weight:700; }
 @media (max-width:960px){ .cards { grid-template-columns:1fr 1fr; } }
 @media (max-width:640px){ .cards { grid-template-columns:1fr; } }
@@ -271,7 +293,13 @@ section { padding:64px 0; }
 
 /* Footer */
 footer { padding:36px 0 70px; color:var(--muted); }
-.foot { display:flex; justify-content:space-between; align-items:center; gap:16px; }
+.foot {
+  display:flex;
+  justify-content:center; /* <<< centra i nomi e il testo */
+  align-items:center;
+  gap:16px;
+  text-align:center;      /* <<< allineamento centrato */
+}
 .badges { display:flex; gap:10px; align-items:center; }
 
 /* Active link highlight */
@@ -373,7 +401,6 @@ footer { padding:36px 0 70px; color:var(--muted); }
   .img-pair{ grid-template-columns:1fr; }
 }
 
-
 /* ==== Hero background for Giorno 2 (Marais) ==== */
 .hero{
   position:relative;
@@ -396,14 +423,22 @@ footer { padding:36px 0 70px; color:var(--muted); }
 .hero h1, .hero p, .hero .tagline{ color:#fff; }
 .hero .tagline{ background:rgba(255,255,255,.14); border-color:rgba(255,255,255,.35); }
 
-/* Buttons row */
+/* Row pulsanti hero */
 .cta-group{justify-content:center;  display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-top:12px; }
-.hero .cta{ box-shadow:0 12px 30px rgba(0,0,0,.35); border:1px solid rgba(255,255,255,.22); }
+
+/* Pulsanti trasparenti nell'hero */
+.hero .cta{
+  background: transparent;
+  box-shadow: none;
+  border: 1px solid rgba(255, 255, 255, .4);
+}
+.hero .cta:hover {
+  background: rgba(255, 255, 255, .1);
+}
 
 @media (max-width: 780px){
   .hero .container{ padding-top:88px; padding-bottom:28px; }
 }
-
 
 .hero .tagline{ margin-inline:auto; }
 .hero-grid .hero-art{ display:none !important; } /* remove transparent box on the right */
