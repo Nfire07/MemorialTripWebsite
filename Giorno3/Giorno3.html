@@ -170,7 +170,7 @@
           position: fixed;
           right: 20px;
           top: 66px;
-          background: var(--panel);
+          background: var(--bg);
           padding: 10px;
           border-radius: var(--radius);
           box-shadow: var(--shadow);
@@ -179,6 +179,11 @@
         }
         .nav ul.open {
           display: flex;
+        }
+
+        .hero-menu ul {
+          max-width: 300px;
+          flex-direction: column;
         }
       }
 
@@ -392,6 +397,7 @@
         margin: 0;
         line-height: 1.7;
       }
+
     </style>
   </head>
   <body id="return-up">
@@ -401,8 +407,8 @@
       <div class="container nav">
         <img src="../Images/logo.png" alt="Logo Tour Eiffel" class="logo" />
         <span style="font-weight: 800;">VIAGGIO D'ISTRUZIONE — dal 03/11/25 al 08/11/25</span>
-        <button class="menu-btn" aria-expanded="false" aria-controls="menu">
-          Menu
+        <button class="menu-btn" aria-expanded="false" aria-controls="menu" style="font-size: 1.5em;">
+          ☰
         </button>
         <nav>
           <ul id="menu" role="menubar">
