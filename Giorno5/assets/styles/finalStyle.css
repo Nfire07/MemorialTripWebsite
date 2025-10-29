@@ -1,10 +1,10 @@
 /* =========================================================
-   Modern Subpages Theme — base + Giorno 3 Versailles
+   Modern Subpages Theme  base + Giorno 3 Versailles
    ========================================================= */
 
 :root {
-  --bg:#0f1115;
-  --panel:#151923;
+  --bg:#a37c5e;
+  --panel:#a37c5e;
   --text:#e6e8ee;
   --muted:#a8b0c0;
   --brand:#4f7cff;
@@ -319,7 +319,7 @@ footer { padding:36px 0 70px; color:var(--muted); }
 .image{ width:100%; height:100%; border-radius:12px; }
 
 /* =========================================================
-   GIORNO 3 — REGGIA DI VERSAILLES SPECIFIC
+   GIORNO 3  REGGIA DI VERSAILLES SPECIFIC
    ========================================================= */
 
 .g3-hero {
@@ -401,7 +401,7 @@ footer { padding:36px 0 70px; color:var(--muted); }
   margin-top: 10px;
 }
 .g3-itinerario .item::before {
-  content: "●";
+  content: "�";
   color: var(--brand-2);
   font-size: 14px;
   margin-right: 6px;
@@ -426,7 +426,7 @@ footer { padding:36px 0 70px; color:var(--muted); }
 }
 
 /* ================================
-   🌐 Reset e base
+   < Reset e base
 ================================ */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -446,7 +446,7 @@ body {
 }
 
 /* ================================
-   🧭 Navbar
+   >� Navbar
 ================================ */
 .navbar {
   position: fixed;
@@ -529,7 +529,7 @@ body {
 }
 
 /* ================================
-   🏞️ Hero Section con carosello sfondo
+   <� Hero Section con carosello sfondo
 ================================ */
 .hero {
   position: relative;
@@ -588,7 +588,7 @@ body {
 }
 
 /* ================================
-   🗺️ Mappa + Footer
+   =� Mappa + Footer
 ================================ */
 .map-section {
   text-align: center;
@@ -622,7 +622,7 @@ footer {
 }
 
 /* ================================
-   🔝 Scroll to top button
+   = Scroll to top button
 ================================ */
 .scroll-to-top {
   position: fixed;
@@ -656,7 +656,7 @@ footer {
 }
 
 /* ================================
-   📱 Responsive Design
+   =� Responsive Design
 ================================ */
 @media (max-width: 768px) {
   .nav-links {
