@@ -4,7 +4,7 @@
 
 :root {
   --bg:#a37c5e;
-  --panel:#a37c5e;
+  --panel:#D4B6A4;
   --text:#e6e8ee;
   --muted:#a8b0c0;
   --brand:#4f7cff;
@@ -401,7 +401,7 @@ footer { padding:36px 0 70px; color:var(--muted); }
   margin-top: 10px;
 }
 .g3-itinerario .item::before {
-  content: "Ï";
+  content: "ï¿½";
   color: var(--brand-2);
   font-size: 14px;
   margin-right: 6px;
@@ -446,7 +446,7 @@ body {
 }
 
 /* ================================
-   >í Navbar
+   >ï¿½ Navbar
 ================================ */
 .navbar {
   position: fixed;
@@ -529,7 +529,7 @@ body {
 }
 
 /* ================================
-   <Þ Hero Section con carosello sfondo
+   <ï¿½ Hero Section con carosello sfondo
 ================================ */
 .hero {
   position: relative;
@@ -588,7 +588,7 @@ body {
 }
 
 /* ================================
-   =ú Mappa + Footer
+   =ï¿½ Mappa + Footer
 ================================ */
 .map-section {
   text-align: center;
@@ -656,7 +656,7 @@ footer {
 }
 
 /* ================================
-   =ñ Responsive Design
+   =ï¿½ Responsive Design
 ================================ */
 @media (max-width: 768px) {
   .nav-links {

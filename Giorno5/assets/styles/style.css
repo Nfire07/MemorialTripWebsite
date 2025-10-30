@@ -4,7 +4,7 @@
 
 :root {
   --bg:#a37c5e;
-  --panel:#a37c5e;
+  --panel:#D4B6A4;
   --text:#e6e8ee;
   --muted:#a8b0c0;
   --brand:#3455b3;
@@ -28,7 +28,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: #D9BA98;
+    background: var(--bg);
     color: black;
     margin: 0;
     padding: 0;
@@ -110,7 +110,7 @@ body {
 }
 
 .panel {
-  background: #a37c5e;
+  background: var(--panel);
   border-radius: var(--radius);
   padding: 24px;
   box-shadow: var(--shadow);
@@ -185,10 +185,10 @@ footer a {
   transform: translateY(-2px);
 }
 
-/* SEZIONE MONUMENTI - CARD PIÙ STRETTE E IMMAGINI NON STIRATE */
+/* SEZIONE MONUMENTI - CARD PIï¿½ STRETTE E IMMAGINI NON STIRATE */
 #monumenti {
   padding: 3rem 1rem;
-  background: #D9BA98;
+  background: var(--bg);
 }
 
 #monumenti .container {
@@ -221,7 +221,7 @@ footer a {
 }
 
 #monumenti .card {
-  background: #a37c5e;
+  background: var(--panel);
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -289,7 +289,7 @@ footer a {
 /* SEZIONE ITINERARIO */
 #itinerario {
   padding: 3rem 1rem;
-  background: #D9BA98;
+  background: var(--bg);
 }
 
 /* Timeline */
@@ -318,7 +318,7 @@ footer a {
 
 .timeline .item h4 {
   margin-bottom: 4px;
-  color: white;
+  color: rgb(97, 89, 89);
 }
 
 .timeline .time {
@@ -330,7 +330,7 @@ footer a {
 .timeline .item p {
   font-size: 0.95rem;
   margin-bottom: 0;
-  color: var(--muted);
+  color: rgb(97, 89, 89);
 }
 
 /* LINK METRO */
@@ -351,7 +351,7 @@ footer a {
 /* SEZIONE INFO - CON QR DENTRO IL BLOCCO DESTRO */
 #info {
   padding: 3rem 1rem;
-  background: #D9BA98;
+  background: var(--bg);
 }
 
 #info .container.grid {
@@ -364,10 +364,10 @@ footer a {
 }
 
 #info .panel {
-  background: #a37c5e;
+  background: var(--panel);
   border-radius: 15px;
   padding: 2rem;
-  color: white;
+  color: rgb(97, 89, 89);
   display: flex;
   flex-direction: column;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -375,7 +375,7 @@ footer a {
 
 #info .panel h2,
 #info .panel h3 {
-  color: white;
+  color: rgb(97, 89, 89);
   margin-top: 0;
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
@@ -390,7 +390,7 @@ footer a {
 #info .panel ul li {
   margin-bottom: 1rem;
   line-height: 1.6;
-  color: white;
+  color: rgb(97, 89, 89);
 }
 
 #info .panel ul li strong {
@@ -424,7 +424,7 @@ footer a {
 }
 
 .link-info h4 {
-  color: white;
+  color: rgb(97, 89, 89);
   margin: 0 0 0.5rem 0;
   font-size: 1.1rem;
 }
