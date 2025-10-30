@@ -29,25 +29,9 @@ Segretario
 Incaricato a esposizione
 Gestore del tempo
 
-### INDICAZIONI PER DEPLIANT (digitale)
-
-1. Titolo e Immagine Principale:
-Un titolo che catturi l'attenzione e un'immagine della copertina molto bella e pertinente al monumento. 
-2. Storia e Dettagli:
-Un racconto della storia del monumento, ma anche tutti i dettagli che lo rendono unico. NO WIKIPEDIA
-Usa anche immagini attraenti per permettere a chi non ha mai visto il monumento di conoscerlo. Suscitare il loro interesse.
-
-3. Informazioni Pratiche:
-- Orari di visita: Orari di apertura e chiusura. 
-- Accessibilità: Informazioni su come raggiungere il monumento, ad esempio con trasporti pubblici o a piedi. 
-- Contatti: sito web o QR code a cui rimandare e a cui avete fatto riferimento.
-Consigli 
-Testo Chiaro e Breve:
-Le descrizioni devono essere leggibili e concise, rendendo facile la consultazione. 
-Pensa al Tuo Pubblico:
-La grafica, il tono e i contenuti devono essere adatti al tuo destinatario (compagni di altre classi). 
-Usa colori e layout che valorizzano il contenuto. 
-
 ### Comando per clonare la repo
 ```bash
 git clone https://github.com/Nfire07/MemorialTripWebsite
+```
+### Visualizzazione modifiche sito
+https://nfire07.github.io/MemorialTripWebsite/index.html
