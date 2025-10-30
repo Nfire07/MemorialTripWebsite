@@ -3,8 +3,8 @@
    ========================================================= */
 
 :root {
-  --bg: #f7f3e9;
-  --panel: #e8d5b7;
+  --bg: #e9e1d3; /* neutral sand like other pages */
+  --panel: #ffffff; /* white panels to avoid yellow tint */
   --text: #2d1b0e;
   --muted: #8b7355;
   --brand: #d4af37;
@@ -14,8 +14,6 @@
   --shadow-gold: 0 8px 24px rgba(212, 175, 55, 0.25);
   --radius: 16px;
   --maxw: 1200px;
-  --gradient-gold: linear-gradient(135deg, #d4af37, #f4d03f, #d4af37);
-  --gradient-warm: linear-gradient(135deg, #f7f3e9, #e8d5b7, #f7f3e9);
 }
 
 * { box-sizing: border-box; }
@@ -25,7 +23,7 @@ body {
   margin: 0;
   font-family: "Inter", system-ui, sans-serif;
   color: var(--text);
-  background: var(--gradient-warm);
+  background: var(--bg);
   min-height: 100vh;
 }
 
@@ -47,127 +45,96 @@ p { line-height: 1.7; }
   width: 100%;
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 20px;
 }
 
 /* Header & Navigation */
 header {
   position: sticky;
   top: 0;
-  backdrop-filter: saturate(180%) blur(12px);
-  background: rgba(247, 243, 233, 0.95);
-  border-bottom: 2px solid var(--brand-light);
+  backdrop-filter: saturate(180%) blur(8px);
+  background: rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(20, 23, 29, 0.06);
   z-index: 200;
-  box-shadow: var(--shadow);
 }
 
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
-  padding: 12px 0;
-}
-
-.nav > span {
-  margin-right: auto;
-  padding-left: 1rem;
+  gap: 16px;
+  padding: 14px 0;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   font-weight: 800;
-  font-size: 1.1rem;
-  color: var(--text);
+  letter-spacing: 0.2px;
 }
 
 .logo {
-  width: 35px;
-  height: 35px;
+  width: 34px;
+  height: 34px;
   border-radius: 10px;
   object-fit: cover;
-  border: none;
-  box-shadow: none;
 }
 
 .nav ul {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-left: auto;
 }
 
 .nav a {
   display: block;
-  padding: 8px 14px;
+  padding: 10px 14px;
   border-radius: 10px;
   color: var(--text);
+  text-decoration: none;
   font-weight: 600;
-  font-size: 0.95rem;
-  transition: all 0.3s ease;
+  transition: background-color 0.2s ease;
 }
 
-.nav a:hover,
-.nav a[aria-current="page"] {
-  background-color: var(--brand-light);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-gold);
-  color: var(--brand-dark);
+.nav a[aria-current="page"],
+.nav a:hover {
+  background: linear-gradient(135deg, rgba(79, 124, 255, 0.14), rgba(159, 122, 234, 0.14));
 }
 
 .menu-btn {
   display: none;
-  border: 2px solid var(--brand);
-  background: var(--brand-light);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: transparent;
   color: var(--text);
-  padding: 10px 14px;
-  border-radius: 12px;
+  padding: 8px 10px;
+  border-radius: 10px;
   cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.menu-btn:hover {
-  background: var(--brand);
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-gold);
 }
 
 @media (max-width: 860px) {
-  .menu-btn { 
+  .menu-btn {
     display: inline-flex;
-    cursor: pointer;
-  }
-  .nav > span {
-    font-size: 0.85rem;
-    padding-left: 0.5rem;
-  }
-  .nav nav {
-    order: 3;
+    align-items: center;
+    gap: 8px;
   }
   .nav ul {
     display: none;
     position: fixed;
     right: 20px;
-    top: 70px;
+    top: 66px;
     background: var(--panel);
-    padding: 20px;
-    border-radius: var(--radius);
+    padding: 10px;
+    border-radius: 12px;
     box-shadow: var(--shadow);
     flex-direction: column;
-    width: min(280px, 90vw);
-    border: 2px solid var(--brand);
-    margin-left: 0;
+    width: min(260px, 90vw);
     z-index: 999;
   }
-  #menu.open,
-  ul.open { 
-    display: flex !important;
+  .nav ul.open {
+    display: flex;
   }
 }
 
@@ -282,7 +249,7 @@ header {
   font-size: 1rem;
   letter-spacing: 0.5px;
   border-radius: 50px;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.35);
   transition: all 0.4s ease;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3);
   flex: 1;
@@ -290,9 +257,9 @@ header {
   text-align: center;
 }
 
-.btn-glass-primary { background: rgba(255, 255, 255, 0.2); }
-.btn-glass-secondary { background: rgba(212, 175, 55, 0.25); }
-.btn-glass-tertiary { background: rgba(201, 169, 110, 0.25); }
+.btn-glass-primary { background: rgba(255, 255, 255, 0.15); }
+.btn-glass-secondary { background: rgba(255, 255, 255, 0.15); }
+.btn-glass-tertiary { background: rgba(255, 255, 255, 0.15); }
 
 .btn-glass-primary:hover,
 .btn-glass-secondary:hover,
@@ -303,9 +270,9 @@ header {
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
-.btn-glass-primary:hover { background: rgba(255, 255, 255, 0.3); }
-.btn-glass-secondary:hover { background: rgba(212, 175, 55, 0.35); }
-.btn-glass-tertiary:hover { background: rgba(201, 169, 110, 0.35); }
+.btn-glass-primary:hover { background: rgba(255, 255, 255, 0.25); }
+.btn-glass-secondary:hover { background: rgba(255, 255, 255, 0.25); }
+.btn-glass-tertiary:hover { background: rgba(255, 255, 255, 0.25); }
 
 /* Scroll Indicator */
 .glass-scroll {
