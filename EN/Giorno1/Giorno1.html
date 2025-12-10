@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>School Trip to Paris — 11/03–11/08/25</title>
+  <meta name="description" content="School trip to Paris: Montmartre, Sacré-Cœur and sites of the Paris Commune."/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <img src="../../images/favicon.svg" alt="Logo" class="logo">
+      SCHOOL TRIP — from 11/03/25 to 11/08/25
+    </div>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav>
+      <ul id="menu">
+        <li><a href="../index.html" style="text-decoration: none;">Home</a></li>
+        <li><a href="./Giorno1.html" aria-current="page" style="text-decoration: none;">Day 1</a></li>
+        <li><a href="../Giorno2/Giorno2.html" style="text-decoration: none;">Day 2</a></li>
+        <li><a href="../Giorno3/Giorno3.html" style="text-decoration: none;">Day 3</a></li>
+        <li><a href="../Giorno4/Giorno4.html" style="text-decoration: none;">Day 4</a></li>
+        <li><a href="../Giorno5/Giorno5.html" style="text-decoration: none;">Day 5</a></li>
+        <li><a role="menuitem" href="../../IT/Giorno1/Giorno1.html">🇮🇹 Italiano</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section id="intro" class="hero hero-bg">
+    <div class="container hero-content">
+      <h1>Paris through Art, Spirituality, and Civic History</h1>
+      <div class="hero-icons">
+        <a href="#monumenti" class="hero-icon"><span class="ico">🏛️</span>Monuments</a>
+        <a href="#itinerario" class="hero-icon"><span class="ico">🗺️</span>Itinerary</a>
+        <a href="#info" class="hero-icon"><span class="ico">ℹ️</span>Useful Info</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="monumenti">
+    <div class="container">
+      <h2 class="section-title">Day 1 Monuments</h2>
+      <p class="section-sub">Overview of the first day’s sites.</p>
+
+      <div class="monumenti-grid">
+        <article class="card">
+          <img src="imgs/monmartre.jpg" alt="Montmartre" class="mon-img">
+          <h3>Montmartre</h3>
+          <p>Artistic neighborhood and bohemian heart: streets, squares, and ateliers among the most iconic in Paris.</p>
+          <a href="montmartre.html" class="more">Learn More →</a>
+        </article>
+
+        <article class="card">
+          <img src="imgs/sacre1.jpg" alt="Basilica of Sacré-Cœur" class="mon-img">
+          <h3>Basilica of Sacré-Cœur</h3>
+          <p>Symbol of peace and faith after 1871; one of the most beautiful panoramas in the city.</p>
+          <a href="sacre-coeur.html" class="more">Learn More →</a>
+        </article>
+
+        <article class="card">
+          <img src="imgs/commune_bg.jpg" alt="Hôtel de Ville" class="mon-img">
+          <h3>The Paris Commune (1871)</h3>
+          <p>Short revolutionary period that influenced European social and political history.</p>
+          <a href="commune.html" class="more">Learn More →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="itinerario">
+    <div class="container">
+      <h2 class="section-title">Proposed Itinerary</h2>
+      <p class="section-sub">Approximate duration: 4–5 hours total</p>
+
+      <div class="panel">
+        <ul>
+          <li><strong>Departure</strong> — B&B HOTEL Paris Porte de la Villette (4 Rue Émile Reynaud)</li>
+          <li>Walk → <em>Aimé Césaire</em> (M12) — ~19 min</li>
+          <li>M12 Aimé Césaire → Abbesses (direction “Mairie d’Issy”) — 7 stops</li>
+          <li>Walk Abbesses → <strong>Montmartre</strong> — ~9 min</li>
+          <li>Montmartre tour: <em>Place du Tertre</em>, <em>Saint-Pierre-de-Montmartre</em>, view from <em>Sacré-Cœur</em></li>
+          <li><strong>Visit Basilica of Sacré-Cœur</strong> (exterior + interior)</li>
+          <li>Metro to <strong>Tuileries</strong> (line 12 → Concorde, then M1 towards Château de Vincennes)</li>
+          <li><strong>Tuileries Garden and Palace</strong> — explanation of the symbolism of the May 23, 1871 fire</li>
+          <li>Walk to <strong>Hôtel de Ville</strong> — ~15 min</li>
+          <li><strong>Hôtel de Ville</strong> — seat of the Commune Council, comparison with current function</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="info">
+    <div class="container">
+      <h2 class="section-title">Useful Info</h2>
+      <div class="panel">
+        <ul>
+          <li><strong>Transport:</strong> Metro 2 (Anvers), 12 (Abbesses)</li>
+          <li><strong>Accessibility:</strong> steep stairs in Montmartre; funicular available</li>
+          <li><strong>Clothing:</strong> comfortable shoes, water, shoulder cover for the basilica</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container foot">
+    © School Trip — Capacci · Tridello · Zavaglini — ITIS N. Baldini Ravenna
+  </div>
+</footer>
+
+<script>
+  const menuButton = document.querySelector('.menu-btn');
+  const menuList = document.getElementById('menu');
+
+  menuButton?.addEventListener('click', () => {
+    const open = menuList.classList.toggle('open');
+    menuButton.setAttribute('aria-expanded', String(open));
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../../images/favicon.svg">
+    <title>Viaggio d’Istruzione a Parigi — Giorno 3</title>
+    <meta
+      name="description"
+      content="Esplorazione dei giardini e dell'architettura di Parigi: una passeggiata tra natura, arte e storia."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* =========================================================
+         Modern Golden Theme
+         ========================================================= */
+
+      :root {
+        --bg: #dfd2b9; /* Sfondo beige molto chiaro */
+        --panel: #cdb585;
+        --text: #433422; /* Testo marrone scuro */
+        --muted: #856f58; /* Testo secondario marrone/grigio */
+        --brand: #c59d5f; /* Colore principale oro/ocra */
+        --brand-light: rgba(
+          197,
+          157,
+          95,
+          0.5
+        ); /* Evidenziazione dorata chiara */
+        --shadow: 0 8px 24px rgba(67, 52, 34, 0.08); /* Ombra più calda */
+        --radius: 12px;
+        --maxw: 1100px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font-family: "Inter", system-ui, sans-serif;
+        color: var(--text);
+        background-color: var(--bg);
+      }
+
+      a {
+        color: var(--brand);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        margin: 0;
+      }
+
+      p {
+        line-height: 1.6;
+      }
+
+      .container {
+        width: 100%;
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Skip link for accessibility */
+      .skip {
+        position: absolute;
+        left: -9999px;
+      }
+      .skip:focus {
+        position: fixed;
+        left: 20px;
+        top: 20px;
+        width: auto;
+        height: auto;
+        background: var(--panel);
+        color: var(--text);
+        padding: 10px 14px;
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+        z-index: 1000;
+      }
+
+      /* =========================================================
+         Header & Navigation
+         ========================================================= */
+
+      header {
+        position: sticky;
+        top: 0;
+        backdrop-filter: saturate(180%) blur(8px);
+        background: rgba(253, 250, 246, 0.85); 
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        z-index: 200;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 14px 0;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 800;
+      }
+
+      .logo {
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+
+      .nav ul {
+        display: flex;
+        gap: 10px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .nav a {
+        display: block;
+        padding: 10px 14px;
+        border-radius: 10px;
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.2s ease;
+      }
+      .nav a:hover,
+      .nav a[aria-current="page"] {
+        background-color: var(--brand-light);
+      }
+
+      .menu-btn {
+        display: none;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background: transparent;
+        color: var(--text);
+        padding: 8px 10px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      /* Mobile Navigation */
+      @media (max-width: 860px) {
+        .menu-btn {
+          display: inline-flex;
+        }
+        .nav ul {
+          display: none;
+          position: fixed;
+          right: 20px;
+          top: 66px;
+          background: var(--bg);
+          padding: 10px;
+          border-radius: var(--radius);
+          box-shadow: var(--shadow);
+          flex-direction: column;
+          width: min(260px, 90vw);
+        }
+        .nav ul.open {
+          display: flex;
+        }
+
+        .hero-menu ul {
+          max-width: 300px;
+          flex-direction: column;
+        }
+      }
+
+      /* =========================================================
+         Hero Section (#intro)
+         ========================================================= */
+
+      #intro {
+        position: relative;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        padding: 20px;
+      }
+
+      .hero-background {
+        position: absolute;
+        inset: 0;
+        /* --- IMMAGINE DI SFONDO MODIFICATA --- */
+        background: url("../../images/GalleriaDegliSpecchi.jpg")
+          center/cover no-repeat;
+        filter: blur(3px) brightness(0.9); /* Leggermente più scuro per contrasto */
+        z-index: -1;
+      }
+
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(30, 20, 10, 0.4); /* Overlay marrone/seppia */
+        z-index: -1;
+      }
+
+      #intro h1 {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-weight: 800;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        margin-bottom: 30px;
+      }
+
+      .hero-menu ul {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        padding: 0;
+        list-style: none;
+      }
+
+      .hero-menu a {
+        display: inline-block;
+        padding: 8px 18px;
+        background-color: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(5px);
+        color: #fff;
+        font-weight: 600;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: background-color 0.3s, transform 0.3s;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .hero-menu a:hover {
+        background-color: rgba(255, 255, 255, 0.25);
+        transform: translateY(-2px);
+      }
+
+      /* =========================================================
+         Generic Sections & Components
+         ========================================================= */
+      main section {
+        padding: 64px 0;
+      }
+
+      .section-title {
+        font-size: clamp(24px, 4vw, 32px);
+        margin-bottom: 12px;
+      }
+      .section-sub {
+        color: var(--muted);
+        margin-top: 0;
+        margin-bottom: 30px;
+        max-width: 600px;
+      }
+
+      /* Cards */
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 22px;
+      }
+      .card {
+        background: var(--panel);
+        border-radius: var(--radius);
+        padding: 18px;
+        box-shadow: var(--shadow);
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card .thumb {
+        height: 180px;
+        border-radius: 10px;
+        margin-bottom: 16px;
+        background-color: #eee;
+      }
+      .card .thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+      }
+
+      .card .chip {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--text);
+        background: var(--brand-light);
+        padding: 6px 12px;
+        border-radius: 50px;
+        margin-bottom: 12px;
+        align-self: flex-start;
+      }
+      .card h3 {
+        margin-bottom: 8px;
+        font-size: 1.25rem;
+      }
+      .card p {
+        color: var(--muted);
+        margin: 0 0 16px;
+        font-size: 0.95rem;
+      }
+      .card a.more {
+        margin-top: auto;
+        font-weight: 700;
+      }
+
+      /* Grid & Panels */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 22px;
+      }
+      .panel {
+        background: var(--panel);
+        border-radius: var(--radius);
+        padding: 24px;
+        box-shadow: var(--shadow);
+      }
+
+      /* Timeline */
+      .timeline {
+        padding-left: 20px;
+        border-left: 2px solid var(--brand-light);
+      }
+      .timeline .item {
+        position: relative;
+        margin-bottom: 24px;
+      }
+      .timeline .item::before {
+        content: "";
+        position: absolute;
+        left: -28px;
+        top: 5px;
+        width: 12px;
+        height: 12px;
+        background-color: var(--brand);
+        border-radius: 50%;
+        border: 2px solid var(--bg);
+      }
+      .timeline .item h4 {
+        margin-bottom: 4px;
+      }
+      .timeline .time {
+        font-size: 14px;
+        color: var(--muted);
+        margin-bottom: 8px;
+      }
+      .timeline .item p {
+        font-size: 0.95rem;
+        margin-bottom: 0;
+      }
+
+      .notice {
+        background-color: #fff8e1;
+        color: #6d4c41;
+        padding: 1rem;
+        border-radius: 8px;
+        border: 1px solid #ffecb3;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      /* =========================================================
+         Footer
+         ========================================================= */
+      footer {
+        padding: 40px 0;
+        color: var(--muted);
+        text-align: center;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        margin-top: 64px;
+      }
+      footer p {
+        margin: 0;
+        line-height: 1.7;
+      }
+
+    </style>
+  </head>
+  <body id="return-up">
+    <a class="skip" href="#contenuto">Salta al contenuto</a>
+
+    <header>
+      <div class="container nav">
+        <img src="../../images/favicon.svg" alt="Logo Tour Eiffel" class="logo" />
+        <span style="font-weight: 800;">VIAGGIO D'ISTRUZIONE — dal 03/11/25 al 08/11/25</span>
+        <button class="menu-btn" aria-expanded="false" aria-controls="menu" style="font-size: 1.5em;">
+          ☰
+        </button>
+        <nav>
+          <ul id="menu" role="menubar">
+            <li role="none">
+              <a role="menuitem" href="../index.html">Home</a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="../Giorno1/Giorno1.html">Giorno 1</a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="../Giorno2/Giorno2.html">Giorno 2</a>
+            </li>
+            <li role="none">
+              <a
+                role="menuitem"
+                href="../Giorno3/Giorno3.html"
+                aria-current="page"
+                >Giorno 3</a
+              >
+            </li>
+            <li role="none">
+              <a role="menuitem" href="../Giorno4/Giorno4.html">Giorno 4</a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="../Giorno5/Giorno5.html">Giorno 5</a>
+            </li>
+            <li>
+              <a role="menuitem" href="../../EN/Giorno3/Giorno3.html">🇬🇧 English</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenuto">
+      <section id="intro">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+          <h1>Parigi tra giardini, palazzi e bellezza urbana</h1>
+          <nav class="hero-menu" aria-label="Navigazione interna hero">
+            <ul>
+              <li><a href="#luoghi">Monumenti</a></li>
+              <li><a href="#itinerario">Itinerario</a></li>
+              <li><a href="#info">Info utili</a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+
+      <section id="luoghi">
+        <div class="container">
+          <h2 class="section-title">Luoghi in evidenza <a href="#return-up"><img src="../icons/arrow_up.svg"></a></h2>
+          <p class="section-sub">
+            Tre tappe per esplorare Parigi tra natura, architettura e storia.
+          </p>
+          <div class="cards">
+            <article class="card">
+              <div class="thumb" role="img" aria-label="Giardini di Versailles">
+                <img
+                  src="../../images/FontanaDiApollo.jpg"
+                  alt="La Fontana di Apollo nei giardini di Versailles"
+                />
+              </div>
+              <span class="chip">Giardini</span>
+              <h3>Giardini di Versailles</h3>
+              <p>
+                Un esempio di paesaggio geometrico e simbolico. Percorso ideale
+                per riflettere su natura, potere e urbanistica del Seicento.
+              </p>
+              <a class="more" href="versailles.html">Approfondisci →</a>
+            </article>
+
+            <article class="card">
+              <div
+                class="thumb"
+                role="img"
+                aria-label="Interni del Palazzo di Versailles"
+              >
+                <img
+                  src="../../images/GalleriaDegliSpecchi.jpg"
+                  alt="La sfarzosa Galleria degli Specchi a Versailles"
+                />
+              </div>
+              <span class="chip">Architettura</span>
+              <h3>Interni di Versailles</h3>
+              <p>
+                Dalla celebre Galleria degli Specchi agli appartamenti reali,
+                gli interni della Reggia raccontano la grandezza del Re Sole e
+                della corte francese.
+              </p>
+              <a class="more" href="interni.html">Approfondisci →</a>
+            </article>
+
+            <article class="card">
+              <div
+                class="thumb"
+                role="img"
+                aria-label="ANPI Parigi"
+              >
+                <img
+                  src="../../images/ANPIParigi.jpeg"
+                  alt="ANPI Parigi"
+                />
+              </div>
+              <span class="chip">Extra</span>
+              <h3>ANPI Parigi</h3>
+              <p>
+                Incontro con il professore e lo storico Eric Gobetti sul libro
+                ‘I carnefici del Duce’.
+              </p>
+              <a class="more" href="./associazione.html">Approfondisci →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="itinerario">
+        <div class="container">
+          <h2 class="section-title">Itinerario proposto <a href="#return-up"><img src="../icons/arrow_up.svg"></a></h2>
+          <div class="grid">
+            <div class="panel">
+              <div class="timeline" aria-label="Sequenza dell'itinerario">
+                <div class="item">
+                  <h4>Partenza — B&B HOTEL Paris Porte de la Villette</h4>
+                </div>
+                <div class="item">
+                  <h4>Arrivo a Versailles</h4>
+                  <p class="section-sub">Trasferimento in pullman o RER.</p>
+                </div>
+                <div class="item">
+                  <h4>Visione dei giardini di Versailles</h4>
+                  <p class="section-sub">
+                    Passeggiata guidata e osservazioni paesaggistiche.
+                  </p>
+                </div>
+                <div class="item">
+                  <h4>Visita agli interni della Reggia</h4>
+                  <p class="section-sub">
+                    Gallerie, Sala degli Specchi, Appartamenti reali.
+                  </p>
+                </div>
+                <div class="item">
+                  <h4>Ritorno a Parigi</h4>
+                </div>
+                <div class="item">
+                  <h4>Incontro con l'ANPI di Parigi</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="info">
+        <div class="container grid">
+          <div class="panel">
+            <h2 class="section-title" style="text-align: center;">Info utili <a href="#return-up"><img src="../icons/arrow_up.svg"></a></h2>
+            <ul style="display: flex;align-items: center;justify-content: center;flex-direction: column;">
+              <li>
+                <strong>Trasporti:</strong> 
+                <a href="https://www.ratp.fr/en/itineraires/Porte%20de%20la%20Villette_%2075019%20Paris%26Gare%20de%20Versailles%20Chantiers_%2078000%20Versailles" target="_blank" style="color:var(--text);text-decoration: underline;text-align: center ;">Clicca qui per visualizzare l'itinerario sul sito RATP</a>
+              </li>
+              <div style="width: 100%; height: 120px; display: flex; align-items: center; justify-content: center;flex-direction: column; margin-top: 10px;">
+                <img 
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.chateauversailles.fr/" 
+                  alt="QR Code sito ufficiale Versailles"
+                  style="height: 100%; width: 100px;border-radius: 12px;"
+                >
+                <a href="https://www.chateauversailles.fr/" target="_blank" style="color: var(--text); text-decoration: underline;">
+                  Clicca qui o scansiona il QR code per visualizzare il sito ufficiale di Versailles
+                </a>
+              </div>
+
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer style="border: none;">
+      <div class="container">
+        <p>
+          Sito sviluppato da:<br /><strong
+            >Cotea Claudiu Florin - Panzavolta Davide - Fusconi Luca - Mele
+            Nicolo' Emanuele</strong
+          ><br />In collaborazione con
+          <strong>&copy; 2025 5AIN <a href="https://itisravenna.edu.it/">ITIS Nullo Baldini Ravenna</a>.</strong>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const btn = document.querySelector(".menu-btn");
+      const menu = document.getElementById("menu");
+      btn?.addEventListener("click", () => {
+        const open = menu.classList.toggle("open");
+        btn.setAttribute("aria-expanded", String(open));
+      });
+    </script>
+  </body>
+</html>

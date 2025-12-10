@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="../../images/favicon.svg">
+  <title>ANPI — Meeting with Eric Gobetti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+        --bg: #dfd2b9;
+        --panel: #cdb585;
+        --text: #433422;
+        --muted: #856f58;
+        --brand: #c59d5f;
+        --brand-light: rgba(197,157,95,0.12);
+        --shadow: 0 8px 24px rgba(67,52,34,0.08);
+        --radius: 12px;
+        --maxw: 1100px;
+    }
+    *{box-sizing:border-box}
+    body {
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:var(--bg)
+    }
+    a {
+      color:var(--brand);
+      text-decoration:none
+    }
+    a:hover {text-decoration:underline}
+    .wrap {
+      max-width:var(--maxw);
+      margin:0 auto;
+      padding:26px 18px
+    }
+    .crumbs {
+      display:flex;
+      gap:8px;
+      align-items:center;
+      color:var(--muted);
+      font-size:14px;
+      margin:12px 0 18px
+    }
+    .panel {
+      background:var(--panel);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:var(--shadow)
+    }
+    .chip {
+      display:inline-block;
+      font-size:12px;
+      color:#fff;
+      background:linear-gradient(135deg,var(--brand),#b3894a);
+      padding:6px 10px;
+      border-radius:999px
+    }
+    h1 {margin:6px 0 8px}
+    .sub {color:var(--muted);margin:0 0 18px}
+    .meta-row {display:flex;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:14px}
+    .hero {
+      height:220px;
+      border-radius:12px;
+      background:linear-gradient(135deg, rgba(159,122,234,.18), rgba(79,124,255,.14));
+      margin-top:14px;
+      overflow:hidden
+    }
+    .hero img {
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block
+    }
+    .card {
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:16px;
+      align-items:stretch;
+      background:var(--panel);
+      border-radius:12px;
+      padding:16px
+    }
+    .card h3 {margin:0 0 6px}
+    .card p {margin:0;color:var(--muted);line-height:1.5}
+    .media {
+      position:relative;
+      width:100%;
+      border-radius:10px;
+      overflow:hidden;
+      background:#0b0d12
+    }
+    .media::before {content:"";display:block;aspect-ratio:16/10;width:100%}
+    .media img {
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover
+    }
+    .badge {
+      display:inline-block;
+      font-size:11px;
+      color:var(--text);
+      background:var(--brand);
+      border:1px solid rgba(255,255,255,.06);
+      padding:4px 8px;
+      border-radius:999px;
+      margin-bottom:8px;
+    }
+    @media (max-width:780px){.card{grid-template-columns:1fr;}}
+    footer {
+      color:var(--muted);
+      margin:24px 0 40px
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="crumbs">
+      <a href="Giorno3.html">Home</a> <span>›</span> <a href="Giorno3.html#itinerario">Itinerary</a> <span>›</span> <span>ANPI Paris</span>
+    </nav>
+
+    <!-- MAIN HEADER -->
+    <header class="panel page">
+      <span class="chip">Event • ANPI Paris</span>
+      <h1>Meeting with historian Eric Gobetti: “I carnefici del Duce”</h1>
+      <p class="sub">
+        Wednesday, <strong>November 5th at 7:00 PM</strong>, at the headquarters of <strong>ANPI Paris</strong>, there will be a meeting with historian <strong>Eric Gobetti</strong> dedicated to presenting his essay  
+        <em>“I carnefici del Duce. I crimini di guerra dell’Italia fascista”</em>.  
+        The initiative, promoted by ANPI in collaboration with Italian cultural institutions in France, represents an opportunity to reflect on the <strong>war crimes committed by the Fascist regime</strong> and on the duty of historical memory.  
+        The event aims to encourage an open dialogue on the relationship between history, responsibility, and democracy, providing the public with tools to understand the roots of the past and their connection to the present.
+      </p>
+      <div class="media" aria-hidden="true" style="background: url('assets/images/ANPIParigi.jpeg');background-size: contain;background-repeat:no-repeat;background-position:center;"></div>
+    </header>
+
+    <!-- HISTORICAL SECTION -->
+    <section class="panel">
+      <div style="display:flex;align-items:center;justify-content:center;flex-direction:column;width:100%;text-align:justify;">
+        <span class="badge">Memory and Commitment</span>
+        <h3>A bridge between past and future</h3>
+        <p>
+          The meeting is part of the civic and cultural engagement path that <strong>ANPI</strong> has been promoting for decades, fostering knowledge of the <strong>Resistance</strong> and defending the values of the <strong>Italian Constitution</strong>.  
+          Through events like this, the association continues to keep historical memory alive, encouraging collective reflection on <strong>freedom, anti-fascism, and justice</strong>.  
+          ANPI Paris, in particular, is committed to spreading the story of the liberation struggle abroad and supporting dialogue between new Italian and French generations on the universal values of democracy.
+        </p>
+      </div>
+    </section>
+
+    <!-- SPEAKER SECTION -->
+    <section class="panel" style="margin-top:18px;">
+      <div class="card">
+        <div>
+          <span class="badge">Historian & Speaker</span>
+          <h3>Eric Gobetti</h3>
+          <p>
+            <strong>Eric Gobetti</strong>, historian and essayist, will be the speaker responsible for the <strong>ANPI presentation</strong> and its role in safeguarding historical memory.  
+            A scholar of the twentieth century and topics related to the <strong>Italian Resistance</strong>, Gobetti is known for his outreach work and his commitment to combating historical falsifications of the Fascist period.  
+            Through his talks, he aims to convey to younger generations the profound meaning of the <strong>partisan struggle</strong> and the contemporary relevance of the values of freedom, justice, and democracy on which ANPI is founded.
+          </p>
+        </div>
+        <div class="media" aria-hidden="true">
+          <img src="https://fondazionefeltrinelli.it/wp-content/uploads/2025/04/Untitled-design.jpg" alt="Eric Gobetti, historian and speaker" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container foot" style="width:100%;display:flex;align-items:center;justify-content:center;">
+        <p style="text-align:center;">
+          Website developed by:<br>
+          <strong>Cotea Claudiu Florin - Panzavolta Davide - Fusconi Luca - Mele Nicolò Emanuele</strong><br>
+          In collaboration with: <strong><br>&copy; 2025 5AIN <a href="https://itisravenna.edu.it/">ITIS Nullo Baldini Ravenna</a>.</strong>
+        </p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
