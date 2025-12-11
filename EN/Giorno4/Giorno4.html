@@ -16,7 +16,7 @@
   <header>
     <div class="container nav">
       <div class="brand">
-        <img src="../Images/logo.png" alt="Logo Tour Eiffel" class="logo" />
+        <img src="../../images/favicon.svg" alt="Eiffel Tower Logo" class="logo" />
         <span>EDUCATIONAL TRIP — from 03/11/25 to 08/11/25</span>
       </div>
       <button class="menu-btn" aria-expanded="false" aria-controls="menu">☰</button>
@@ -122,7 +122,7 @@
               <div class="main-image">
                 <img src="assets/images/les-invalides1.jpg" alt="Les Invalides - Majestic architectural complex with golden dome">
                 <div class="image-overlay">
-                  <button class="gallery-btn">
+                  <button class="gallery-btn" data-gallery="les-invalides">
                     <i class="fas fa-expand"></i>
                     Full Gallery
                   </button>
@@ -130,8 +130,8 @@
             </div>
               <div class="thumbnail-grid">
                 <img src="assets/images/les-invalides.jpg" alt="Golden dome of Les Invalides">
-                <img src="assets/images/les-invalides1.jpg" alt="Inner courtyard of Les Invalides">
                 <img src="assets/images/les-invalides2.jpg" alt="Classical French architecture">
+                <img src="assets/images/les-invalides3.jpg" alt="Les Invalides architecture">
         </div>
             </div>
             
@@ -139,7 +139,7 @@
               <div class="description-section">
                 <h4>History and Significance</h4>
                 <p>Les Invalides represents one of the most significant architectural complexes in Paris. Built at the behest of Louis XIV in 1670, this majestic building was born from the need to provide assistance to French war veterans. The imposing architecture, characterized by the famous golden dome, embodies the grandeur of the Sun King and French military power.</p>
-                <p>The complex extends over an area of 13 hectares and includes not only the original hospital, but also the Musée de l'Armée, Napoleon's tomb and the church of Saint-Louis-des-Invalides. Each architectural element tells a story of power, art and collective memory.</p>
+                <p>The complex extends over a vast area with a 196-meter façade and includes 15 courtyards, the original hospital, the Musée de l'Armée, Napoleon's tomb and the church of Saint-Louis-des-Invalides. Each architectural element tells a story of power, art and collective memory.</p>
               </div>
               
               <div class="curiosita-section">
@@ -149,7 +149,7 @@
                     <i class="fas fa-coins"></i>
                     <div>
                       <h5>The Golden Dome</h5>
-                      <p>Contains over 12 kg of pure gold leaf, applied in 550,000 ultra-thin sheets</p>
+                      <p>Contains 12.65 kg of pure gold leaf, applied in 550,000 ultra-thin sheets (0.2 microns thick)</p>
                     </div>
                   </div>
                   <div class="curiosita-item">
@@ -168,6 +168,22 @@
                     </div>
                 </div>
               </div>
+              
+              <div class="monumento-official">
+                <div class="monumento-official-content">
+                  <div class="monumento-official-label">Official Resources</div>
+                  <div class="monumento-official-links">
+                    <a class="monumento-official-link" href="https://www.musee-armee.fr/" target="_blank" rel="noopener">
+                      <i class="fas fa-external-link-alt"></i>
+                      Official Site
+                    </a>
+                  </div>
+                </div>
+                <div class="monumento-qr-container">
+                  <div class="monumento-qr-label">Scan QR Code</div>
+                  <img class="monumento-qr" src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https%3A%2F%2Fwww.musee-armee.fr%2F" alt="QR Code for Les Invalides official website" width="100" height="100"/>
+                </div>
+              </div>
                     </div>
                     </div>
                 </div>
@@ -181,7 +197,7 @@
               <div class="monumento-meta">
                 <span class="meta-item">
                   <i class="fas fa-calendar"></i>
-                  1840 - 1861
+                  1843 - 1861
                 </span>
                 <span class="meta-item">
                   <i class="fas fa-user"></i>
@@ -198,38 +214,31 @@
           <div class="monumento-content-grid">
             <div class="monumento-image-gallery">
               <div class="main-image">
-                <img src="assets/images/napoleon-tomb2.jpg" alt="Napoleon's Tomb - Imperial mausoleum with red quartz sarcophagus">
+                <img src="assets/images/napoleon-tomb2.jpg" alt="Napoleon's Tomb - Imperial mausoleum with red quartzite sarcophagus">
                 <div class="image-overlay">
-                  <button class="gallery-btn">
+                  <button class="gallery-btn" data-gallery="napoleon-tomb">
                     <i class="fas fa-expand"></i>
                     Full Gallery
                   </button>
                 </div>
               </div>
               <div class="thumbnail-grid">
-                <img src="assets/images/napoleon-tomb.jpg" alt="Red quartz sarcophagus from Corsica">
+                <img src="assets/images/napoleon-tomb.jpg" alt="Red quartzite sarcophagus in Napoleon's Tomb">
                 <img src="assets/images/napoleon-tomb1.jpg" alt="Interior of the dome with decorations">
-                <img src="assets/images/napoleon-tomb2.jpg" alt="Architectural decorations of the mausoleum">
+                <img src="assets/images/napoleon-tomb3.jpg" alt="Napoleon's Tomb details">
               </div>
             </div>
             
             <div class="monumento-description">
               <div class="description-section">
                 <h4>The Emperor's Mausoleum</h4>
-                <p>Napoleon Bonaparte's tomb represents one of the masterpieces of world funerary architecture. Designed by Louis Visconti, this monumental work of art houses the Emperor's remains in a 35-ton red quartz sarcophagus, positioned at the center of a circular crypt of extraordinary beauty.</p>
+                <p>Napoleon Bonaparte's tomb represents one of the masterpieces of world funerary architecture. Designed by Louis Visconti, this monumental work of art houses the Emperor's remains in a massive red quartzite sarcophagus, positioned at the center of a circular crypt of extraordinary beauty.</p>
                 <p>The architectural design reflects Napoleon's greatness and ambition, with a structure that evokes both imperial majesty and technical innovation. The crypt, accessible through a monumental staircase, creates an atmosphere of sacredness and respect that honors the memory of one of the most influential figures in European history.</p>
                 </div>
 
               <div class="curiosita-section">
                 <h4>Technical Details</h4>
                 <div class="curiosita-grid">
-                  <div class="curiosita-item">
-                    <i class="fas fa-weight"></i>
-                    <div>
-                      <h5>Sarcophagus Weight</h5>
-                      <p>35 tons of red quartz from Corsica</p>
-                    </div>
-                        </div>
                   <div class="curiosita-item">
                     <i class="fas fa-ruler"></i>
                     <div>
@@ -238,13 +247,36 @@
                     </div>
                 </div>
                   <div class="curiosita-item">
-                    <i class="fas fa-ship"></i>
+                    <i class="fas fa-gem"></i>
                     <div>
-                      <h5>Transport</h5>
-                      <p>Transported from Corsica by sea in 1861</p>
+                      <h5>Material</h5>
+                      <p>Red Shoksha quartzite from Russian Karelia</p>
+                    </div>
+                        </div>
+                  <div class="curiosita-item">
+                    <i class="fas fa-coffin"></i>
+                    <div>
+                      <h5>Nested Coffins</h5>
+                      <p>Six coffins: tin, mahogany, lead, mahogany, ebony, and quartzite</p>
                     </div>
                         </div>
                     </div>
+                </div>
+                
+                <div class="monumento-official">
+                  <div class="monumento-official-content">
+                    <div class="monumento-official-label">Official Resources</div>
+                    <div class="monumento-official-links">
+                      <a class="monumento-official-link" href="https://www.musee-armee.fr/" target="_blank" rel="noopener">
+                        <i class="fas fa-external-link-alt"></i>
+                        Official Site
+                      </a>
+                    </div>
+                  </div>
+                  <div class="monumento-qr-container">
+                    <div class="monumento-qr-label">Scan QR Code</div>
+                    <img class="monumento-qr" src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https%3A%2F%2Fwww.musee-armee.fr%2F" alt="QR Code for Napoleon's Tomb official website" width="120" height="120"/>
+                  </div>
                 </div>
             </div>
         </div>
@@ -278,7 +310,7 @@
               <div class="main-image">
                 <img src="assets/images/musee-arm1.jpg" alt="Musée de l'Armée - Military collection and historical armor">
                 <div class="image-overlay">
-                  <button class="gallery-btn">
+                  <button class="gallery-btn" data-gallery="musee-armee">
                     <i class="fas fa-expand"></i>
                     Full Gallery
                   </button>
@@ -286,8 +318,8 @@
             </div>
               <div class="thumbnail-grid">
                 <img src="assets/images/musee-armee.jpg" alt="Medieval and Renaissance armor">
-                <img src="assets/images/musee-arm1.jpg" alt="Historical weapons and military documents">
                 <img src="assets/images/musee-arme2.jpg" alt="Historical uniforms and flags">
+                <img src="assets/images/musee-arme3.jpg" alt="Musée de l'Armée collection">
         </div>
             </div>
             
@@ -324,6 +356,22 @@
                   </div>
                 </div>
               </div>
+              
+              <div class="monumento-official">
+                <div class="monumento-official-content">
+                  <div class="monumento-official-label">Official Resources</div>
+                  <div class="monumento-official-links">
+                    <a class="monumento-official-link" href="https://www.musee-armee.fr/" target="_blank" rel="noopener">
+                      <i class="fas fa-external-link-alt"></i>
+                      Official Site
+                    </a>
+                  </div>
+                </div>
+                <div class="monumento-qr-container">
+                  <div class="monumento-qr-label">Scan QR Code</div>
+                  <img class="monumento-qr" src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https%3A%2F%2Fwww.musee-armee.fr%2F" alt="QR Code for Musée de l'Armée official website" width="120" height="120"/>
+                </div>
+              </div>
             </div>
           </div>
                         </div>
@@ -356,7 +404,7 @@
               <div class="main-image">
                 <img src="assets/images/musee-liberation1.jpg" alt="Musée de la Libération - Memorial dedicated to Leclerc and Moulin">
                 <div class="image-overlay">
-                  <button class="gallery-btn">
+                  <button class="gallery-btn" data-gallery="musee-liberation">
                     <i class="fas fa-expand"></i>
                     Full Gallery
                   </button>
@@ -364,8 +412,8 @@
                     </div>
               <div class="thumbnail-grid">
                 <img src="assets/images/musee-liberation.jpg" alt="Memorial of the French resistance">
-                <img src="assets/images/musee-liberation1.jpg" alt="Historical documents of the liberation">
                 <img src="assets/images/musee-liberation2.jpg" alt="Permanent exhibition on the resistance">
+                <img src="assets/images/musee-liberation3.jpg" alt="Musée de la Libération exhibition">
                                 </div>
                             </div>
             
@@ -387,10 +435,10 @@
                                 </div>
                             </div>
                   <div class="curiosita-item">
-                    <i class="fas fa-car"></i>
+                    <i class="fas fa-walking-stick"></i>
                                 <div>
-                      <h5>Leclerc's Jeep</h5>
-                      <p>The original vehicle used in the liberation</p>
+                      <h5>Leclerc's Artifacts</h5>
+                      <p>Walking cane, Moroccan burnous, and British identity papers</p>
                                 </div>
                             </div>
                   <div class="curiosita-item">
@@ -401,6 +449,22 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    
+                    <div class="monumento-official">
+                      <div class="monumento-official-content">
+                        <div class="monumento-official-label">Official Resources</div>
+                        <div class="monumento-official-links">
+                          <a class="monumento-official-link" href="https://www.museeliberation-leclerc-moulin.paris.fr/" target="_blank" rel="noopener">
+                            <i class="fas fa-external-link-alt"></i>
+                            Official Site
+                          </a>
+                        </div>
+                      </div>
+                      <div class="monumento-qr-container">
+                        <div class="monumento-qr-label">Scan QR Code</div>
+                        <img class="monumento-qr" src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https%3A%2F%2Fwww.museeliberation-leclerc-moulin.paris.fr%2F" alt="QR Code for Musée de la Libération official website" width="100" height="100"/>
+                      </div>
                     </div>
             </div>
           </div>
@@ -528,7 +592,7 @@
             <div class="info-row">
               <div class="info-col">
                 <label>Address</label>
-                <p>Place Denfert-Rochereau, 75014</p>
+                <p>4 Avenue du Colonel Henri Rol-Tanguy, 75014</p>
               </div>
               <div class="info-col">
                 <label>Metro</label>
@@ -589,11 +653,24 @@
               <h3>Map & Resources</h3>
             </div>
             <div class="info-map-container">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.123456789!2d2.3123456!3d48.8567890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66c1e06e2b70f%3A0x40b82c3688c9460!2sLes%20Invalides!5e0!3m2!1sit!2sit!4v1234567890123!5m2!1sit!2sit" width="100%" height="180" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-            <div class="qr-container" style="text-align: center; margin-top: 1rem;">
-              <img src="assets/images/qr-code.png" alt="QR Code" style="width: 100px; height: 100px; border-radius: 8px; border: 2px solid var(--brand-light);" />
-              <p style="margin: 0.5rem 0 0; font-size: 0.8rem; color: var(--muted);">Scan for complete info</p>
+              <div class="map-wrapper">
+                <iframe 
+                  src="https://www.google.com/maps?q=Les+Invalides,+129+Rue+de+Grenelle,+75007+Paris,+France|Musée+de+la+Libération+de+Paris,+4+Avenue+du+Colonel+Henri+Rol-Tanguy,+75014+Paris,+France&ll=48.8456,2.3194&z=13&output=embed" 
+                  width="100%" 
+                  height="280" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade"
+                  class="map-iframe"
+                  title="Map showing Les Invalides (including Napoleon's Tomb and Musée de l'Armée) and Musée de la Libération locations">
+                </iframe>
+                <div class="map-overlay"></div>
+                <div class="map-click-hint">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Click to explore both locations</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

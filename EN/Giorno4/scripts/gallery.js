@@ -25,23 +25,30 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Gallery modal functionality
+// Gallery modal functionality - shows all images together
 document.querySelectorAll('.gallery-btn').forEach(btn => {
   btn.addEventListener('click', function() {
     const allImages = [
-      { src: 'assets/images/les-invalides.jpg', alt: 'Les Invalides - Cupola dorata' },
-      { src: 'assets/images/les-invalides1.jpg', alt: 'Les Invalides - Complesso architettonico' },
-      { src: 'assets/images/les-invalides2.jpg', alt: 'Les Invalides - Architettura classica' },
-      { src: 'assets/images/musee-arm1.jpg', alt: 'Musée de l\'Armée - Collezione militare' },
-      { src: 'assets/images/musee-armee.jpg', alt: 'Musée de l\'Armée - Armature storiche' },
-      { src: 'assets/images/musee-arme2.jpg', alt: 'Musée de l\'Armée - Uniformi e bandiere' },
-      { src: 'assets/images/musee-liberation.jpg', alt: 'Musée de la Libération - Memoriale' },
-      { src: 'assets/images/musee-liberation1.jpg', alt: 'Musée de la Libération - Leclerc e Moulin' },
-      { src: 'assets/images/musee-liberation2.jpg', alt: 'Musée de la Libération - Resistenza francese' },
-      { src: 'assets/images/napoleon-tomb.jpg', alt: 'Tomba di Napoleone - Sarcofago di quarzo rosso' },
-      { src: 'assets/images/napoleon-tomb1.jpg', alt: 'Tomba di Napoleone - Interno della cupola' },
-      { src: 'assets/images/napoleon-tomb2.jpg', alt: 'Tomba di Napoleone - Mausoleo imperiale' },
-      { src: 'assets/images/qr-code.png', alt: 'QR Code - Informazioni' }
+      // Les Invalides
+      { src: 'assets/images/les-invalides1.jpg', alt: 'Les Invalides - Majestic architectural complex with golden dome' },
+      { src: 'assets/images/les-invalides.jpg', alt: 'Golden dome of Les Invalides' },
+      { src: 'assets/images/les-invalides2.jpg', alt: 'Classical French architecture' },
+      { src: 'assets/images/les-invalides3.jpg', alt: 'Les Invalides architecture' },
+      // Napoleon's Tomb
+      { src: 'assets/images/napoleon-tomb2.jpg', alt: 'Napoleon\'s Tomb - Imperial mausoleum with red quartz sarcophagus' },
+      { src: 'assets/images/napoleon-tomb.jpg', alt: 'Red quartz sarcophagus from Corsica' },
+      { src: 'assets/images/napoleon-tomb1.jpg', alt: 'Interior of the dome with decorations' },
+      { src: 'assets/images/napoleon-tomb3.jpg', alt: 'Napoleon\'s Tomb details' },
+      // Musée de l'Armée
+      { src: 'assets/images/musee-arm1.jpg', alt: 'Musée de l\'Armée - Military collection and historical armor' },
+      { src: 'assets/images/musee-armee.jpg', alt: 'Medieval and Renaissance armor' },
+      { src: 'assets/images/musee-arme2.jpg', alt: 'Historical uniforms and flags' },
+      { src: 'assets/images/musee-arme3.jpg', alt: 'Musée de l\'Armée collection' },
+      // Musée de la Libération
+      { src: 'assets/images/musee-liberation1.jpg', alt: 'Musée de la Libération - Memorial dedicated to Leclerc and Moulin' },
+      { src: 'assets/images/musee-liberation.jpg', alt: 'Memorial of the French resistance' },
+      { src: 'assets/images/musee-liberation2.jpg', alt: 'Permanent exhibition on the resistance' },
+      { src: 'assets/images/musee-liberation3.jpg', alt: 'Musée de la Libération exhibition' }
     ];
     
     // Create modal
@@ -51,7 +58,7 @@ document.querySelectorAll('.gallery-btn').forEach(btn => {
       <div class="gallery-modal-content">
         <span class="gallery-close">&times;</span>
         <div class="gallery-header">
-          <h3>Galleria Completa - Tutte le Immagini</h3>
+          <h3>Full Gallery</h3>
           <div class="gallery-counter">
             <span class="current-image">1</span> / <span class="total-images">${allImages.length}</span>
           </div>
@@ -193,11 +200,16 @@ document.querySelectorAll('.monumento-detailed').forEach(monument => {
     // Create expand button
     const expandBtn = document.createElement('button');
     expandBtn.className = 'expand-toggle';
-    expandBtn.innerHTML = '<span>Leggi di più</span><i class="fas fa-chevron-down"></i>';
+    expandBtn.innerHTML = '<span>Read more</span><i class="fas fa-chevron-down"></i>';
     expandBtn.setAttribute('aria-expanded', 'false');
     
-    // Insert button inside the description area, after all content
-    description.appendChild(expandBtn);
+    // Insert button inside the description area, before official section if present
+    const official = description.querySelector('.monumento-official');
+    if (official) {
+      description.insertBefore(expandBtn, official);
+    } else {
+      description.appendChild(expandBtn);
+    }
     
     // Add click event
     expandBtn.addEventListener('click', () => {
@@ -208,14 +220,14 @@ document.querySelectorAll('.monumento-detailed').forEach(monument => {
       expandBtn.setAttribute('aria-expanded', isExpanding ? 'true' : 'false');
       
       if (description.classList.contains('expanded')) {
-        expandBtn.innerHTML = '<span>Mostra meno</span><i class="fas fa-chevron-down"></i>';
+        expandBtn.innerHTML = '<span>Show less</span><i class="fas fa-chevron-down"></i>';
         
         // Smooth scroll to keep the button in view when expanding
         setTimeout(() => {
           expandBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }, 100);
       } else {
-        expandBtn.innerHTML = '<span>Leggi di più</span><i class="fas fa-chevron-down"></i>';
+        expandBtn.innerHTML = '<span>Read more</span><i class="fas fa-chevron-down"></i>';
         
         // Scroll to top of monument when collapsing
         setTimeout(() => {

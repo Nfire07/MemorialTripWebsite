@@ -699,7 +699,7 @@ header {
 
 .monumento-description:not(.expanded) .description-section {
   position: relative;
-  max-height: 150px;
+  max-height: 280px;
   overflow: hidden;
   margin-bottom: 1rem;
 }
@@ -710,8 +710,8 @@ header {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 80px;
-  background: linear-gradient(to bottom, transparent, var(--panel) 70%);
+  height: 120px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, var(--panel) 100%);
   pointer-events: none;
   z-index: 5;
 }
@@ -720,10 +720,13 @@ header {
   display: none;
 }
 
+/* Official section always visible */
+
 .monumento-description .expand-toggle {
   position: relative;
   z-index: 10;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* Expanded state - show all content */
@@ -741,6 +744,8 @@ header {
   display: block;
   margin-bottom: 2rem;
 }
+
+/* Official section always visible */
 
 .monumento-description .description-section,
 .monumento-description .curiosita-section {
@@ -1019,10 +1024,86 @@ header {
 }
 
 .info-map-container {
-  border-radius: 8px;
-  overflow: hidden;
   margin-bottom: 0;
 }
+
+.map-wrapper {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 3px solid var(--brand-light);
+  box-shadow: 0 4px 16px rgba(212, 175, 55, 0.15), inset 0 0 0 1px rgba(212, 175, 55, 0.1);
+  transition: all 0.3s ease;
+  background: var(--panel);
+}
+
+.info-card:hover .map-wrapper {
+  border-color: var(--brand);
+  box-shadow: 0 6px 24px rgba(212, 175, 55, 0.25), inset 0 0 0 1px rgba(212, 175, 55, 0.2);
+  transform: translateY(-2px);
+}
+
+.map-iframe {
+  display: block;
+  width: 100%;
+  height: 280px;
+  border: none;
+  filter: grayscale(10%) brightness(0.98) contrast(1.05);
+  transition: filter 0.3s ease;
+}
+
+.info-card:hover .map-iframe {
+  filter: grayscale(0%) brightness(1) contrast(1);
+}
+
+.map-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background: linear-gradient(135deg, 
+    rgba(212, 175, 55, 0.03) 0%, 
+    transparent 50%, 
+    rgba(212, 175, 55, 0.03) 100%);
+  border-radius: 12px;
+  z-index: 1;
+}
+
+.map-click-hint {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 0.8rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--text);
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.map-click-hint i {
+  color: var(--brand);
+  font-size: 0.9rem;
+}
+
+.info-card:hover .map-click-hint {
+  opacity: 1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
 
 .info-card-map .info-card-header {
   margin-bottom: 1rem;
@@ -1358,6 +1439,15 @@ header {
   .info-tips-grid {
     grid-template-columns: 1fr;
   }
+  .map-iframe {
+    height: 240px;
+  }
+  .map-click-hint {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.6rem;
+    bottom: 8px;
+    right: 8px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -1382,5 +1472,119 @@ header {
     width: 45px;
     height: 45px;
     font-size: 1rem;
+  }
+}
+
+/* Official Resources Styles (Moved from HTML) */
+.monumento-official {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: var(--bg);
+  border-radius: 8px;
+  border: 1px solid var(--brand-light);
+  transition: all 0.3s ease;
+}
+
+.monumento-official:hover {
+  background: var(--panel);
+  border-color: var(--brand);
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.1);
+}
+
+.monumento-official-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.monumento-official-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+
+.monumento-official-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.monumento-official-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--brand);
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.monumento-official-link:hover {
+  background: var(--brand-light);
+  color: var(--brand-dark);
+  text-decoration: none;
+}
+
+.monumento-official-link i {
+  font-size: 0.75rem;
+}
+
+.monumento-qr-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.monumento-qr-label {
+  font-size: 0.65rem;
+  color: var(--muted);
+  font-weight: 600;
+  text-align: center;
+}
+
+.monumento-qr {
+  border: 1.5px solid rgba(212, 175, 55, 0.25);
+  border-radius: 8px;
+  padding: 4px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.monumento-qr:hover {
+  border-color: var(--brand);
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.2);
+  transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .monumento-official {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+  }
+  .monumento-official-content {
+    order: 1;
+  }
+  .monumento-qr-container {
+    order: 2;
+  }
+  .monumento-official-links {
+    flex-direction: row;
   }
 }
