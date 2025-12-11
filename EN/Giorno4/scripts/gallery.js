@@ -208,7 +208,7 @@ document.querySelectorAll('.monumento-detailed').forEach(monument => {
     if (official) {
       description.insertBefore(expandBtn, official);
     } else {
-      description.appendChild(expandBtn);
+    description.appendChild(expandBtn);
     }
     
     // Add click event
