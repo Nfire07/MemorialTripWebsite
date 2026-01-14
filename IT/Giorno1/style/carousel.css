@@ -1,0 +1,44 @@
+/* Carousel Styles */
+.hero-carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    /* Behind content */
+    overflow: hidden;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+/* Ensure content sits on top */
+.hero-content {
+    z-index: 2;
+    /* Already in CSS but reinforcing */
+    position: relative;
+}
+
+/* Specific background images for slides so we can reuse classes if needed, 
+   or we can stick them inline/in HTML for specific pages */
+.slide-sacre1 {
+    background-image: url('../../../images/sacre1.jpg');
+}
+
+.slide-gruppo {
+    background-image: url('../../../images/grupposacre.jpg');
+}

@@ -35,17 +35,25 @@
 
   <main>
 
-    <section id="intro" class="hero hero-bg">
+    <!-- HERO -->
+    <section id="intro" class="hero hero-bg" style="background-image: none;">
+      <div class="hero-carousel">
+        <div class="carousel-slide slide-sacre1 active"></div>
+        <div class="carousel-slide slide-gruppo"></div>
+      </div>
       <div class="container hero-content">
         <h1>Paris through Art, Spirituality, and Civic History</h1>
-        <div class="hero-icons">
-          <a href="#monumenti" class="hero-icon"><span class="ico">🏛️</span>Monuments</a>
-          <a href="#itinerario" class="hero-icon"><span class="ico">🗺️</span>Itinerary</a>
-          <a href="#info" class="hero-icon"><span class="ico">ℹ️</span>Useful Info</a>
-        </div>
+        <nav class="hero-menu" aria-label="Hero internal navigation">
+          <ul>
+            <li><a href="#monumenti">Monuments</a></li>
+            <li><a href="#itinerario">Itinerary</a></li>
+            <li><a href="#info">Useful Info</a></li>
+          </ul>
+        </nav>
       </div>
     </section>
 
+    <!-- MONUMENTI -->
     <section id="monumenti">
       <div class="container">
         <h2 class="section-title">Day 1 Monuments</h2>
@@ -66,12 +74,11 @@
             <p>Symbol of peace and faith after 1871; one of the most beautiful panoramas in the city.</p>
             <a href="sacre-coeur.html" class="more">Learn More →</a>
           </article>
-
-
         </div>
       </div>
     </section>
 
+    <!-- ITINERARIO -->
     <section id="itinerario">
       <div class="container">
         <h2 class="section-title">Proposed Itinerary</h2>
@@ -79,30 +86,25 @@
 
         <div class="panel">
           <ul>
+            <!-- MORNING -->
             <li><strong>Departure</strong> — B&B HOTEL Paris Porte de la Villette (4 Rue Émile Reynaud)</li>
-            <li>Walk → <em>Aimé Césaire</em> (M12) — ~19 min</li>
-            <li>M12 Aimé Césaire → Abbesses (direction “Mairie d’Issy”) — 7 stops</li>
-            <li>Walk Abbesses → <strong>Montmartre</strong> — ~9 min</li>
-            <li>Montmartre tour: <em>Place du Tertre</em>, <em>Saint-Pierre-de-Montmartre</em>, view from
-              <em>Sacré-Cœur</em>
-            </li>
-            <li><strong>Visit Basilica of Sacré-Cœur</strong> (exterior + interior)</li>
-            <li>Metro to <strong>Tuileries</strong> (line 12 → Concorde, then M1 towards Château de Vincennes)</li>
-            <li><strong>Tuileries Garden and Palace</strong> — explanation of the symbolism of the May 23, 1871 fire
-            </li>
-            <li>Walk to <strong>Hôtel de Ville</strong> — ~15 min</li>
-            <li><strong>Hôtel de Ville</strong> — seat of the Commune Council, comparison with current function</li>
+            <li>🚇 <strong>Metro 7</strong>: <em>Porte de la Villette</em> → <em>Stalingrad</em> (4 stops, ~5 min)</li>
+            <li>👣 <strong>Transfer</strong> (4 min) at <em>Stalingrad</em></li>
+            <li>🚇 <strong>Metro 2</strong>: <em>Stalingrad</em> → <em>Anvers</em> (3 stops, ~4 min)</li>
+            <li>⛪ <strong>Basilica of Sacré-Cœur</strong> — Arrival and visit</li>
+            <li>🚶 <strong>Walk</strong> (15 min) to the <strong>Moulin Rouge</strong></li>
           </ul>
         </div>
       </div>
     </section>
 
+    <!-- INFO -->
     <section id="info">
       <div class="container">
         <h2 class="section-title">Useful Info</h2>
         <div class="panel">
           <ul>
-            <li><strong>Transport:</strong> Metro 2 (Anvers), 12 (Abbesses)</li>
+            <li><strong>Transport:</strong> Metro 2 (Anvers), 7 (Stalingrad)</li>
             <li><strong>Accessibility:</strong> steep stairs in Montmartre; funicular available</li>
             <li><strong>Clothing:</strong> comfortable shoes, water, shoulder cover for the basilica</li>
           </ul>
@@ -126,6 +128,18 @@
       const open = menuList.classList.toggle('open');
       menuButton.setAttribute('aria-expanded', String(open));
     });
+
+    // Carousel Logic
+    const slides = document.querySelectorAll('.carousel-slide');
+    let currentSlide = 0;
+
+    if (slides.length > 0) {
+      setInterval(() => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+      }, 5000); // Change every 5 seconds
+    }
   </script>
 
 </body>

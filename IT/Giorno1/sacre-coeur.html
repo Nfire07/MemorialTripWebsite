@@ -21,17 +21,23 @@
   </div>
 
   <!-- HERO GRANDE E SFUOCATA (riusa .hero-bg del tuo CSS) -->
-  <section id="intro" class="hero-bg sacre">
+  <section id="intro" class="hero-bg sacre" style="background-image: none;">
+    <div class="hero-carousel">
+      <div class="carousel-slide slide-sacre1 active"></div>
+      <div class="carousel-slide slide-gruppo"></div>
+    </div>
     <div class="container hero-content">
       <h1>Basilica del Sacro Cuore (Sacré-Cœur)</h1>
       <p class="section-sub" style="max-width:800px; color: rgb(204, 217, 169);">
         Montmartre dall’alto: arte sacra, panorama e memoria civile in uno dei luoghi più iconici di Parigi.
       </p>
-      <div class="hero-icons">
-        <a href="#storia" class="hero-icon">Monumenti</a>
-        <a href="#visita" class="hero-icon">Itinerario</a>
-        <a href="#info" class="hero-icon">Info utili</a>
-      </div>
+      <nav class="hero-menu">
+        <ul>
+          <li><a href="#storia">Monumenti</a></li>
+          <li><a href="#visita">Itinerario</a></li>
+          <li><a href="#info">Info utili</a></li>
+        </ul>
+      </nav>
     </div>
   </section>
 
@@ -59,7 +65,8 @@
           <img class="mon-img" src="../../images/sacre_facciata.jpg" alt="Facciata del Sacré-Cœur e scalinata">
           <h3>Facciata e scalinata</h3>
           <p>Ingresso scenografico con vista su Parigi. Statue equestri di <strong>Giovanna d’Arco</strong> e
-            <strong>San Luigi IX</strong> ai portali.</p>
+            <strong>San Luigi IX</strong> ai portali.
+          </p>
         </article>
 
         <article class="card">
@@ -83,14 +90,7 @@
   <!-- INFO & PERCORSO -->
   <section id="info">
     <div class="container grid">
-      <div class="panel">
-        <h2 class="section-title">Percorso consigliato</h2>
-        <p class="section-sub">Scalinata → Facciata → Interno/Mosaico → Cupola → Belvedere finale</p>
-        <ul>
-          <li><strong>Punto d’incontro</strong>: sagrato del Sacré-Cœur.</li>
-          <li><strong>Accesso</strong>: metro Abbesses/Anvers; funicolare per la parte alta.</li>
-        </ul>
-      </div>
+
 
       <div class="panel">
         <h2 class="section-title">Informazioni pratiche</h2>
@@ -106,8 +106,22 @@
   </section>
 
   <footer>
-    © 2025 — Giorno 1 • Montmartre
+    Sito sviluppato da Jacopo Capacci Zanette-Federico Zavaglini-Gianluigi Tridello<br>
+    © 2025 Classe 5AIN <a href="https://itisravenna.edu.it/">ITIS Nullo Baldini Ravenna</a>
   </footer>
+  <script>
+    // Carousel Logic
+    const slides = document.querySelectorAll('.carousel-slide');
+    let currentSlide = 0;
+
+    if (slides.length > 0) {
+      setInterval(() => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+      }, 5000); // Change every 5 seconds
+    }
+  </script>
 </body>
 
 </html>
