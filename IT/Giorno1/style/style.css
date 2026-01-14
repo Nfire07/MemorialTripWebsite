@@ -382,6 +382,33 @@ footer a:hover {
   background-size: cover;
 }
 
+/* Hero Menu (Giorno 3 Style) */
+.hero-menu ul {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-menu a {
+  display: inline-block;
+  padding: 8px 18px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
 .card-links {
   margin-top: 10px;
 }
@@ -399,4 +426,46 @@ footer a:hover {
 .btn.more:hover {
   opacity: .95;
   transform: translateY(-1px);
+}
+
+/* Carousel Styles */
+.hero-carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+/* Ensure content sits on top */
+.hero-content {
+  z-index: 2;
+  position: relative;
+}
+
+/* Specific images */
+.slide-sacre1 {
+  background-image: url('../../../images/sacre1.jpg');
+}
+
+.slide-gruppo {
+  background-image: url('../../../images/grupposacre.jpg');
 }
