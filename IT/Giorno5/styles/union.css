@@ -2,7 +2,7 @@
     --bg: #f0ebe3;            /* beige chiaro, sfondo storico */
     --panel: #ffffff;         /* bianco, pannelli delle card */
     --text: #1b1b1b;          /* testo principale nero/grigio scuro */
-    --muted: #6b6b6b;         /* testo secondario grigio */
+    --muted: #efefef;         /* testo secondario grigio */
     --brand: #0055a4;         /* blu Francia */
     --brand-2: #ef4135;       /* rosso Francia */
     --brand-light: #ffffff;   /* bianco Francia */
@@ -132,12 +132,11 @@ section {
     padding:64px 0;
 }
 
+/* Contenitore slides */
 .hero {
     position: relative;
     height: 90vh;
     min-height: 100vh;
-    padding: 100px 20px 60px;
-    background: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -147,17 +146,58 @@ section {
     flex-direction: column;
 }
 
+/* Overlay scuro sopra le slide */
 .hero::before {
     content: "";
     position: absolute;
     top:0; left:0;
     width:100%; height:100%;
-    background: url('../../../images/torreEiffelConcergerie.png') center/cover no-repeat;
-    filter: blur(6px) brightness(70%);
-    transform: scale(1.1);
+    background: rgba(0,0,0,0.35);
     z-index: 0;
 }
 
+/* Contenitore slides */
+.hero-slides {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero-slide {
+    position: absolute;
+    top:0; left:0;
+    width:100%;
+    height:100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: fadeSlides 15s infinite;
+}
+
+.slide1 { animation-delay: 0s; }
+/* Slide 2 */
+.slide2 { animation-delay: 5s; }
+/* Slide 3 */
+.slide3 { animation-delay: 10s; }
+
+/* Animazione fade */
+@keyframes fadeSlides {
+    0% { opacity: 0; }
+    5% { opacity: 1; }
+    30% { opacity: 1; }
+    35% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* Animazione keyframes fluida da sinistra verso destra */
+@keyframes slideHero {
+    0%   { transform: translateX(0%); }
+    33.33% { transform: translateX(-33.333%); }
+    66.66% { transform: translateX(-66.666%); }
+    100% { transform: translateX(0%); }
+}
+
+/* Contenuto hero sopra le slide */
 .hero-content {
     position: relative;
     z-index: 1;
