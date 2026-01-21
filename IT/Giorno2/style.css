@@ -20,6 +20,18 @@
     --shadow:0 10px 30px rgba(20,23,29,.08);
   }
 }
+.card .thumb{
+  width: 100%;
+  height: 180px;
+  object-fit: contain;      /* non taglia, ma può lasciare “spazi” */
+  background: rgba(0,0,0,.15); /* opzionale: “bande” eleganti */
+  display: block;
+}
+
+.thumb-vertical{
+  object-fit: contain; /* oppure cover, a seconda di cosa vuoi */
+}
+
 
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
@@ -385,6 +397,7 @@ footer { padding:36px 0 70px; color:var(--muted); }
   font-weight:700;
   text-decoration:none;
   box-shadow:var(--shadow); text-decoration:none;
+  transition: transform .18s ease, background .18s ease;
 }
 @media (prefers-color-scheme: dark){
   .btn{ background:var(--panel); color:var(--text); border-color: rgba(255,255,255,.12); }
@@ -426,14 +439,20 @@ footer { padding:36px 0 70px; color:var(--muted); }
 /* Row pulsanti hero */
 .cta-group{justify-content:center;  display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-top:12px; }
 
-/* Pulsanti trasparenti nell'hero */
+/* Pulsanti nell'hero (più leggibili + hover lift) */
 .hero .cta{
-  background: transparent;
+  background: rgba(255,255,255,.18);
   box-shadow: none;
-  border: 1px solid rgba(255, 255, 255, .4);
+  border: 1px solid rgba(255, 255, 255, .45);
+  transition: transform .18s ease, background .18s ease;
 }
 .hero .cta:hover {
-  background: rgba(255, 255, 255, .1);
+  background: rgba(255,255,255,.28);
+  transform: translateY(-3px);
+}
+.hero .cta:focus-visible{
+  outline: 3px solid rgba(255,255,255,.55);
+  outline-offset: 3px;
 }
 
 @media (max-width: 780px){
@@ -442,3 +461,26 @@ footer { padding:36px 0 70px; color:var(--muted); }
 
 .hero .tagline{ margin-inline:auto; }
 .hero-grid .hero-art{ display:none !important; } /* remove transparent box on the right */
+
+/* ===== Text alignment ===== */
+p{ text-align: justify; }
+.hero p{ text-align: center; }
+
+.btn:hover{ transform: translateY(-3px); }
+
+/* ===== Card 'official links' row ===== */
+.card .official{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:10px; flex-wrap:wrap; }
+.card .official-link{ font-weight:700; text-decoration:none; }
+.card .official-link:hover{ text-decoration:underline; }
+
+/* ===== Photo carousel (detail pages) ===== */
+.carousel{ position:relative; margin:16px 0 0; border-radius:12px; overflow:hidden; border:1px solid rgba(255,255,255,.12); box-shadow:var(--shadow); }
+.carousel-viewport{ width:100%; overflow:hidden; }
+.carousel-track{ display:flex; transition: transform .35s ease; }
+.carousel .slide{ min-width:100%; height:320px; background-position:center; background-size:cover; }
+@media (max-width:700px){ .carousel .slide{ height:240px; } }
+.carousel-btn{ position:absolute; top:50%; transform:translateY(-50%); width:44px; height:44px; border-radius:999px; border:1px solid rgba(255,255,255,.35); background:rgba(0,0,0,.35); color:#fff; font-size:24px; line-height:1; display:grid; place-items:center; cursor:pointer; z-index:2; transition: transform .18s ease, background .18s ease; }
+.carousel-btn:hover{ background:rgba(0,0,0,.5); transform:translateY(-50%) translateY(-2px); }
+.carousel-btn:focus-visible{ outline:3px solid rgba(255,255,255,.55); outline-offset:3px; }
+.carousel-btn.prev{ left:12px; }
+.carousel-btn.next{ right:12px; }

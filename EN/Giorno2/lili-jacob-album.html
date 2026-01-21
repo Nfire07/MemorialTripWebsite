@@ -4,8 +4,8 @@
   <meta charset="utf-8"/>
   <link rel="icon" href="../../images/favicon.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>School Trip — Exhibition “Lili Jacob Album”</title>
-  <meta name="description" content="Overview of the 'Lili Jacob Album' exhibition at the Shoah Memorial: historical context, value of the images and educational insights."/>
+  <title>Educational Trip — “Lili Jacob’s Album” Exhibition</title>
+  <meta name="description" content="Fact sheet for the 'Lili Jacob's Album' exhibition at the Mémorial de la Shoah: historical context, value of images, and educational insights."/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="./style.css"/>
 </head>
@@ -13,7 +13,7 @@
 <header>
   <div class="container nav">
     <div class="brand">
-      <span>School Trip — Paris 2025</span>
+      <span>Educational Trip — Paris 2025</span>
     </div>
     <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
     <ul id="menu">
@@ -23,102 +23,117 @@
       <li><a href="../Giorno3/Giorno3.html">Day 3</a></li>
       <li><a href="../Giorno4/Giorno4.html">Day 4</a></li>
       <li><a href="../Giorno5/Giorno5.html">Day 5</a></li>
+      <li><a role="menuitem" href="../../IT/Giorno2/lili-jacob-album.html">🇮🇹 Italiano</a></li>
     </ul>
   </div>
 </header>
 
 <main class="wrap" id="contenuto">
-  <nav class="crumbs" aria-label="Path">
-    <a href="Giorno2.html">Home</a> › <span>Lili Jacob Album</span>
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="Giorno2.html">Home</a> › <span>Lili Jacob’s Album</span>
   </nav>
 
-  <h1 class="section-title">Exhibition “Lili Jacob Album”</h1>
+  <h1 class="section-title">“Lili Jacob’s Album” Exhibition</h1>
+
   <p class="sub">
-    Also known as the <em>“Auschwitz Album”</em>, it is a set of photographs taken in 1944 on the arrival ramp of
-    Auschwitz-Birkenau during the convoys, particularly from Hungary, documenting with stark clarity
-    <strong>arrival</strong>, <strong>selection</strong>, and the first stages of dispossession. The album was found in 1945 by the young
-    deportee <strong>Lili Jacob</strong> in a barrack of a camp where she had been transferred. She understood the historical value of those images and preserved them,
-    allowing historians, courts, and witnesses to recognise faces, places, and procedures. Today it is one of the most frequently cited visual collections
-    for understanding “how” the machinery of extermination functioned, not only “what” happened.
+    Also known as the <em>“Auschwitz Album”</em>, this is a collection of photographs taken in 1944 on the arrival ramp of
+    Auschwitz-Birkenau during the convoys, specifically from Hungary. They document with stark clarity
+    <strong>the arrival</strong>, the <strong>selection</strong>, and the initial stages of dispossession. The album was found in 1945 by the young
+    deportee <strong>Lili Jacob</strong> in a barrack of a camp where she had been transferred: she understood the historical value of these images and preserved them,
+    allowing historians, courts, and witnesses to identify faces, locations, and procedures.
   </p>
 
-  <!-- Block 1: 2 photos -->
-  <div class="img-pair">
-    <div class="hero-box" role="img" aria-label="Arrival of deportees at Birkenau"
-         style="background:url('./Img/lili5.jpg') center top / cover; border:1px solid rgba(255,255,255,.12)"></div>
-    <div class="hero-box" role="img" aria-label="Line on the ramp at Birkenau"
-         style="background:url('./Img/lili4.jpg') center top / cover; border:1px solid rgba(255,255,255,.12)"></div>
+  <div class="carousel" aria-label="Lili Jacob's Album photo gallery" data-start="0">
+    <button class="carousel-btn prev" aria-label="Previous photo">‹</button>
+    <div class="carousel-viewport">
+      <div class="carousel-track">
+        <div class="slide" role="img" aria-label="Arrival of deportees at Birkenau" style="background-image:url('./Img/lili1.jpg')"></div>
+        <div class="slide" role="img" aria-label="Line on the Birkenau ramp" style="background-image:url('./Img/lili2.jpg')"></div>
+        <div class="slide" role="img" aria-label="Pages of the Auschwitz album" style="background-image:url('./Img/lili3.jpg')"></div>
+        <div class="slide" role="img" aria-label="Pages of the Auschwitz album" style="background-image:url('./Img/tavolo.jpeg')"></div>
+        <div class="slide" role="img" aria-label="Pages of the Auschwitz album" style="background-image:url('./Img/lili-jacob-album.png')"></div>
+      </div>
+    </div>
+    <button class="carousel-btn next" aria-label="Next photo">›</button>
   </div>
 
   <section>
-    <h2 class="section-title">Historical context</h2>
+    <h2 class="section-title">Historical Context</h2>
+
     <p>
-      The photographs were taken by members of the SS photographic service at <strong>Birkenau</strong> in the spring–summer of 1944,
-      during the mass deportations of Hungarian Jews. The sequences show trains arriving,
-      prisoners lining up, checks, the separation between those “fit for work” and those sent directly to
-      the crematoria. The strength of the album lies in its <strong>sequential nature</strong>: these are not isolated shots,
-      but a coherent and deliberately organised visual account of violence.
+      The photographs were taken by members of the SS photographic service at <strong>Birkenau</strong> during the spring–summer of 1944,
+      during the mass deportation phase of Hungarian Jews. The sequences show arriving trains,
+      prisoners in line, inspections, and the separation between those “fit for work” and those sent directly to the
+      crematoria.
     </p>
+
     <p>
-      The discovery by Lili Jacob in 1945, shortly after liberation, turned these images into
-      <strong>primary evidence</strong>: thanks to the album many families were able to reconstruct journeys and recognise people and settings.
-      In the post-war period, copies and reproductions were used in trials and exhibitions, contributing to the public memory of the Shoah.
-      The controlled circulation of the album has also fostered comparative studies on locations, uniforms, and procedures.
+      Lili Jacob's discovery in 1945 transformed these images into <strong>primary evidence</strong>:
+      thanks to the album, many families were able to reconstruct paths and recognize people and contexts.
+    </p>
+
+    <p>
+      In the post-war period, copies and reproductions were used in trials and exhibitions, contributing to the public memory of the Holocaust.
+      The controlled circulation of the album has also facilitated comparative studies of locations, uniforms, and procedures.
     </p>
   </section>
 
-  <!-- Block 2: 2 photos (the second comes from the last pair) -->
-  <div class="img-pair">
-    <div class="hero-box" role="img" aria-label="Line on the ramp at Birkenau"
-         style="background:url('./Img/lili2.jpg') center top / cover; border:1px solid rgba(255,255,255,.12)"></div>
-    <div class="hero-box" role="img" aria-label="Arrival of deportees (detail)"
-         style="background:url('./Img/lili1.jpg') center top / cover; border:1px solid rgba(255,255,255,.12)"></div>
+  <div class="carousel" aria-label="Gallery — Sequences and ramp" data-start="1">
+    <button class="carousel-btn prev" aria-label="Previous photo">‹</button>
+    <div class="carousel-viewport">
+      <div class="carousel-track">
+        <div class="slide" role="img" aria-label="Arrival of deportees at Birkenau" style="background-image:url('./Img/lili1.jpg')"></div>
+        <div class="slide" role="img" aria-label="Line on the Birkenau ramp" style="background-image:url('./Img/lili2.jpg')"></div>
+        <div class="slide" role="img" aria-label="Pages of the Auschwitz album" style="background-image:url('./Img/lili3.jpg')"></div>
+        <div class="slide" role="img" aria-label="Pages of the Auschwitz album" style="background-image:url('./Img/tavolo.jpeg')"></div>
+        <div class="slide" role="img" aria-label="Pages of the Auschwitz album" style="background-image:url('./Img/lili-jacob-album.png')"></div>
+      </div>
+    </div>
+    <button class="carousel-btn next" aria-label="Next photo">›</button>
   </div>
 
   <section>
-    <h2 class="section-title">What we learn</h2>
+    <h2 class="section-title">What We Learn</h2>
     <ul>
-      <li><strong>Photography as evidence:</strong> understanding the evidential value of images and their limits
-        (partial framing, the perpetrator’s point of view, the absence of what lies “beyond” the ramp), while questioning who is taking the picture and why.</li>
-      <li><strong>Vocabulary of deportation:</strong> arrivals, selections, registrations, confiscation of personal belongings, loss of name and civil identity,
-        connected to orders, paperwork, and the logistics of the convoys.</li>
-      <li><strong>Sequence and causal links:</strong> reading the photos not as single “frames”, but as stages of an
-        administrative–industrial process of extermination, linking gestures and spaces to decisions and responsibilities.</li>
+      <li><strong>Photography as Evidence:</strong> Evidentiary value and limits (framing, point of view, absences).</li>
+      <li><strong>Vocabulary of Deportation:</strong> Arrivals, selections, registrations, dispossession of goods, loss of name.</li>
+      <li><strong>Sequence and Causal Links:</strong> Reading the photos as stages of an administrative-industrial process.</li>
     </ul>
   </section>
 
-  <!-- Block 3: 1 final photo (only the left one from the last pair) -->
-  <div class="hero-box" role="img" aria-label="Pages of the Auschwitz Album"
-       style="background:url('./Img/lili3.jpg') center top / cover; border:1px solid rgba(255,255,255,.12)"></div>
-
   <section class="grid">
     <div class="panel">
-      <h2 class="section-title">What to observe (class focus)</h2>
+      <h2 class="section-title">What to Observe (Class Focus)</h2>
       <ul>
-        <li><strong>Composition and details:</strong> signs, uniforms, personal objects, looks, gestures: which “minor” pieces of information open up bigger questions?</li>
-        <li><strong>The ramp as a space:</strong> where exactly are we? how are the flows organised? who directs and who waits?</li>
-        <li><strong>Causes and effects:</strong> connect the photographic sequence to regulations, orders, and convoy logistics (who decides what, when, and why).</li>
+        <li><strong>Composition and Details:</strong> Signs, personal objects, gestures.</li>
+        <li><strong>The Ramp as Space:</strong> Flow organization and roles.</li>
+        <li><strong>Cause and Effect:</strong> Connecting images to regulations and convoy logistics.</li>
       </ul>
     </div>
 
     <div class="panel">
-      <h3>Further resources</h3>
-      <p>
-        Digital resources: <a href="https://www.memorialdelashoah.org" target="_blank" rel="noopener">memorialdelashoah.org</a>
-      </p>
-      <h2 class="section-title">Practical information</h2>
+      <h2 class="section-title">Practical Info</h2>
       <ul>
-        <li><strong>Location:</strong> Shoah Memorial (exhibition area)</li>
-        <li><strong>Entry:</strong> free; security checks at the entrance</li>
-        <li><strong>Recommended visit length:</strong> 20–30 minutes (silence and teacher guidance recommended)</li>
+        <li><strong>Location:</strong> Mémorial de la Shoah (Exhibition space)</li>
+        <li><strong>Admission:</strong> Free; security checks at the entrance</li>
+        <li><strong>Visit Duration:</strong> 20–30 minutes</li>
       </ul>
     </div>
   </section>
+
+  <section class="panel" aria-label="Useful Links">
+    <h2 class="section-title">Useful Links</h2>
+    <p>
+      <a href="https://easyvi.it/event-detail-page/?action=getEventDetails&type=event&id=6285" target="_blank" rel="noopener">Official Site — “Lili Jacob’s Album” Exhibition</a><br/>
+      <a href="https://www.memorialdelashoah.org" target="_blank" rel="noopener">Official Mémorial de la Shoah Website</a>
+    </p>
+  </section>
+
 </main>
 
 <footer>
   <div class="container foot">
-    <p>Website developed by Simone Tomassetti – Gianmarco Vignoli – Matteo Di Giuseppe – Lorenzo Campa – Diego Melandri – Nicola Medri<br/>
+    <p>Site developed by Simone Tomassetti – Gianmarco Vignoli – Matteo Di Giuseppe – Lorenzo Campa – Diego Melandri – Nicola Medri<br/>
       © 2025 Class 5AIN <a href="https://www.itisravenna.edu.it/" target="_blank" rel="noopener">ITIS Nullo Baldini Ravenna</a></p>
   </div>
 </footer>
