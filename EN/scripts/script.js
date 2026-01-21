@@ -51,28 +51,29 @@ document.addEventListener('DOMContentLoaded', () => {
     day1: [
       { coord: [48.8867, 2.3431], label: 'Montmartre', img: '../images/montmartre.jpg', desc: 'A bohemian district full of art and life.' },
       { coord: [48.8860, 2.3430], label: 'Sacré-Cœur', img: '../images/sacrecoeur.jpg', desc: 'The white basilica overlooking Paris.' },
-      { coord: [48.8635, 2.3709], label: 'Paris Commune (1871)', img: '../images/commune.jpg', desc: 'Historical areas linked to the 1871 revolution.' }
+      { coord: [48.8841, 2.3322], label: 'Moulin Rouge', img: '../images/moulin_rouge.jpg', desc: 'The legendary cabaret in Pigalle.' }
     ],
     day2: [
       { coord: [48.8550, 2.3650], label: 'Le Marais', img: '../images/marais.jpg', desc: 'Historic district known for squares, architecture and Jewish heritage.' },
       { coord: [48.8596, 2.3582], label: 'Carnavalet Museum', img: '../images/carnavalet.jpg', desc: 'Museum of the history of Paris.' },
       { coord: [48.8493, 2.3560], label: 'Shoah Memorial', img: '../images/shoah.jpg', desc: 'Memorial dedicated to Holocaust victims.' },
-      { coord: [48.8493, 2.3560], label: 'Exhibition “Lili Jacob Album”', img: '../images/lili_jacob_album.jpg', desc: 'Temporary/permanent exhibition inside the Shoah Memorial.' }
+      { coord: [48.8530, 2.3499], label: 'Notre-Dame Cathedral', img: '../images/notredame.jpg', desc: 'The iconic Gothic cathedral in the heart of Île de la Cité.' }
     ],
     day3: [
-      { coord: [48.8049, 2.1204], label: 'Palace of Versailles', img: '../images/versailles.jpg', desc: 'Majestic royal residence symbol of absolutism.' },
-      { coord: [48.8156, 2.1265], label: 'Versailles Gardens', img: '../images/giardini.jpg', desc: 'Spectacular geometric gardens by Le Nôtre.' }
+      { coord: [48.8049, 2.1204], label: 'Palace of Versailles', img: '../images/versailles.jpg', desc: 'Majestic royal residence symbol of French absolutism.' },
+      { coord: [48.8156, 2.1265], label: 'Versailles Gardens', img: '../images/giardini.jpg', desc: 'Spectacular geometric gardens designed by Le Nôtre.' }
     ],
     day4: [
       { coord: [48.8561, 2.3129], label: 'Hôtel des Invalides', img: '../images/invalides.jpg', desc: 'Complex hosting museums and Napoleon’s tomb.' },
-      { coord: [48.8560, 2.3130], label: 'Army Museum', img: '../images/musee_armee.jpg', desc: 'Museum located inside Les Invalides.' },
+      { coord: [48.8560, 2.3130], label: 'Army Museum', img: '../images/musee_armee.jpg', desc: 'Military history museum located inside Les Invalides.' },
       { coord: [48.8560, 2.3130], label: 'Tomb of Napoleon', img: '../images/tomba_napoleone.jpg', desc: 'Napoleon’s monumental burial under the golden dome.' },
-      { coord: [48.8351, 2.3259], label: 'Liberation Museum – Gen. Leclerc', img: '../images/liberation_leclerc.jpg', desc: 'Museum dedicated to the Liberation of Paris.' }
+      { coord: [48.8372, 2.3211], label: 'Leclerc - Jean Moulin Museum', img: '../images/leclerc_moulin.jpg', desc: 'Museum dedicated to the Liberation of Paris and the French Resistance.' }
     ],
     day5: [
       { coord: [48.8559, 2.3456], label: 'Conciergerie', img: '../images/conciergerie.jpg', desc: 'Former palace and prison of the Palais de la Cité.' },
-      { coord: [48.8600, 2.3333], label: '1st Arrondissement', img: '../images/1er_arrondissement.jpg', desc: 'Visit near Louvre and Tuileries.' },
-      { coord: [48.8584, 2.2945], label: 'Eiffel Tower (optional)', img: '../images/eiffel.jpg', desc: 'Iconic symbol of Paris.' }
+      { coord: [48.8606, 2.3376], label: 'Louvre Museum', img: '../images/louvre.jpg', desc: 'The world\'s most visited art museum.' },
+      { coord: [48.8599, 2.3265], label: 'Orsay Museum', img: '../images/orsay.jpg', desc: 'Famous for Impressionist masterpieces in a former railway station.' },
+      { coord: [48.8738, 2.2950], label: 'Champs-Élysées & Arc de Triomphe', img: '../images/champs_elysees.jpg', desc: 'The famous avenue leading to the monumental Triumphal Arch.' }
     ]
   };
 
