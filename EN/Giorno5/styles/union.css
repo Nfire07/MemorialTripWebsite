@@ -1,15 +1,15 @@
 :root {
-    --bg: #f0ebe3;            /* beige chiaro, sfondo storico */
-    --panel: #ffffff;         /* bianco, pannelli delle card */
-    --text: #1b1b1b;          /* testo principale nero/grigio scuro */
-    --muted: #efefef;         /* testo secondario grigio */
-    --brand: #0055a4;         /* blu Francia */
-    --brand-2: #ef4135;       /* rosso Francia */
-    --brand-light: #ffffff;   /* bianco Francia */
-    --ok: #1fce8b;            /* verde per conferme (può restare) */
+    --bg: #f0ebe3;
+    --panel: #ffffff;
+    --text: #1b1b1b;
+    --muted: #efefef;
+    --brand: #c18400;
+    --brand-2: #000000;
+    --brand-light: #ffffff;
+    --ok: #1fce8b;
     --shadow: 0 10px 30px rgba(0,0,0,.2);
     --radius: 14px;
-    --maxw: 1100px;
+    --maxw: 1200px;
 }
 
 
@@ -171,7 +171,7 @@ section {
     background-size: cover;
     background-position: center;
     opacity: 0;
-    animation: fadeSlides 15s infinite;
+    animation: fadeSlides 20s infinite;
 }
 
 .slide1 { animation-delay: 0s; }
@@ -179,6 +179,8 @@ section {
 .slide2 { animation-delay: 5s; }
 /* Slide 3 */
 .slide3 { animation-delay: 10s; }
+/* Slide 4 */
+.slide4 { animation-delay: 15s; }
 
 /* Animazione fade */
 @keyframes fadeSlides {
@@ -207,11 +209,23 @@ section {
 .hero-content h1 {
     font-size: 3rem;
     font-weight: 800;
+
+    background: linear-gradient(90deg, blue, white, red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin-top: 1rem;
+
+    background: linear-gradient(90deg, blue, white, red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: inline-block;
 }
 
 .hero-grid {
@@ -278,11 +292,10 @@ section {
 
 #monumenti .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 380px));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    max-width: 820px;
+    max-width: 1200px;
     margin: 0 auto;
-    justify-content: center;
 }
 
 #monumenti .card {
@@ -367,12 +380,6 @@ section {
     color: var(--muted);
     margin: 0 0 30px;
     max-width: 600px;
-}
-
-.cards {
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap:18px;
 }
 
 @media (max-width:960px){ .cards { grid-template-columns:1fr 1fr; } }
