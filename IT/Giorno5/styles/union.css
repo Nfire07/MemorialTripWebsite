@@ -1,17 +1,22 @@
 :root {
-    --bg: #f0ebe3;            /* beige chiaro, sfondo storico */
-    --panel: #ffffff;         /* bianco, pannelli delle card */
-    --text: #1b1b1b;          /* testo principale nero/grigio scuro */
-    --muted: #efefef;         /* testo secondario grigio */
-    --brand: #0055a4;         /* blu Francia */
-    --brand-2: #ef4135;       /* rosso Francia */
-    --brand-light: #ffffff;   /* bianco Francia */
-    --ok: #1fce8b;            /* verde per conferme (può restare) */
+    --bg: #f0ebe3;
+    --panel: #ffffff;
+    --text: #1b1b1b;
+    --muted: #efefef;
+    --brand: #c18400;
+    --brand-2: #000000;
+    --brand-light: #ffffff;
+    --ok: #1fce8b;
     --shadow: 0 10px 30px rgba(0,0,0,.2);
     --radius: 14px;
-    --maxw: 1100px;
+    --maxw: 1200px;
 }
 
+/*
+--brand: #0055a4;
+--brand-2: #ef4135;
+--brand-light: #ffffff;
+*/
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -97,7 +102,6 @@ header {
     cursor: pointer;
 }
 
-/* Mobile Navigation */
 @media (max-width: 860px) {
     .menu-btn {
         display: inline-flex;
@@ -132,7 +136,6 @@ section {
     padding:64px 0;
 }
 
-/* Contenitore slides */
 .hero {
     position: relative;
     height: 90vh;
@@ -146,17 +149,15 @@ section {
     flex-direction: column;
 }
 
-/* Overlay scuro sopra le slide */
 .hero::before {
     content: "";
     position: absolute;
     top:0; left:0;
     width:100%; height:100%;
-    background: rgba(0,0,0,0.35);
+    background: rgba(0,0,0,0.45);
     z-index: 0;
 }
 
-/* Contenitore slides */
 .hero-slides {
     position: absolute;
     inset: 0;
@@ -171,16 +172,14 @@ section {
     background-size: cover;
     background-position: center;
     opacity: 0;
-    animation: fadeSlides 15s infinite;
+    animation: fadeSlides 20s infinite;
 }
 
 .slide1 { animation-delay: 0s; }
-/* Slide 2 */
 .slide2 { animation-delay: 5s; }
-/* Slide 3 */
 .slide3 { animation-delay: 10s; }
+.slide4 { animation-delay: 15s; }
 
-/* Animazione fade */
 @keyframes fadeSlides {
     0% { opacity: 0; }
     5% { opacity: 1; }
@@ -189,7 +188,6 @@ section {
     100% { opacity: 0; }
 }
 
-/* Animazione keyframes fluida da sinistra verso destra */
 @keyframes slideHero {
     0%   { transform: translateX(0%); }
     33.33% { transform: translateX(-33.333%); }
@@ -197,7 +195,6 @@ section {
     100% { transform: translateX(0%); }
 }
 
-/* Contenuto hero sopra le slide */
 .hero-content {
     position: relative;
     z-index: 1;
@@ -205,6 +202,11 @@ section {
 }
 
 .hero-content h1 {
+    background: linear-gradient(90deg, blue, white, red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
     font-size: 3rem;
     font-weight: 800;
 }
@@ -212,6 +214,13 @@ section {
 .hero-content p {
     font-size: 1.2rem;
     margin-top: 1rem;
+
+    background: linear-gradient(90deg, blue, white, red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: inline-block;
 }
 
 .hero-grid {
@@ -220,11 +229,13 @@ section {
     gap:34px;
     align-items:center;
 }
+
 .hero h1 {
     font-size:clamp(28px, 5vw, 52px);
     line-height:1.05;
     margin:0 0 14px;
 }
+
 .hero p {
     font-size:clamp(16px, 2.6vw, 19px);
     color:var(--muted);
@@ -278,11 +289,10 @@ section {
 
 #monumenti .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 380px));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    max-width: 820px;
+    max-width: 1200px;
     margin: 0 auto;
-    justify-content: center;
 }
 
 #monumenti .card {
@@ -367,12 +377,6 @@ section {
     color: var(--muted);
     margin: 0 0 30px;
     max-width: 600px;
-}
-
-.cards {
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap:18px;
 }
 
 @media (max-width:960px){ .cards { grid-template-columns:1fr 1fr; } }
