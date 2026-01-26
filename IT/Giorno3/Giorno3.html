@@ -401,6 +401,57 @@
         line-height: 1.7;
       }
 
+      /* Carousel Styles */
+      .hero-carousel {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 0;
+          /* Behind content */
+          overflow: hidden;
+      }
+
+      .carousel-slide {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          transition: opacity 1.5s ease-in-out;
+          background-size: cover;
+          background-position: center;
+      }
+
+      .carousel-slide.active {
+          opacity: 1;
+      }
+
+      /* Ensure content sits on top */
+      .hero-content {
+          z-index: 2;
+          /* Already in CSS but reinforcing */
+          position: relative;
+      }
+
+      /* Specific background images for slides so we can reuse classes if needed, 
+        or we can stick them inline/in HTML for specific pages */
+      .slide-versailles {
+          background-image: url('../../../images/GalerieDesBatailles.jpg');
+          backdrop-filter: blur(3px);
+          -webkit-filter: blur(4px);
+          filter: blur(3px) brightness(0.9);
+      }
+
+      .slide-gruppo {
+          background-image: url('../../../images/VersaillesClasse.jpeg');
+          backdrop-filter: blur(3px);
+          -webkit-filter: blur(4px);
+          filter: blur(3px) brightness(0.9);
+      }
+
     </style>
   </head>
   <body id="return-up">
@@ -447,20 +498,22 @@
     </header>
 
     <main id="contenuto">
-      <section id="intro">
-        <div class="hero-background"></div>
-        <div class="hero-overlay"></div>
-        <div class="container">
-          <h1 style="text-align:center">Parigi tra giardini, palazzi e bellezza urbana</h1>
-          <nav class="hero-menu" style="display:flex;align-items:center;justify-content: center;flex-wrap: wrap;flex-direction: row;" aria-label="Navigazione interna hero">
+      <section id="intro" class="hero hero-bg" style="background-image: none;">
+        <div class="hero-carousel">
+          <div class="carousel-slide slide-versailles active"></div>
+          <div class="carousel-slide slide-gruppo"></div>
+        </div>
+        <div class="container hero-content">
+          <h1 style="text-align: center;">Parigi tra giardini, palazzi e bellezza urbana</h1>
+          <nav class="hero-menu" aria-label="Navigazione interna hero">
             <ul>
-              <li><a href="#luoghi">Monumenti</a></li>
+              <li><a href="#monumenti">Monumenti</a></li>
               <li><a href="#itinerario">Itinerario</a></li>
               <li><a href="#info">Info utili</a></li>
             </ul>
           </nav>
         </div>
-      </section>
+      </section> 
 
       <section id="luoghi">
         <div class="container">
@@ -612,6 +665,16 @@
         const open = menu.classList.toggle("open");
         btn.setAttribute("aria-expanded", String(open));
       });
+      const slides = document.querySelectorAll('.carousel-slide');
+      let currentSlide = 0;
+
+      if (slides.length > 0) {
+        setInterval(() => {
+          slides[currentSlide].classList.remove('active');
+          currentSlide = (currentSlide + 1) % slides.length;
+          slides[currentSlide].classList.add('active');
+        }, 5000); 
+      }
     </script>
   </body>
 </html>
