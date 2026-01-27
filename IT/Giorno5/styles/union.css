@@ -12,12 +12,6 @@
     --maxw: 1200px;
 }
 
-/*
---brand: #0055a4;
---brand-2: #ef4135;
---brand-light: #ffffff;
-*/
-
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -328,7 +322,7 @@ section {
     display: inline-block;
     font-size: 12px;
     color: #fff;
-    background: linear-gradient(135deg, var(--brand), var(--brand-2));
+    background: var(--brand);
     padding: 6px 12px;
     border-radius: 999px;
     margin: 1rem 1rem 0.5rem 1rem;
@@ -542,13 +536,13 @@ section {
     gap: 1rem;
     margin-bottom: 1.5rem;
     padding: 1rem;
-    background: linear-gradient(135deg, rgba(0,85,164,0.1), rgba(239,65,53,0.1));
+    background: rgba(240,240,240,0.1);
     border-radius: 10px;
     transition: all 0.3s ease;
 }
 
 .link-qr-item:hover {
-    background: linear-gradient(135deg, rgba(0,85,164,0.2), rgba(239,65,53,0.2));
+    background: rgba(240,240,240,0.5);
 }
 
 .link-info {
