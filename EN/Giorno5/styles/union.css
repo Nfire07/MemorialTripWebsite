@@ -12,7 +12,6 @@
     --maxw: 1200px;
 }
 
-
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -97,7 +96,6 @@ header {
     cursor: pointer;
 }
 
-/* Mobile Navigation */
 @media (max-width: 860px) {
     .menu-btn {
         display: inline-flex;
@@ -132,7 +130,6 @@ section {
     padding:64px 0;
 }
 
-/* Contenitore slides */
 .hero {
     position: relative;
     height: 90vh;
@@ -146,17 +143,15 @@ section {
     flex-direction: column;
 }
 
-/* Overlay scuro sopra le slide */
 .hero::before {
     content: "";
     position: absolute;
     top:0; left:0;
     width:100%; height:100%;
-    background: rgba(0,0,0,0.35);
+    background: rgba(0,0,0,0.45);
     z-index: 0;
 }
 
-/* Contenitore slides */
 .hero-slides {
     position: absolute;
     inset: 0;
@@ -175,14 +170,10 @@ section {
 }
 
 .slide1 { animation-delay: 0s; }
-/* Slide 2 */
 .slide2 { animation-delay: 5s; }
-/* Slide 3 */
 .slide3 { animation-delay: 10s; }
-/* Slide 4 */
 .slide4 { animation-delay: 15s; }
 
-/* Animazione fade */
 @keyframes fadeSlides {
     0% { opacity: 0; }
     5% { opacity: 1; }
@@ -191,7 +182,6 @@ section {
     100% { opacity: 0; }
 }
 
-/* Animazione keyframes fluida da sinistra verso destra */
 @keyframes slideHero {
     0%   { transform: translateX(0%); }
     33.33% { transform: translateX(-33.333%); }
@@ -199,7 +189,6 @@ section {
     100% { transform: translateX(0%); }
 }
 
-/* Contenuto hero sopra le slide */
 .hero-content {
     position: relative;
     z-index: 1;
@@ -207,13 +196,13 @@ section {
 }
 
 .hero-content h1 {
-    font-size: 3rem;
-    font-weight: 800;
-
     background: linear-gradient(90deg, blue, white, red);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+
+    font-size: 3rem;
+    font-weight: 800;
 }
 
 .hero-content p {
@@ -234,11 +223,13 @@ section {
     gap:34px;
     align-items:center;
 }
+
 .hero h1 {
     font-size:clamp(28px, 5vw, 52px);
     line-height:1.05;
     margin:0 0 14px;
 }
+
 .hero p {
     font-size:clamp(16px, 2.6vw, 19px);
     color:var(--muted);
@@ -331,7 +322,7 @@ section {
     display: inline-block;
     font-size: 12px;
     color: #fff;
-    background: linear-gradient(135deg, var(--brand), var(--brand-2));
+    background: var(--brand);
     padding: 6px 12px;
     border-radius: 999px;
     margin: 1rem 1rem 0.5rem 1rem;
@@ -545,13 +536,13 @@ section {
     gap: 1rem;
     margin-bottom: 1.5rem;
     padding: 1rem;
-    background: linear-gradient(135deg, rgba(0,85,164,0.1), rgba(239,65,53,0.1));
+    background: rgba(240,240,240,0.1);
     border-radius: 10px;
     transition: all 0.3s ease;
 }
 
 .link-qr-item:hover {
-    background: linear-gradient(135deg, rgba(0,85,164,0.2), rgba(239,65,53,0.2));
+    background: rgba(240,240,240,0.5);
 }
 
 .link-info {
