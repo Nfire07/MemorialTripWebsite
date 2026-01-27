@@ -4,28 +4,17 @@
 <meta charset="utf-8"/>
 <link rel="icon" href="../../images/favicon.svg">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>School Trip — Day 2: Marais, Shoah and Lili Jacob</title>
-<meta name="description" content="Visit to the Marais district, Musée Carnavalet, Shoah Memorial and the 'Lili Jacob Album' exhibition during the school trip to Paris."/>
+<title>The Marais - Musée Carnavalet, Shoah Memorial</title>
+<meta name="description" content="Visit to the Marais district, Musée Carnavalet, Mémorial de la Shoah, and 'Lili Jacob's Album' Exhibition during the educational trip to Paris."/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="./style.css"/>
-
-<style>
-.card .official{
-  display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:10px;
-}
-.card .official-link{ font-weight:700; text-decoration:none; }
-.card .official-link:hover{ text-decoration:underline; }
-.card .qr{ border:1px solid rgba(0,0,0,.15); border-radius:10px; padding:4px; background:#fff; }
-@media (max-width:640px){ .card .official{ flex-direction:row; } }
-</style>
-
 </head>
 <body>
 <header>
   <div class="container nav">
-    <img src="../../images/favicon.svg" alt="Tour Eiffel Logo" class="logo" />
+    <img src="../../images/favicon.svg" alt="Eiffel Tower Logo" class="logo" />
     <div class="brand">
-      <span>SCHOOL TRIP — from 03/11/25 to 08/11/25</span>
+      <span>EDUCATIONAL TRIP — from 03/11/25 to 08/11/25</span>
     </div>
     <button class="menu-btn" aria-controls="menu" aria-expanded="false">Menu</button>
     <ul id="menu">
@@ -35,7 +24,7 @@
       <li><a href="../Giorno3/Giorno3.html">Day 3</a></li>
       <li><a href="../Giorno4/Giorno4.html">Day 4</a></li>
       <li><a href="../Giorno5/Giorno5.html">Day 5</a></li>
-      <li><a href="../../IT/Giorno2/Giorno2.html">🇮🇹 Italiano</a></li>
+      <li><a role="menuitem" href="../../IT/Giorno2/Giorno2.html">🇮🇹 Italiano</a></li>
     </ul>
   </div>
 </header>
@@ -44,12 +33,12 @@
   <section class="hero">
     <div class="container hero-grid">
       <div>
-        <h1>The Marais: memory, art, and Jewish identity</h1>
-        <p>An itinerary in the historical heart of Paris: from the <strong>Musée Carnavalet</strong> to the <strong>Shoah Memorial</strong>, ending with the <em>“Lili Jacob Album”</em> exhibition.</p>
+        <h1>The Marais - Musée Carnavalet, Shoah Memorial</h1>
+        <p>An itinerary in the historic heart of Paris through memory, art, and Jewish identity.</p>
         <div class="cta-group">
-          <a class="cta" href="#itinerario">Discover the route ↓</a>
           <a class="cta" href="#monumenti">Monuments</a>
-          <a class="cta" href="#info">Useful info</a>
+          <a class="cta" href="#itinerario">Itinerary</a>
+          <a class="cta" href="#info">Useful Info</a>
         </div>
       </div>
     </div>
@@ -58,48 +47,30 @@
   <section id="monumenti">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Main stops</h2>
+        <h2 class="section-title">Main Stops</h2>
         <a class="cta cta-top" href="#contenuto" aria-label="Back to top">↑ Back to top</a>
       </div>
 
       <div class="cards">
         <article class="card">
-          <img src="img/carnavalet.jpg" alt="Musee Carnavalet" class="thumb"/>
+          <img src="img/carnavalet.jpeg" alt="Musée Carnavalet" class="thumb thumb-vertical"/>
           <h3>Musée Carnavalet</h3>
-          <p>A journey through the history of Paris, with collections, paintings, and artifacts telling the story of the city from the 16th century to the Belle Époque.</p>
+          <p>A journey through the history of Paris via collections, paintings, and artifacts that tell the story of the city from the 16th century to the Belle Époque.</p>
           <a class="more" href="carnavalet.html">Learn more →</a>
-        
-          <div class="official">
-            <a class="official-link" href="https://www.ratp.fr/itineraires/Porte%20de%20la%20Villette_%2075019%20Paris%26Mus%C3%A9e%20Carnavalet_%20Rue%20De%20S%C3%A9vign%C3%A9%2075004%20Paris">Museum route</a>
-            <a class="official-link" href="https://www.carnavalet.paris.fr" target="_blank" rel="noopener">Official website →</a>
-            <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https%3A%2F%2Fwww.carnavalet.paris.fr" alt="QR code for official website" width="120" height="120"/>
-          </div>
         </article>
 
         <article class="card">
-          <img src="img/memorial-shoah.jpg" alt="Shoah Memorial" class="thumb"/>
-          <h3>Shoah Memorial</h3>
-          <p>Documentation and remembrance center on the Holocaust, dedicated to the French Jewish community and the victims of deportation.</p>
+          <img src="img/memorial-shoah.jpeg" alt="Mémorial de la Shoah" class="thumb"/>
+          <h3>Mémorial de la Shoah</h3>
+          <p>A documentation and memory center for the Holocaust, dedicated to the French Jewish community and the victims of deportation.</p>
           <a class="more" href="memorial.html">Learn more →</a>
-        
-          <div class="official">
-            <a class="official-link" href="https://www.ratp.fr/itineraires/Porte%20de%20la%20Villette_%2075019%20Paris%26Place%20des%20Vosges_%2075003%20Paris">Marais route</a>
-            <a class="official-link" href="https://www.ratp.fr/itineraires/Porte%20de%20la%20Villette_%2075019%20Paris%26M%C3%A9morial%20De%20La%20Shoah_%2017%20Rue%20Geoffroy%20l%E2%80%99Asnier%2075004%20Paris">Memorial route</a>
-            <a class="official-link" href="https://www.memorialdelashoah.org" target="_blank" rel="noopener">Official website →</a>
-            <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https%3A%2F%2Fwww.memorialdelashoah.org" alt="QR code for official website" width="120" height="120"/>
-          </div>
         </article>
 
         <article class="card">
-          <img src="img/lili-jacob-album.png" alt="Lili Jacob Album Exhibition" class="thumb"/>
-          <h3>Exhibition “Lili Jacob Album”</h3>
-          <p>A unique photographic testimony of the deportees of Auschwitz, found by Lili Jacob in 1945, now exhibited at the Memorial.</p>
+          <img src="img/lili-jacob-album.png" alt="Lili Jacob's Album Exhibition" class="thumb"/>
+          <h3>“Lili Jacob’s Album” Exhibition</h3>
+          <p>A unique photographic testimony of Auschwitz deportees, found by Lili Jacob in 1945, now on display at the Memorial.</p>
           <a class="more" href="lili-jacob-album.html">Learn more →</a>
-        
-          <div class="official">
-            <a class="official-link" href="https://easyvi.it/event-detail-page/?action=getEventDetails&type=event&id=6285" target="_blank" rel="noopener">Official website →</a>
-            <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https%3A%2F%2Feasyvi.it%2Fevent-detail-page%2F%3Faction%3DgetEventDetails%26type%3Devent%26id%3D6285" alt="QR code for official website" width="120" height="120"/>
-          </div>
         </article>
       </div>
     </div>
@@ -108,7 +79,7 @@
   <section id="itinerario">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Day 2 itinerary</h2>
+        <h2 class="section-title">Day 2 Itinerary</h2>
         <a class="cta cta-top" href="#contenuto" aria-label="Back to top">↑ Back to top</a>
       </div>
       <p class="section-sub">Departure from B&amp;B Hotel Paris Porte de la Villette</p>
@@ -116,20 +87,20 @@
       <h2 class="section-title">Morning</h2>
       <div class="timeline">
         <div class="item">
-          <h4>🕍 Walk through the Jewish Marais and Musée Carnavalet</h4>
-          <p class="section-sub">Free entry | 23 Rue de Sévigné – 3rd Arr.</p>
+          <h4>🕍 Walk in the Jewish Marais and Musée Carnavalet</h4>
+          <p class="section-sub">Free admission | 23 Rue de Sévigné – 3rd Arr.</p>
         </div>
       </div>
 
       <h2 class="section-title">Afternoon</h2>
       <div class="timeline">
         <div class="item">
-          <h4>🕯️ Shoah Memorial</h4>
-          <p class="section-sub">17 Rue Geoffroy-l’Asnier – 4th Arr. (free entry)</p>
+          <h4>🕯️ Mémorial de la Shoah</h4>
+          <p class="section-sub">17 Rue Geoffroy-l’Asnier – 4th Arr. (Free admission)</p>
         </div>
         <div class="item">
-          <h4>📷 Exhibition “Lili Jacob Album”</h4>
-          <p class="section-sub">Theme: deportation in France</p>
+          <h4>📷 “Lili Jacob’s Album” Exhibition</h4>
+          <p class="section-sub">Topic: Deportation from France</p>
         </div>
       </div>
     </div>
@@ -139,23 +110,23 @@
     <div class="container grid">
       <div class="panel">
         <div class="section-header">
-          <h2 class="section-title">Useful info</h2>
+          <h2 class="section-title">Useful Info</h2>
           <a class="cta cta-top" href="#contenuto" aria-label="Back to top">↑ Back to top</a>
         </div>
         <ul>
-          <li><strong>Transport:</strong> Metro 7 (Pont Marie), 1 (St Paul), 11 (Hôtel de Ville) — <a href="https://www.ratp.fr" target="_blank" rel="noopener">Official RATP website</a></li>
-          <li><strong>Accessibility:</strong> All locations are accessible; ramps available at the Memorial</li>
-          <li><strong>Clothing:</strong> comfortable and respectful of places of remembrance</li>
+          <li><strong>Transportation:</strong> Metro 7 (Pont Marie), 1 (St Paul), 11 (Hôtel de Ville) — <a href="https://www.ratp.fr" target="_blank" rel="noopener">Official RATP Website</a></li>
+          <li><strong>Accessibility:</strong> All sites are accessible; wheelchair ramps at the Memorial</li>
+          <li><strong>Dress Code:</strong> Comfortable and respectful of memory sites</li>
         </ul>
       </div>
 
       <div class="panel">
-        <h3>Contacts & Materials</h3>
-        <p><strong>Reference teachers:</strong> Angelini Cristina, Bassi Silvia</p>
-        <p><strong>Official websites:</strong><br/>
+        <h3>Contacts &amp; Materials</h3>
+        <p><strong>Lead Teachers:</strong> Angelini Cristina, Bassi Silvia</p>
+        <p><strong>Official Sites:</strong><br/>
           <a href="https://www.carnavalet.paris.fr" target="_blank" rel="noopener">Musée Carnavalet</a><br/>
-          <a href="https://www.memorialdelashoah.org" target="_blank" rel="noopener">Shoah Memorial</a><br/>
-          <a href="https://easyvi.it/event-detail-page/?action=getEventDetails&type=event&id=6285" target="_blank" rel="noopener">Exhibition “Lili Jacob Album”</a><br/>
+          <a href="https://www.memorialdelashoah.org" target="_blank" rel="noopener">Mémorial de la Shoah</a><br/>
+          <a href="https://easyvi.it/event-detail-page/?action=getEventDetails&type=event&id=6285" target="_blank" rel="noopener"> “Lili Jacob’s Album” Exhibition</a><br/>
         </p>
       </div>
     </div>
@@ -164,7 +135,7 @@
 
 <footer>
   <div class="container foot">
-    <p>Website developed by Simone Tomassetti – Gianmarco Vignoli – Matteo Di Giuseppe – Lorenzo Campa – Diego Melandri – Nicola Medri<br/>
+    <p>Site developed by Simone Tomassetti – Gianmarco Vignoli – Matteo Di Giuseppe – Lorenzo Campa – Diego Melandri – Nicola Medri<br/>
       © 2025 Class 5AIN <a href="https://www.itisravenna.edu.it/" target="_blank" rel="noopener">ITIS Nullo Baldini Ravenna</a></p>
   </div>
 </footer>

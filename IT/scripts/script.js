@@ -49,28 +49,30 @@ document.addEventListener('DOMContentLoaded', () => {
     giorno1: [
       { coord: [48.8867, 2.3431], label: 'Montmartre', img: '../images/montmartre.jpg', desc: 'Un quartiere bohémien pieno di arte e vita.' },
       { coord: [48.8860, 2.3430], label: 'Sacré-Cœur', img: '../images/sacrecoeur.jpg', desc: 'La basilica bianca che domina Parigi.' },
-      { coord: [48.8635, 2.3709], label: 'La Comune di Parigi (1871)', img: '../images/commune.jpg', desc: 'Riferimento a luoghi simbolo della rivoluzione del 1871 a Parigi.' }
+      { coord: [48.8841, 2.3322], label: 'Moulin Rouge', img: '../images/moulin_rouge.jpg', desc: 'Il leggendario cabaret di Pigalle.' }
     ],
     giorno2: [
-      { coord: [48.8550, 2.3650], label: 'Le Marais', img: '../images/marais.jpg', desc: 'Quartiere storico noto per le sue piazze, l\'architettura e l\'eredità ebraica.' },
-      { coord: [48.8596, 2.3582], label: 'Museo Carnavalet', img: '../images/carnavalet.jpg', desc: 'Museo della storia di Parigi (nel Marais).' },
-      { coord: [48.8493, 2.3560], label: 'Memoriale della Shoah', img: '../images/shoah.jpg', desc: 'Luogo di memoria dedicato alle vittime dell’Olocausto (nel Marais).' },
-      { coord: [48.8493, 2.3560], label: 'Mostra "Album di Lili Jacob"', img: '../images/lili_jacob_album.jpg', desc: 'Riferimento a una possibile mostra temporanea o permanente legata al Memoriale della Shoah.' }
+      { coord: [48.8550, 2.3650], label: 'Le Marais', img: '../images/marais.jpg', desc: 'Quartiere storico noto per le sue piazze e l\'architettura.' },
+      { coord: [48.8596, 2.3582], label: 'Museo Carnavalet', img: '../images/carnavalet.jpg', desc: 'Museo della storia di Parigi.' },
+      { coord: [48.8493, 2.3560], label: 'Memoriale della Shoah', img: '../images/shoah.jpg', desc: 'Luogo di memoria dedicato alle vittime dell’Olocausto.' },
+      { coord: [48.8530, 2.3499], label: 'Notre-Dame', img: '../images/notredame.jpg', desc: 'La cattedrale gotica nel cuore dell\'Île de la Cité.' }
     ],
     giorno3: [
       { coord: [48.8049, 2.1204], label: 'Reggia di Versailles', img: '../images/versailles.jpg', desc: 'Maestosa residenza reale simbolo dell’assolutismo francese.' },
-      { coord: [48.8156, 2.1265], label: 'Giardini di Versailles', img: '../images/giardini.jpg', desc: 'Spettacolari giardini geometrici progettati da Le Nôtre.' },
+      { coord: [48.8156, 2.1265], label: 'Giardini di Versailles', img: '../images/giardini.jpg', desc: 'Spettacolari giardini geometrici progettati da Le Nôtre.' }
     ],
     giorno4: [
       { coord: [48.8561, 2.3129], label: 'Hôtel des Invalides', img: '../images/invalides.jpg', desc: 'Complesso di edifici che ospita musei e la Tomba di Napoleone.' },
       { coord: [48.8560, 2.3130], label: 'Musée de l’Armée', img: '../images/musee_armee.jpg', desc: 'Museo dell\'esercito all\'interno degli Invalides.' },
-      { coord: [48.8560, 2.3130], label: 'Tomba di Napoleone', img: '../images/tomba_napoleone.jpg', desc: 'Sepolcro di Napoleone Bonaparte sotto la cupola degli Invalides.' },
-      { coord: [48.8351, 2.3259], label: 'Musée de la Libération - Musée du Général Leclerc - Moulin', img: '../images/liberation_leclerc.jpg', desc: 'Museo della Liberazione di Parigi (situato vicino a Denfert-Rochereau).' }
+      { coord: [48.8560, 2.3130], label: 'Tomba di Napoleone', img: '../images/tomba_napoleone.jpg', desc: 'Sepolcro di Napoleone Bonaparte sotto la cupola.' },
+      { coord: [48.8372, 2.3211], label: 'Museo Leclerc - Jean Moulin', img: '../images/leclerc_moulin.jpg', desc: 'Museo dedicato alla Liberazione di Parigi e alle figure di Leclerc e Moulin.' },
+      { coord: [48.8584, 2.2945], label: 'Torre Eiffel (facoltativo)', img: '../images/eiffel.jpg', desc: 'Simbolo iconico di Parigi, costruita nel 1889.' }
     ],
     giorno5: [
       { coord: [48.8559, 2.3456], label: 'Conciergerie', img: '../images/conciergerie.jpg', desc: 'Antico palazzo e prigione, parte del Palais de la Cité.' },
-      { coord: [48.8600, 2.3333], label: '1er Arrondissement', img: '../images/1er_arrondissement.jpg', desc: 'Visita all\'area circostante al Louvre e Tuileries.' },
-      { coord: [48.8584, 2.2945], label: 'Torre Eiffel (facoltativo)', img: '../images/eiffel.jpg', desc: 'Simbolo iconico di Parigi, costruita nel 1889.' }
+      { coord: [48.8606, 2.3376], label: 'Louvre', img: '../images/louvre.jpg', desc: 'Il museo d\'arte più visitato al mondo.' },
+      { coord: [48.8599, 2.3265], label: 'Musée d’Orsay', img: '../images/orsay.jpg', desc: 'Famoso per i capolavori impressionisti in una vecchia stazione.' },
+      { coord: [48.8738, 2.2950], label: 'Avenue des Champs-Élysées', img: '../images/champs_elysees.jpg', desc: 'La strada più famosa del mondo che porta all\'Arco di Trionfo.' }
     ]
 };
 
