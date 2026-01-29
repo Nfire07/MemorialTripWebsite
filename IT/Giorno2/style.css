@@ -124,6 +124,7 @@ header {
   color:var(--text);
   text-decoration:none;
   font-weight:600;
+  width:max-content;
 }
 .nav a[aria-current="page"], .nav a:hover {
   background:linear-gradient(135deg, rgba(79,124,255,.14), rgba(159,122,234,.14));
