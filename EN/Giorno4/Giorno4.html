@@ -54,11 +54,14 @@
   <main id="contenuto">
     <section id="intro" class="hero glass-hero">
       <div class="hero-background">
-        <div class="hero-image-bg">
-          <img src="assets/images/les-invalides1.jpg" alt="Les Invalides" class="bg-image">
+        <div class="hero-carousel" aria-label="Day 4 hero carousel">
+          <div class="carousel-slide slide-invalides active" style="background-image: url('assets/images/les-invalides.jpg');"></div>
+          <div class="carousel-slide slide-napoleon" style="background-image: url('assets/images/napoleon-tomb.jpg');"></div>
+          <div class="carousel-slide slide-armee" style="background-image: url('assets/images/musee-armee.jpg');"></div>
+          <div class="carousel-slide slide-liberation" style="background-image: url('assets/images/musee-liberation2.jpg');"></div>
         </div>
         <div class="hero-overlay-gradient"></div>
-        </div>
+      </div>
       
       <div class="container hero-content-centered">
         <div class="hero-text-centered">
@@ -750,6 +753,17 @@
           });
         }
       });
+    }
+
+    // Hero carousel (like Day 1, 3, 5)
+    const slides = document.querySelectorAll('.hero-carousel .carousel-slide');
+    let currentSlide = 0;
+    if (slides.length > 0) {
+      setInterval(() => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+      }, 5000);
     }
   </script>
   <script src="scripts/gallery.js"></script>
