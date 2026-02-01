@@ -1,10 +1,6 @@
-/* =========================================================
-   Giorno 4 - Streamlined CSS
-   ========================================================= */
-
 :root {
-  --bg: #e9e1d3; /* neutral sand like other pages */
-  --panel: #ffffff; /* white panels to avoid yellow tint */
+  --bg: #e9e1d3;
+  --panel: #ffffff;
   --text: #2d1b0e;
   --muted: #8b7355;
   --brand: #d4af37;
@@ -40,12 +36,12 @@ a:hover {
 
 h1, h2, h3, h4 { margin: 0; font-weight: 700; }
 p { line-height: 1.7; text-align: justify; }
-/* Hero e testi centrati restano al centro */
+
 .hero-subtitle-main,
 .hero p,
 .section-sub,
 .gallery-header h3,
-.footer-bottom { text-align: center; }
+.footer-bottom,
 .footer-bottom p { text-align: center; }
 
 .container {
@@ -55,7 +51,6 @@ p { line-height: 1.7; text-align: justify; }
   padding: 0 20px;
 }
 
-/* Header & Navigation */
 header {
   position: sticky;
   top: 0;
@@ -145,7 +140,6 @@ header {
   }
 }
 
-/* Hero Section */
 .glass-hero {
   position: relative;
   height: 100vh;
@@ -165,7 +159,6 @@ header {
   z-index: -2;
 }
 
-/* Hero carousel (like Giorno 1, 3, 5) */
 .hero-carousel {
   position: absolute;
   top: 0;
@@ -257,7 +250,6 @@ header {
   margin: 0 auto;
 }
 
-/* Glass Buttons - Sleek & Borderless */
 .btn-glass-primary,
 .btn-glass-secondary,
 .btn-glass-tertiary {
@@ -295,7 +287,6 @@ header {
 .btn-glass-secondary:hover { background: rgba(255, 255, 255, 0.25); }
 .btn-glass-tertiary:hover { background: rgba(255, 255, 255, 0.25); }
 
-/* Scroll Indicator */
 .glass-scroll {
   position: absolute;
   bottom: 3rem;
@@ -342,7 +333,6 @@ header {
   60% { transform: translateY(-10px); }
 }
 
-/* Sections */
 .gothic-section {
   background: var(--gradient-warm);
   padding: 4rem 0;
@@ -418,7 +408,6 @@ header {
   font-size: 1rem;
 }
 
-/* Timeline - Clean Outdoor Style */
 .simple-timeline {
   max-width: 900px;
   margin: 0 auto;
@@ -508,7 +497,6 @@ header {
   box-shadow: none;
 }
 
-/* Monument Details */
 .monumento-detailed {
   background: var(--panel);
   border: 3px solid var(--brand-light);
@@ -671,7 +659,6 @@ header {
   margin-bottom: 3rem; 
 }
 
-/* Collapsible Content */
 .monumento-content-grid {
   position: relative;
 }
@@ -713,7 +700,6 @@ header {
   transform: rotate(180deg);
 }
 
-/* Preview state - show partial content with fade */
 .monumento-description {
   position: relative;
 }
@@ -741,8 +727,6 @@ header {
   display: none;
 }
 
-/* Official section always visible */
-
 .monumento-description .expand-toggle {
   position: relative;
   z-index: 10;
@@ -750,7 +734,6 @@ header {
   margin-bottom: 1rem;
 }
 
-/* Expanded state - show all content */
 .monumento-description.expanded .description-section {
   max-height: none;
   overflow: visible;
@@ -765,8 +748,6 @@ header {
   display: block;
   margin-bottom: 2rem;
 }
-
-/* Official section always visible */
 
 .monumento-description .description-section,
 .monumento-description .curiosita-section {
@@ -787,7 +768,6 @@ header {
   font-size: 1rem;
 }
 
-/* Curiosities */
 .curiosita-section {
   background: var(--brand-light);
   border: 2px solid var(--brand);
@@ -844,9 +824,13 @@ header {
   color: var(--muted);
   margin: 0;
   font-size: 0.95rem;
+  text-align: left;
 }
 
-/* Panels & Grid */
+.curiosita-section p {
+  text-align: left;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -926,7 +910,6 @@ header {
   object-fit: cover;
 }
 
-/* Info Section - Compact Engineering Layout */
 .info-compact-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1130,7 +1113,6 @@ header {
   margin-bottom: 1rem;
 }
 
-/* Group Section */
 .gothic-gruppo {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -1161,7 +1143,6 @@ header {
   margin: 0;
 }
 
-/* Back to Top Button */
 .back-to-top {
   position: fixed;
   bottom: 2rem;
@@ -1201,7 +1182,6 @@ header {
   transform: scale(0.95);
 }
 
-/* Footer */
 .gothic-footer {
   background: var(--panel);
   border-top: 4px solid var(--brand);
@@ -1255,7 +1235,6 @@ header {
   font-size: 1rem;
 }
 
-/* Gallery Modal */
 .gallery-modal {
   position: fixed;
   inset: 0;
@@ -1417,7 +1396,6 @@ header {
   transform: scale(1.05);
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
   .monumento-content-grid {
     grid-template-columns: 1fr;
@@ -1549,7 +1527,6 @@ header {
   }
 }
 
-/* Official Resources Styles (Moved from HTML) */
 .monumento-official {
   display: flex;
   align-items: center;
