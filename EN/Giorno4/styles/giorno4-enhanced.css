@@ -39,7 +39,14 @@ a:hover {
 }
 
 h1, h2, h3, h4 { margin: 0; font-weight: 700; }
-p { line-height: 1.7; }
+p { line-height: 1.7; text-align: justify; }
+/* Hero and centered text stay center */
+.hero-subtitle-main,
+.hero p,
+.section-sub,
+.gallery-header h3,
+.footer-bottom { text-align: center; }
+.footer-bottom p { text-align: center; }
 
 .container {
   width: 100%;
