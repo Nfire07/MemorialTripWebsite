@@ -7,7 +7,7 @@
     --brand-2: #000000;
     --brand-light: #ffffff;
     --ok: #1fce8b;
-    --shadow: 0 10px 30px rgba(0,0,0,.2);
+    --shadow: 0 10px 30px rgba(0, 0, 0, .2);
     --radius: 14px;
     --maxw: 1200px;
 }
@@ -17,7 +17,7 @@
 }
 
 html {
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -45,45 +45,47 @@ header {
 }
 
 .nav {
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:16px;
-    padding:14px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 0;
 }
 
 .nav ul {
-    display:flex;
-    gap:10px;
-    list-style:none;
-    padding:0;
-    margin:0;
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
+
 .nav a {
-    display:block;
-    padding:10px 14px;
-    border-radius:10px;
-    color:var(--text);
-    text-decoration:none;
-    font-weight:600;
+    display: block;
+    padding: 10px 14px;
+    border-radius: 10px;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
 }
+
 .nav a[aria-current="page"], .nav a:hover {
-    background:linear-gradient(135deg, rgba(79,124,255,.14), rgba(159,122,234,.14));
+    background: linear-gradient(135deg, rgba(79, 124, 255, .14), rgba(159, 122, 234, .14));
 }
 
 .brand {
-    display:flex;
-    align-items:center;
-    gap:12px;
-    font-weight:800;
-    letter-spacing:0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 800;
+    letter-spacing: 0;
 }
 
 .logo {
-    width:34px;
-    height:34px;
-    border-radius:10px;
-    object-fit:cover;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
 .menu-btn {
@@ -100,6 +102,7 @@ header {
     .menu-btn {
         display: inline-flex;
     }
+
     .nav ul {
         display: none;
         position: fixed;
@@ -112,6 +115,7 @@ header {
         flex-direction: column;
         width: min(260px, 90vw);
     }
+
     .nav ul.open {
         display: flex;
     }
@@ -127,7 +131,7 @@ header {
 }
 
 section {
-    padding:64px 0;
+    padding: 64px 0;
 }
 
 .hero {
@@ -146,9 +150,11 @@ section {
 .hero::before {
     content: "";
     position: absolute;
-    top:0; left:0;
-    width:100%; height:100%;
-    background: rgba(0,0,0,0.45);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
     z-index: 0;
 }
 
@@ -160,33 +166,63 @@ section {
 
 .hero-slide {
     position: absolute;
-    top:0; left:0;
-    width:100%;
-    height:100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
     opacity: 0;
     animation: fadeSlides 20s infinite;
 }
 
-.slide1 { animation-delay: 0s; }
-.slide2 { animation-delay: 5s; }
-.slide3 { animation-delay: 10s; }
-.slide4 { animation-delay: 15s; }
+.slide1 {
+    animation-delay: 0s;
+}
+
+.slide2 {
+    animation-delay: 5s;
+}
+
+.slide3 {
+    animation-delay: 10s;
+}
+
+.slide4 {
+    animation-delay: 15s;
+}
 
 @keyframes fadeSlides {
-    0% { opacity: 0; }
-    5% { opacity: 1; }
-    30% { opacity: 1; }
-    35% { opacity: 0; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+    35% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 @keyframes slideHero {
-    0%   { transform: translateX(0%); }
-    33.33% { transform: translateX(-33.333%); }
-    66.66% { transform: translateX(-66.666%); }
-    100% { transform: translateX(0%); }
+    0% {
+        transform: translateX(0%);
+    }
+    33.33% {
+        transform: translateX(-33.333%);
+    }
+    66.66% {
+        transform: translateX(-66.666%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
 }
 
 .hero-content {
@@ -218,22 +254,22 @@ section {
 }
 
 .hero-grid {
-    display:grid;
+    display: grid;
     grid-template-columns:1.2fr .8fr;
-    gap:34px;
-    align-items:center;
+    gap: 34px;
+    align-items: center;
 }
 
 .hero h1 {
-    font-size:clamp(28px, 5vw, 52px);
-    line-height:1.05;
-    margin:0 0 14px;
+    font-size: clamp(28px, 5vw, 52px);
+    line-height: 1.05;
+    margin: 0 0 14px;
 }
 
 .hero p {
-    font-size:clamp(16px, 2.6vw, 19px);
-    color:var(--muted);
-    margin:0 0 24px;
+    font-size: clamp(16px, 2.6vw, 19px);
+    color: var(--muted);
+    margin: 0 0 24px;
 }
 
 .hero-menu ul {
@@ -364,7 +400,7 @@ section {
 .section-title {
     font-size: clamp(24px, 4vw, 32px);
     margin: 0 0 12px;
-    font-size:28px;
+    font-size: 28px;
 }
 
 .section-sub {
@@ -373,39 +409,58 @@ section {
     max-width: 600px;
 }
 
-@media (max-width:960px){ .cards { grid-template-columns:1fr 1fr; } }
-@media (max-width:640px){ .cards { grid-template-columns:1fr; } }
+@media (max-width: 960px) {
+    .cards {
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .cards {
+        grid-template-columns:1fr;
+    }
+}
 
 .card {
-    background:var(--panel);
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:var(--radius);
-    padding:18px;
-    box-shadow:var(--shadow);
-    display:flex;
-    flex-direction:column;
+    background: var(--panel);
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: var(--radius);
+    padding: 18px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
     transition: transform .25s ease, box-shadow .25s ease;
 }
 
-.card h3 { margin:0 0 6px; }
-.card p { color:var(--muted); margin:0 0 14px; }
-.card a.more { margin-top:auto; font-weight:700; }
+.card h3 {
+    margin: 0 0 6px;
+}
+
+.card p {
+    color: var(--muted);
+    margin: 0 0 14px;
+}
+
+.card a.more {
+    margin-top: auto;
+    font-weight: 700;
+}
 
 .thumb {
-    height:140px;
-    border-radius:12px;
-    background:linear-gradient(135deg, rgba(79,124,255,.18), rgba(159,122,234,.18));
-    border:1px solid rgba(255,255,255,.12);
-    margin-bottom:14px;
+    height: 140px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(79, 124, 255, .18), rgba(159, 122, 234, .18));
+    border: 1px solid rgba(255, 255, 255, .12);
+    margin-bottom: 14px;
 }
 
 .chip {
-    display:inline-block;
-    font-size:12px;
-    color:#fff;
-    background:linear-gradient(135deg, var(--brand), var(--brand-2));
-    padding:6px 10px;
-    border-radius:999px;
+    display: inline-block;
+    font-size: 12px;
+    color: #fff;
+    background: linear-gradient(135deg, var(--brand), var(--brand-2));
+    padding: 6px 10px;
+    border-radius: 999px;
 }
 
 #itinerario {
@@ -426,12 +481,16 @@ section {
     gap: 22px;
 }
 
-@media (max-width:900px){ .grid{ grid-template-columns:1fr; } }
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns:1fr;
+    }
+}
 
 .panel {
     background: var(--panel);
     border-radius: var(--radius);
-    border:1px solid rgba(255,255,255,.08);
+    border: 1px solid rgba(255, 255, 255, .08);
     padding: 24px;
     box-shadow: var(--shadow);
 }
@@ -439,7 +498,7 @@ section {
 .timeline {
     padding-left: 20px;
     border-left: 2px solid var(--brand-2);
-    margin-left:6px;
+    margin-left: 6px;
 }
 
 .timeline .item {
@@ -536,13 +595,13 @@ section {
     gap: 1rem;
     margin-bottom: 1.5rem;
     padding: 1rem;
-    background: rgba(240,240,240,0.1);
+    background: rgba(240, 240, 240, 0.1);
     border-radius: 10px;
     transition: all 0.3s ease;
 }
 
 .link-qr-item:hover {
-    background: rgba(240,240,240,0.5);
+    background: rgba(240, 240, 240, 0.5);
 }
 
 .link-info {
@@ -560,18 +619,18 @@ section {
     color: white;
     font-weight: 600;
     text-decoration: none;
-    background: linear-gradient(135deg, var(--brand), var(--brand-2));
+    background: var(--brand);
     padding: 8px 16px;
     border-radius: 25px;
     font-size: 0.9rem;
     transition: all 0.3s ease;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
 }
 
 .link-info a:hover {
     color: #f0ebe3;
     transform: translateY(-2px);
-    box-shadow: 0 5px 12px rgba(0,0,0,0.4);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
 }
 
 .qr-code-small {
