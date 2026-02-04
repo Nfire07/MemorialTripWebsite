@@ -824,11 +824,11 @@ header {
   color: var(--muted);
   margin: 0;
   font-size: 0.95rem;
-  text-align: left;
+  text-align: justify;
 }
 
 .curiosita-section p {
-  text-align: left;
+  text-align: justify;
 }
 
 .grid {
