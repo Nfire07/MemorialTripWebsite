@@ -73,6 +73,7 @@ h1 {
 }
 
 .sub {
+    text-align: justify;
     color: var(--muted);  /* Colore del sottotitolo */
     margin: 0 0 18px;
 }
@@ -173,4 +174,5 @@ h1 {
 footer {
     color: var(--muted);  /* Colore del testo nel footer */
     margin: 24px 0 40px;
+
 }
