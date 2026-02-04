@@ -1,13 +1,13 @@
 :root {
-    --bg: #f0ebe3;            /* beige chiaro, sfondo storico */
-    --panel: #ffffff;         /* bianco, pannelli delle card */
-    --text: #1b1b1b;          /* testo principale nero/grigio scuro */
-    --muted: #6b6b6b;         /* testo secondario grigio */
+    --bg: #f0ebe3; /* beige chiaro, sfondo storico */
+    --panel: #ffffff; /* bianco, pannelli delle card */
+    --text: #1b1b1b; /* testo principale nero/grigio scuro */
+    --muted: #6b6b6b; /* testo secondario grigio */
     --brand: #c18400;
-    --brand-2: #000000;      /* rosso Francia */
-    --brand-light: #ffffff;   /* bianco Francia */
-    --ok: #1fce8b;            /* verde per conferme (può restare) */
-    --shadow: 0 10px 30px rgba(0,0,0,.2);
+    --brand-2: #000000; /* rosso Francia */
+    --brand-light: #ffffff; /* bianco Francia */
+    --ok: #1fce8b; /* verde per conferme (può restare) */
+    --shadow: 0 10px 30px rgba(0, 0, 0, .2);
     --radius: 14px;
     --maxw: 1100px;
     --border: 1px solid rgba(0, 0, 0, 0.08);
@@ -21,18 +21,18 @@
 body {
     margin: 0;
     font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    color: var(--text);  /* Colore del testo */
-    background: var(--bg);  /* Colore di sfondo */
+    color: var(--text); /* Colore del testo */
+    background: var(--bg); /* Colore di sfondo */
 }
 
 a {
-    color: var(--muted);  /* Colore principale dei link */
+    color: var(--muted); /* Colore principale dei link */
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
-    color: #2d3748    ;  /* Colore al passaggio del mouse */
+    color: #2d3748; /* Colore al passaggio del mouse */
 }
 
 .wrap {
@@ -51,11 +51,11 @@ a:hover {
 }
 
 .panel {
-    background: var(--panel);  /* Colore di sfondo del pannello */
+    background: var(--panel); /* Colore di sfondo del pannello */
     border: var(--border);
     border-radius: var(--radius);
     padding: 18px;
-    box-shadow: var(--shadow);  /* Ombra per il pannello */
+    box-shadow: var(--shadow); /* Ombra per il pannello */
 }
 
 .chip {
@@ -69,12 +69,12 @@ a:hover {
 
 h1 {
     margin: 6px 0 8px;
-    color: var(--text);  /* Colore del titolo principale */
+    color: var(--text); /* Colore del titolo principale */
 }
 
 .sub {
     text-align: justify;
-    color: var(--muted);  /* Colore del sottotitolo */
+    color: var(--muted); /* Colore del sottotitolo */
     margin: 0 0 18px;
 }
 
@@ -112,7 +112,7 @@ h1 {
     grid-template-columns: 1.1fr 0.9fr;
     gap: 16px;
     align-items: stretch;
-    background: var(--panel);  /* Colore di sfondo per le card */
+    background: var(--panel); /* Colore di sfondo per le card */
     border: var(--border);
     border-radius: 12px;
     padding: 16px;
@@ -120,12 +120,12 @@ h1 {
 
 .card h3 {
     margin: 0 0 6px;
-    color: var(--text);  /* Colore del titolo della card */
+    color: var(--text); /* Colore del titolo della card */
 }
 
 .card p {
     margin: 0;
-    color: var(--muted);  /* Colore del testo della card */
+    color: var(--muted); /* Colore del testo della card */
     line-height: 1.5;
 }
 
@@ -135,13 +135,13 @@ h1 {
     border-radius: 10px;
     overflow: hidden;
     border: var(--border);
-    background: #7a8fa8;  /* Colore di sfondo per l'immagine */
+    background: #7a8fa8; /* Colore di sfondo per l'immagine */
 }
 
 .media::before {
     content: "";
     display: block;
-    aspect-ratio: 16/10;
+    aspect-ratio: 16 / 10;
     width: 100%;
 }
 
@@ -151,6 +151,11 @@ h1 {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.media > .carousel {
+    position: absolute;
+    inset: 0;
 }
 
 .badge {
@@ -164,7 +169,6 @@ h1 {
     margin-bottom: 8px;
 }
 
-/* Media Queries */
 @media (max-width: 780px) {
     .card {
         grid-template-columns: 1fr;
@@ -172,7 +176,81 @@ h1 {
 }
 
 footer {
-    color: var(--muted);  /* Colore del testo nel footer */
+    color: var(--muted);
     margin: 24px 0 40px;
 
+}
+
+.carousel {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, .12);
+    box-shadow: var(--shadow);
+}
+
+.carousel-viewport,
+.carousel-track,
+.carousel .slide {
+    height: 100%;
+}
+
+.carousel-viewport {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform .35s ease;
+}
+
+.carousel .slide {
+    min-width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 700px) {
+    .carousel .slide {
+        height: 100%;
+    }
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, .35);
+    background: rgba(0, 0, 0, .35);
+    color: #fff;
+    font-size: 24px;
+    line-height: 1;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    z-index: 2;
+    transition: transform .18s ease, background .18s ease;
+}
+
+.carousel-btn:hover {
+    background: rgba(0, 0, 0, .5);
+    transform: translateY(-50%) translateY(-2px);
+}
+
+.carousel-btn:focus-visible {
+    outline: 3px solid rgba(255, 255, 255, .55);
+    outline-offset: 3px;
+}
+
+.carousel-btn.prev {
+    left: 12px;
+}
+
+.carousel-btn.next {
+    right: 12px;
 }

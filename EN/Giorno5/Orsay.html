@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="it">
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <link rel="icon" href="../../images/favicon.svg">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>D’Orsay museum — Paris Educational Trip</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,17 +13,21 @@
 <body>
 <div class="wrap">
     <nav class="crumbs">
-        <a href="Giorno5.html">Home</a> <span>></span> <a href="Giorno5.html#itinerario">Itinerary</a> <span>></span> <span>D’Orsay museum</span>
+        <a href="Giorno5.html">Home</a> <span>></span> <a href="Giorno5.html#itinerario">Itinerary</a> <span>></span>
+        <span>D’Orsay museum</span>
     </nav>
 
     <header class="panel page">
         <span class="chip">D’Orsay museum</span>
         <h1>From train stations to a museum of impressionism</h1>
         <p class="sub">
-            The Musée d’Orsay is a museum in Paris housed in a former railway station, famous for its extraordinary collection of Impressionist and Post-Impressionist works, including masterpieces by Monet, Van Gogh, and Degas.
+            The Musée d’Orsay is a museum in Paris housed in a former railway station, famous for its extraordinary
+            collection of Impressionist and Post-Impressionist works, including masterpieces by Monet, Van Gogh, and
+            Degas.
         </p>
         <div class="meta-row">
-            <span>Recommended duration: 5 hours</span> • <span>Access with booked ticket</span> • <span>Free photography</span>
+            <span>Recommended duration: 5 hours</span> • <span>Access with booked ticket</span> •
+            <span>Free photography</span>
         </div>
         <div class="media" aria-hidden="true">
             <img src="../../images/Orsay.png" alt="D'Orsay museum" loading="lazy">
@@ -37,7 +41,10 @@
                 <div>
                     <span class="badge">Stage 1</span>
                     <h3>The train station (Gare d'Orsay)</h3>
-                    <p style="text-align: justify;">The museum was born from a former railway station from the late 19th century, converted into an exhibition space: the large nave with the monumental clock retains the original industrial atmosphere, making the architecture an integral part of the artistic experience.</p>
+                    <p style="text-align: justify;">The museum was born from a former railway station from the late 19th
+                        century, converted into an exhibition space: the large nave with the monumental clock retains
+                        the original industrial atmosphere, making the architecture an integral part of the artistic
+                        experience.</p>
                 </div>
                 <div class="media">
                     <img src="../../images/orologioOrsay.jpg" alt="Orologio d'Orsay" loading="lazy">
@@ -48,20 +55,65 @@
                 <div>
                     <span class="badge">Stage 2</span>
                     <h3>Vincent van Gogh</h3>
-                    <p style="text-align: justify;">The museum houses some of Van Gogh's most famous masterpieces, such as The Bedroom at Arles and Starry Night Over the Rhone, offering a profound insight into his expressive painting and his transition to modern art.</p>
+                    <p style="text-align: justify;">The museum houses some of Van Gogh's most famous masterpieces, such
+                        as The Bedroom at Arles and Starry Night Over the Rhone, offering a profound insight into his
+                        expressive painting and his transition to modern art.</p>
                 </div>
                 <div class="media">
-                    <img src="../../images/vangogh.jpeg" alt="Ufficio al III piano" loading="lazy">
+                    <div class="carousel" aria-label="Galleria fotografica Musée Carnavalet" data-start="0">
+                        <button class="carousel-btn prev" aria-label="Foto precedente">‹</button>
+                        <div class="carousel-viewport">
+                            <div class="carousel-track">
+                                <div class="slide" role="img" aria-label="Van Gogh"
+                                     style="background-image:url('../../images/vangogh.jpeg')"></div>
+                                <div class="slide" role="img" aria-label="Notturno"
+                                     style="background-image:url('../../images/notturno.jpeg')"></div>
+                                <div class="slide" role="img" aria-label="Hotel Carnavalet"
+                                     style="background-image:url('../../images/arlesiana.jpeg')"></div>
+                            </div>
+                        </div>
+                        <button class="carousel-btn next" aria-label="Foto successiva">›</button>
+                    </div>
                 </div>
             </article>
         </div>
     </section>
     <footer>
         <div class="container foot" style="width:100%;display: flex;align-items: center;justify-content: center;">
-            <p style="text-align: center;">Website developed from:<br><strong>Luca Marconi - Matteo Savorelli</strong><br>In collaboration with: <strong><br><strong>&copy;2025 5AIN <a href="https://itisravenna.edu.it/" style="color: #b71c1c;">ITIS Nullo Baldini Ravenna</a>.</strong></strong></p>
+            <p style="text-align: center;">Website developed from:<br><strong>Luca Marconi - Matteo
+                Savorelli</strong><br>In collaboration with: <strong><br><strong>&copy;2025 5AIN <a
+                    href="https://itisravenna.edu.it/" style="color: #b71c1c;">ITIS Nullo Baldini Ravenna</a>.</strong></strong>
+            </p>
         </div>
     </footer>
 </div>
+
+<script>
+    document.querySelectorAll('.carousel').forEach(carousel => {
+        const track = carousel.querySelector('.carousel-track');
+        const slides = carousel.querySelectorAll('.slide');
+        const prevBtn = carousel.querySelector('.carousel-btn.prev');
+        const nextBtn = carousel.querySelector('.carousel-btn.next');
+
+        let index = parseInt(carousel.dataset.start || 0, 10);
+        const total = slides.length;
+
+        function update() {
+            track.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            index = (index - 1 + total) % total;
+            update();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            index = (index + 1) % total;
+            update();
+        });
+
+        update();
+    });
+</script>
 </body>
 </html>
-
