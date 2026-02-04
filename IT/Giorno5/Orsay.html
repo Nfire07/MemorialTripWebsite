@@ -19,7 +19,7 @@
 
     <header class="panel page">
         <span class="chip">Museo d'Orsay</span>
-        <h1>Da stazioni di treni a museo dell'impressionismo</h1>
+        <h1>Da stazioni di treni a museo dell'Impressionismo</h1>
         <p class="sub">
             Il Museo d’Orsay è un museo di Parigi ospitato in una ex stazione ferroviaria, famoso per la sua
             straordinaria collezione di opere impressioniste e post-impressioniste, tra cui capolavori di Monet, Van
@@ -59,7 +59,20 @@
                         pittura espressiva e sul passaggio verso l’arte moderna.</p>
                 </div>
                 <div class="media">
-                    <img src="../../images/vangogh.jpeg" alt="Ufficio al III piano" loading="lazy">
+                    <div class="carousel" aria-label="Galleria fotografica Musée Carnavalet" data-start="0">
+                        <button class="carousel-btn prev" aria-label="Foto precedente">‹</button>
+                        <div class="carousel-viewport">
+                            <div class="carousel-track">
+                                <div class="slide" role="img" aria-label="Van Gogh"
+                                     style="background-image:url('../../images/vangogh.jpeg')"></div>
+                                <div class="slide" role="img" aria-label="Notturno"
+                                     style="background-image:url('../../images/notturno.jpeg')"></div>
+                                <div class="slide" role="img" aria-label="Hotel Carnavalet"
+                                     style="background-image:url('../../images/arlesiana.jpeg')"></div>
+                            </div>
+                        </div>
+                        <button class="carousel-btn next" aria-label="Foto successiva">›</button>
+                    </div>
                 </div>
             </article>
         </div>
@@ -73,6 +86,34 @@
         </div>
     </footer>
 </div>
+
+<script>
+    document.querySelectorAll('.carousel').forEach(carousel => {
+        const track = carousel.querySelector('.carousel-track');
+        const slides = carousel.querySelectorAll('.slide');
+        const prevBtn = carousel.querySelector('.carousel-btn.prev');
+        const nextBtn = carousel.querySelector('.carousel-btn.next');
+
+        let index = parseInt(carousel.dataset.start || 0, 10);
+        const total = slides.length;
+
+        function update() {
+            track.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            index = (index - 1 + total) % total;
+            update();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            index = (index + 1) % total;
+            update();
+        });
+
+        update();
+    });
+</script>
 </body>
 </html>
 
