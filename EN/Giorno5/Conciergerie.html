@@ -32,7 +32,26 @@
             <span>Recommended duration: 2 hours</span> • <span>Access with booked ticket</span> • <span>Photography without flash</span>
         </div>
         <div class="media" aria-hidden="true">
-            <img src="../../images/conciergerie.jpeg" alt="Concengerie" loading="lazy">
+            <div class="carousel" aria-label="Foto Concengerie" data-start="0">
+                <button class="carousel-btn prev" aria-label="Previous Photo">‹</button>
+                <div class="carousel-viewport">
+                    <div class="carousel-track">
+                        <div class="slide" role="img" aria-label="Conciergerie"
+                                style="background-image:url('../../images/conciergerie.jpeg')"></div>
+                        <div class="slide" role="img" aria-label="Robespierre"
+                                style="background-image:url('../../images/robespierre.jpeg')"></div>
+                        <div class="slide" role="img" aria-label="Courthouse"
+                                style="background-image:url('../../images/tribunale.jpeg')"></div>
+                        <div class="slide" role="img" aria-label="Fouquier-Tinville"
+                        style="background-image:url('../../images/fouquier-tinville.jpeg')"></div>
+                        <div class="slide" role="img" aria-label="Maria Antonietta"
+                        style="background-image:url('../../images/MariaAntonietta.jpeg')"></div>
+                        <div class="slide" role="img" aria-label="Maria Antonietta leaves the Conciergerie"
+                        style="background-image:url('../../images/MariaAntoniettaLascialaConciergerie.jpeg')"></div>
+                    </div>
+                </div>
+                <button class="carousel-btn next" aria-label="Next Photo">›</button>
+            </div>
         </div>
     </header>
 
@@ -81,5 +100,33 @@
         </div>
     </footer>
 </div>
+
+<script>
+    document.querySelectorAll('.carousel').forEach(carousel => {
+        const track = carousel.querySelector('.carousel-track');
+        const slides = carousel.querySelectorAll('.slide');
+        const prevBtn = carousel.querySelector('.carousel-btn.prev');
+        const nextBtn = carousel.querySelector('.carousel-btn.next');
+
+        let index = parseInt(carousel.dataset.start || 0, 10);
+        const total = slides.length;
+
+        function update() {
+            track.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            index = (index - 1 + total) % total;
+            update();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            index = (index + 1) % total;
+            update();
+        });
+
+        update();
+    });
+</script>
 </body>
 </html>
