@@ -24,7 +24,10 @@
 
 * {
   box-sizing: border-box;
+  text-align:justify;
 }
+
+
 
 html {
   scroll-behavior: smooth;
