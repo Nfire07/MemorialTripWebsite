@@ -463,7 +463,9 @@ footer { padding:36px 0 70px; color:var(--muted); }
 .hero-grid .hero-art{ display:none !important; } /* remove transparent box on the right */
 
 /* ===== Text alignment ===== */
-p{ text-align: justify; }
+/* MODIFICA EFFETTUATA QUI SOTTO: aggiunto "li" */
+p, li { text-align: justify; }
+
 .hero p{ text-align: center; }
 
 .btn:hover{ transform: translateY(-3px); }
