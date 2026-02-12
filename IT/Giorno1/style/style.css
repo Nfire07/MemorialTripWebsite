@@ -181,7 +181,6 @@ header {
   position: absolute;
   inset: 0;
   background: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(4px);
   z-index: 1;
 }
 
