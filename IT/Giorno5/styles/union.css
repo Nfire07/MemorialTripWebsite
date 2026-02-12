@@ -289,11 +289,6 @@ section {
 }
 
 .hero-content h1 {
-    background: linear-gradient(90deg, blue, white, red);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-
     font-size: 3rem;
     font-weight: 800;
 }
@@ -301,13 +296,6 @@ section {
 .hero-content p {
     font-size: 1.2rem;
     margin-top: 1rem;
-
-    background: linear-gradient(90deg, blue, white, red);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    display: inline-block;
 }
 
 .hero-grid {
